@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { text: 'Blogs', href: 'blogs/index.html' },
     { text: 'Portfolio', href: 'portfolio/index.html' },
     { text: 'Essays', href: 'essays/index.html' },
-    { text: 'About', href: 'about.html' },
+    { text: 'About', href: 'About.html' },
     { text: 'Design Process', href: 'design/index.html' }
   ];
 
