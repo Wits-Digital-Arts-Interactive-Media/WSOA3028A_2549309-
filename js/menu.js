@@ -1,17 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const basePath = window.location.origin;
   const navContainer = document.getElementById('nav-container');
   const navMenu = document.createElement('nav');
   navMenu.id = 'navbar';
 
   // Menu items for main navigation
   const menuItems = [
-    { text: 'Home', href: basePath + '/index.html' },
-    { text: 'Blogs', href: basePath + '/blogs/index.html' },
-    { text: 'Portfolio', href: basePath + '/portfolio/index.html' },
-    { text: 'Essays', href: basePath + '/essays/index.html' },
-    { text: 'About', href: basePath + '/about.html' },
-    { text: 'Design Process', href: basePath + '/design/index.html' }
+    { text: 'Home', href: 'index.html' },
+    { text: 'Blogs', href: 'blogs/index.html' },
+    { text: 'Portfolio', href: 'portfolio/index.html' },
+    { text: 'Essays', href: 'essays/index.html' },
+    { text: 'About', href: 'about.html' },
+    { text: 'Design Process', href: 'design/index.html' }
   ];
 
   const ul = document.createElement('ul');
@@ -40,16 +39,15 @@ document.addEventListener("DOMContentLoaded", function() {
   navContainer.appendChild(navMenu);
 
   // Check current page and set active link
-  const currentUrl = window.location.pathname;
+  const currentUrl = window.location.href;
   const navLinks = document.querySelectorAll('#navbar a');
   
   navLinks.forEach(link => {
-    if (currentUrl.endsWith(link.getAttribute('href'))) {
+    if (currentUrl.includes(link.getAttribute('href'))) {
       link.classList.add('active');  // Add 'active' class
       link.style.color = '#4CAF50';  // Set active link color to green
     } else {
       link.classList.remove('active');
-      link.style.color = '';  // Ensure non-active links do not have the active color
     }
   });
 
