@@ -1,16 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
+  // Base path for the website, adjust if your site is in a subdirectory
+  const basePath = '/WSOA3028A_2549309';  // Change this to match your deployment
+
   const navContainer = document.getElementById('nav-container');
   const navMenu = document.createElement('nav');
   navMenu.id = 'navbar';
 
-  // Menu items for main navigation
+  // Menu items for main navigation, now using basePath for absolute paths
   const menuItems = [
-    { text: 'Home', href: 'index.html' },
-    { text: 'Blogs', href: 'blogs/index.html' },
-    { text: 'Portfolio', href: 'portfolio/index.html' },
-    { text: 'Essays', href: 'essays/index.html' },
-    { text: 'About', href: 'About.html' },
-    { text: 'Design Process', href: 'design/index.html' }
+    { text: 'Home', href: `${basePath}/index.html` },
+    { text: 'Blogs', href: `${basePath}/blogs/index.html` },
+    { text: 'Portfolio', href: `${basePath}/portfolio/index.html` },
+    { text: 'Essays', href: `${basePath}/essays/index.html` },
+    { text: 'About', href: `${basePath}/About.html` },
+    { text: 'Design Process', href: `${basePath}/design/index.html` }
   ];
 
   const ul = document.createElement('ul');
@@ -19,18 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const a = document.createElement('a');
     a.textContent = item.text;
     a.href = item.href;
-
-    // Applying hover effects
-    a.addEventListener('mouseover', function() {
-      this.style.color = '#4CAF50';  // Green text on hover
-    });
-
-    a.addEventListener('mouseout', function() {
-      if (!this.classList.contains('active')) {
-        this.style.color = '';  // Reset text color if not active
-      }
-    });
-
     li.appendChild(a);
     ul.appendChild(li);
   });
@@ -38,20 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
   navMenu.appendChild(ul);
   navContainer.appendChild(navMenu);
 
-  // Check current page and set active link
-  const currentUrl = window.location.href;
-  const navLinks = document.querySelectorAll('#navbar a');
-  
-  navLinks.forEach(link => {
-    if (currentUrl.includes(link.getAttribute('href'))) {
-      link.classList.add('active');  // Add 'active' class
-      link.style.color = '#4CAF50';  // Set active link color to green
-    } else {
-      link.classList.remove('active');
-    }
-  });
-
-  // Set up hover effects for blog list and breadcrumbs similarly
+  // Additional features like setting up blog list and breadcrumbs can be initialized here if needed
   setupBlogListHoverEffects();
   setupBreadcrumbs();
 });
