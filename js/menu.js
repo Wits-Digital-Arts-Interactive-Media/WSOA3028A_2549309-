@@ -137,16 +137,21 @@ function setupBlogNavigation() {
   const nextPostBtn = document.getElementById('next-post');
 
   if (currentIndex > 0) {
-    prevPostBtn.onclick = () => window.location.href = posts[currentIndex - 1];
+    prevPostBtn.onclick = () => {
+      console.log('Going to:', posts[currentIndex - 1]); // Log the previous post URL
+      window.location.href = posts[currentIndex - 1];
+    };
   } else {
     prevPostBtn.disabled = true;
   }
-
-  mainBlogBtn.onclick = () => window.location.href = `${basePath}/index.html`;
-
+  
   if (currentIndex < posts.length - 1) {
-    nextPostBtn.onclick = () => window.location.href = posts[currentIndex + 1];
+    nextPostBtn.onclick = () => {
+      console.log('Going to:', posts[currentIndex + 1]); // Log the next post URL
+      window.location.href = posts[currentIndex + 1];
+    };
   } else {
     nextPostBtn.disabled = true;
   }
+  
 }
