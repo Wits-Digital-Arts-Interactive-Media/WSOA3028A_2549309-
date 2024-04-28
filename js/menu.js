@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
   setupBlogListHoverEffects();
   setupBreadcrumbs();
   setupBlogNavigation();
+  
 });
 
 function setupBlogListHoverEffects() {
@@ -155,3 +156,20 @@ function setupBlogNavigation() {
   }
   
 }
+// Function to apply hover effects to all elements with a specific class
+function setupHoverEffectsForClass(className, hoverColor, originalColor) {
+  const elements = document.querySelectorAll('.' + className);
+  elements.forEach(element => {
+    element.addEventListener('mouseover', function() {
+      this.style.color = hoverColor; // Change color on hover
+    });
+    element.addEventListener('mouseout', function() {
+      this.style.color = originalColor; // Revert to original color
+    });
+  });
+}
+
+// Apply hover effects to elements with the class 'interactive-heading'
+document.addEventListener('DOMContentLoaded', function() {
+  setupHoverEffectsForClass('interactive-heading', '#008000', '#000000');
+});
