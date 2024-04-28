@@ -39,15 +39,15 @@ function setupBlogListHoverEffects() {
   const blogList = document.getElementById('blog-list');
   const posts =[
     { title: 'Blog Post 1: Exploring the Roots of Internet and Web Technologies', url: 'blog1.html' },
-    { title: 'Blog Post 2: Advanced CSS Techniques', url: 'blog2.html' },
-    { title: 'Blog Post 3: Advanced CSS Techniques', url: 'blog3.html' },
-    { title: 'Blog Post 4: Advanced CSS Techniques', url: 'blog4.html' },
-    { title: 'Blog Post 5: Advanced CSS Techniques', url: 'blog5.html' },
-    { title: 'Blog Post 6: Advanced CSS Techniques', url: 'blog6.html' },
-    { title: 'Blog Post 7: Advanced CSS Techniques', url: 'blog7.html' },
-    { title: 'Blog Post 8: Advanced CSS Techniques', url: 'blog8.html' },
-    { title: 'Blog Post 9: Advanced CSS Techniques', url: 'blog9.html' },
-    { title: 'Blog Post 10: Advanced CSS Techniques', url: 'blog10.html' },
+    { title: 'Blog Post 2: Exploring Website Structure and Inspirations', url: 'blog2.html' },
+    { title: 'Blog Post 3:Interaction Design and User Experience', url: 'blog3.html' },
+    { title: 'Blog Post 4: Navigating Creativity and Usability: A Journey in Responsive Design', url: 'blog4.html' },
+    { title: 'Blog Post 5: Advanced UX Strategies for Modern Web Design', url: 'blog5.html' },
+    { title: 'Blog Post 6: Internet and the Just Society', url: 'blog6.html' },
+    { title: 'Blog Post 7: ', url: 'blog7.html' },
+    { title: 'Blog Post 8: Information Geographies and Digital Hegemony: A South African Perspective', url: 'blog8.html' },
+    { title: 'Blog Post 9:  Empowering Women Through the Internet in Africa', url: 'blog9.html' },
+    { title: 'Blog Post 10: ', url: 'blog10.html' },
     // Additional posts as needed
   ];
 
@@ -123,7 +123,6 @@ function setupBreadcrumbs() {
     breadcrumbContainer.appendChild(ol);
   }
 }
-
 
 function setupBlogNavigation() {
   const posts = [
