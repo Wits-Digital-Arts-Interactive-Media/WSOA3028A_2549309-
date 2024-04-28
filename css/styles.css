@@ -26,3 +26,13 @@
   color: #4CAF50 !important;  
 }
 
+#table-of-contents a {
+  
+  color: black; /* Default link color */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+}
+
+#table-of-contents a:hover {
+  color: #07b407; /* Darker shade on hover, change as you like */
+  transform: scale(10); /* Slightly increase the scale (size) */
+}

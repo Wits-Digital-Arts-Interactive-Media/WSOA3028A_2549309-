@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <script src="../js/menu.js" defer></script>
     <script src="../js/active-nav.js"></script>
+    <script src="../js/scrolling.js"></script>
 </head>
 <body>
     <header>
@@ -29,9 +30,10 @@
             </ul>--> 
         
         <hr>
-        
+       <nav id="table-of-contents"></nav>
+
     </header>
-    <main>
+    <main> 
         <h2>Development</h2>
     <section aria-labelledby="goal-alignment">
             <h3 id="goal-alignment">Goal Alignment </h3>
@@ -71,7 +73,7 @@
     <section aria-labelledby="Information structure">
             <h3 id="Information structure">Information Structure </h3>
         <figure> 
-            <img src="Images/informationStructure.png" alt="Image of a flow diagram of the information structure " title="Information Strcuture diagram"width="400" height="500">
+            <img src="../Images/informationStructure.png" alt="Image of a flow diagram of the information structure " title="Information Strcuture diagram"width="400" height="500">
             <figcaption> flow diagram of the information structure</figcaption>
     </figure>   
         </section>
@@ -79,7 +81,7 @@
     <section aria-labelledby="User Flow">
             <h3 id="User Flow">User Flow </h3>
         <figure>
-            <img src="Images/userFlow.png" alt="A mindmap/diagram of the user flow elements " title="UserFLow diagram" width="400" height="500">
+            <img src="../Images/userFlow.png" alt="A mindmap/diagram of the user flow elements " title="UserFLow diagram" width="400" height="500">
             <figcaption>diagram of the user flow elements </figcaption>
     </figure>   
         </section>
@@ -95,7 +97,9 @@
                <li> Progress bar: To indicate the progression through the design process or long essay. However, will still be testing this and iterating this decision. </li>
                </ul>
      </section>           
-     <a href="#goal-alignment">Back to Top</a>
+     <!--<a href="#goal-alignment">Back to Top</a>-->
+     <button class="back-to-top">Back to Top</button>
+
      <section aria-labelledby="design">
             <h3 id="design">Design</h3>
 
@@ -123,26 +127,37 @@
             <p>After laying down the initial concept, I begin the development phase where I put together wireframes</p>
     <figure>
                 
-                <img src="Images/wireframes/HomePage.png" alt="A wireframe of the home page in black and white with annotations " title="HomePage Wireframe" width="800" height="600">
+                <img src="../Images/wireframes/HomePage.png" alt="A wireframe of the home page in black and white with annotations " title="HomePage Wireframe" width="800" height="600">
                 <figcaption>wireframe of the home page </figcaption>
     </figure>    
     <figure>
-        <img src="Images/wireframes/PortfolioPage.png" alt="A wireframe of the Portfolio page in black and white with annotations " title="portfolio Wireframe"width="800" height="600">
+        <img src="../Images/wireframes/PortfolioPage.png" alt="A wireframe of the Portfolio page in black and white with annotations " title="portfolio Wireframe"width="800" height="600">
         <figcaption>wireframe of the Portfolio page </figcaption>
     </figure>    
     <figure>
-        <img src="Images/wireframes/BlogPage.png" alt="A wireframe of the Blog page in black and white with annotations " title="blogPage Wireframe"width="800" height="600">
+        <img src="../Images/wireframes/BlogPage.png" alt="A wireframe of the Blog page in black and white with annotations " title="blogPage Wireframe"width="800" height="600">
         <figcaption>wireframe of the Blog page </figcaption>
     </figure>
-         <img src="Images/wireframes/EssayPage.png" alt="A wireframe of the Essay page in black and white with annotations " title="EssayPage Wireframe"width="800" height="600">
+         <img src="../Images/wireframes/EssayPage.png" alt="A wireframe of the Essay page in black and white with annotations " title="EssayPage Wireframe"width="800" height="600">
             <figcaption>wireframe of the Essay page </figcaption>
         </figure>
     <figure>
-         <img src="Images/wireframes/AboutPage.png" alt="A wireframe of the About page in black and white with annotations " title="aboutPage Wireframe"width="800" height="600">
+         <img src="../Images/wireframes/AboutPage.png" alt="A wireframe of the About page in black and white with annotations " title="aboutPage Wireframe"width="800" height="600">
             <figcaption>wireframe of the About page </figcaption>
     </figure>
+
+    <h4 >Wireframes for smartPhone screen size</h4>
+    <p> For other screen sizes like smart phones, the layout needs to be adjusted. I need to consider that each of these elements should be touch-friendly and easily navigable using a finger on a touchscreen device.</p>
+    <figure>
+        <img src="../Images/wireframes/screensizePage.png" alt="A wireframe of the smart phone screensize page in black and white with annotations " title="aboutPage Wireframe"width="500" height="600">
+           <figcaption>wireframe of the smartphone screen size page </figcaption>
+   </figure>
+
       </section>
-      <a href="#goal-alignment">Back to Top</a>
+      <!--<a href="#goal-alignment">Back to Top</a>-->
+      <button class="back-to-top">Back to Top</button>
+
+
         <h4>Style Guide</h4>
         <h5> Defining Visual Aesthetic</h5>
         <p> The aesthetic of the website aims to be modern, minimalist, and user-friendly. It seeks to create an engaging and interactive experience that showcases creativity through simplicity. The design focuses on showcasing interactive media and game design work, which means it should be visually appealing yet not overwhelming, allowing the work itself to stand out.</p>
@@ -154,11 +169,11 @@
             </p>
         <p> View my colour palettes below:</p>
     <figure>
-        <img src="Images/colourPalette1.jpg" alt="An image with circles of different colours (subdued blue,a soft peach, a dark sea green, and a muted green) showing colour palette for website " title="colour palette 1"width="400" height="300">
+        <img src="../Images/colourPalette1.jpg" alt="An image with circles of different colours (subdued blue,a soft peach, a dark sea green, and a muted green) showing colour palette for website " title="colour palette 1"width="400" height="300">
         <figcaption>subdued blue,a soft peach, a dark sea green, and a muted green </figcaption>
     </figure>
     <figure>
-        <img src="Images/colourPalette2.jpg" alt="An image with circles of different colours (earthy tones, cool grey, light grey, and almost black) showing colour palette for website " title="colour palette 2" width="400" height="300">
+        <img src="../Images/colourPalette2.jpg" alt="An image with circles of different colours (earthy tones, cool grey, light grey, and almost black) showing colour palette for website " title="colour palette 2" width="400" height="300">
         <figcaption> earthy tones, cool grey, light grey, and almost black </figcaption>
     </figure>
         <details>
@@ -185,7 +200,9 @@
         <p> Large, medium and small (depending on page), expressive images for portfolio and blog entries, also home page, with captions when necessary.</p>
         <p> The images provide a visual break from text and help to tell a story, showcasing my work and thoughts effectively. It also aligns with best practices for portfolio sites where visual work needs to be front and center.</p>
     </section>
-    <a href="#goal-alignment">Back to Top</a>
+    <!--<a href="#goal-alignment">Back to Top</a>-->
+    <button class="back-to-top">Back to Top</button>
+
     </main>
     <footer>
         <address class="vcard" >
