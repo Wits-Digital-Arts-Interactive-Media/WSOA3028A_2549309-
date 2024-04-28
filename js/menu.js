@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Additional features like setting up blog list and breadcrumbs can be initialized here if needed
   setupBlogListHoverEffects();
   setupBreadcrumbs();
+  setupBlogNavigation();
 });
 
 function setupBlogListHoverEffects() {
@@ -120,5 +121,33 @@ function setupBreadcrumbs() {
     });
 
     breadcrumbContainer.appendChild(ol);
+  }
+}
+
+
+function setupBlogNavigation() {
+  const posts = [
+    'blog1.html', 'blog2.html', 'blog3.html', 'blog4.html', 'blog5.html',
+    'blog6.html', 'blog7.html', 'blog8.html', 'blog9.html', 'blog10.html'
+  ];
+  const currentFile = window.location.pathname.split('/').pop();
+  const currentIndex = posts.indexOf(currentFile);
+
+  const prevPostBtn = document.getElementById('prev-post');
+  const mainBlogBtn = document.getElementById('main-blog');
+  const nextPostBtn = document.getElementById('next-post');
+
+  if (currentIndex > 0) {
+    prevPostBtn.onclick = () => window.location.href = posts[currentIndex - 1];
+  } else {
+    prevPostBtn.disabled = true;
+  }
+
+  mainBlogBtn.onclick = () => window.location.href = `${basePath}/index.html`;
+
+  if (currentIndex < posts.length - 1) {
+    nextPostBtn.onclick = () => window.location.href = posts[currentIndex + 1];
+  } else {
+    nextPostBtn.disabled = true;
   }
 }
