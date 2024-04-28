@@ -40,15 +40,51 @@
             <section>
                 <h2>Game Design/Interactive Media</h2> 
                 <p>Dive into the nexus of creativity and technology where each project is a story waiting to be told. From the intricate designs of game environments to the immersive experiences of interactive media, explore a portfolio curated to showcase innovation, craftsmanship...</p>
-                <figure>
-                    <img src="Images/homePageWork.png" alt="digital artwork of a scene from a platformer vidoe game which is an example of Aaminahs works" title="Homepage artwork" class="full-width"> 
+                
+            </section>
+            <h2><a href="blogs/index.html">My blogs</a></h2>
+            <hr>
+            <h2><a href="portfolio/index.html">My portfolio</a></h2>
+            <figure>
+                    <img src="Images/homePageWork.png" alt="digital artwork of a scene from a platformer vidoe game which is an example of Aaminahs works"  class="portfolio-hover-image" title="Homepage artwork" width="500" height="300"> 
                     <figcaption>An example of my art.</figcaption>
                 </figure>
-            </section>
+            <hr>
+            <h2><a href="essays/index.html">My essays</a></h2> 
+            <hr>
+            <h2><a href="design/index.html">My design process</a></h2>
+            <hr>
+            <h2><a href="About.html">About Me</a></h2>
+            <hr>
+
     </main>
     <footer>
         <address class="vcard" >
             <p>&copy; 2024 <span class="fn">Aaminah Habib</span> | All rights reserved</p>
         </address>
+        <script>
+           document.addEventListener('DOMContentLoaded', function() {
+  const portfolioImage = document.querySelector('.portfolio-hover-image');
+
+  // When the mouse enters the image area
+  portfolioImage.addEventListener('mouseenter', function() {
+    // Change the image or style
+    this.style.transform = 'scale(1.1)'; // Example: Enlarge the image
+    this.style.opacity = '0.7';         // Example: Make the image semi-transparent
+    // You can also change the source of the image if you want to swap images
+    // this.src = 'path-to-your-hover-image.jpg';
+  });
+
+  // When the mouse leaves the image area
+  portfolioImage.addEventListener('mouseleave', function() {
+    // Revert the image or style to original
+    this.style.transform = '';
+    this.style.opacity = '1';
+    // And if you swapped images, revert to the original
+    // this.src = 'path-to-your-original-image.jpg';
+  });
+});
+
+          </script>
 </body>
 </html>

@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function() {
     { text: 'Blogs', href: `${basePath}/blogs/index.html` },
     { text: 'Portfolio', href: `${basePath}/portfolio/index.html` },
     { text: 'Essays', href: `${basePath}/essays/index.html` },
-    { text: 'About', href: `${basePath}/About.html` },
-    { text: 'Design Process', href: `${basePath}/design/index.html` }
+    { text: 'Design Process', href: `${basePath}/design/index.html` },
+     { text: 'About', href: `${basePath}/About.html` }
   ];
 
   const ul = document.createElement('ul');

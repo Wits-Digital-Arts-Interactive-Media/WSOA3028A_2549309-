@@ -36,3 +36,6 @@
   color: #07b407; 
   
 }
+.portfolio-hover-image {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}

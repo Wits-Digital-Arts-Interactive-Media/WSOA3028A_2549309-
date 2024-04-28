@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Existing code for main navigation interactivity
+   
     const navLinks = document.querySelectorAll('nav a');
     const currentUrl = window.location.pathname;
     const baseDir = '/';
