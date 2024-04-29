@@ -1,41 +1,45 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Base path for the website, adjust if your site is in a subdirectory
-  const basePath = '/WSOA3028A_2549309';  // Change this to match your deployment
+  setupNavigation();
+  setupBlogListHoverEffects();
+  setupBreadcrumbs();
+  setupBlogNavigation();
+});
 
+function setupNavigation() {
+  const basePath = '/WSOA3028A_2549309';  // Base path, adjust if your site is in a subdirectory
   const navContainer = document.getElementById('nav-container');
   const navMenu = document.createElement('nav');
   navMenu.id = 'navbar';
-
-  // Menu items for main navigation, now using basePath for absolute paths
-  const menuItems = [
-    { text: 'Home', href: `${basePath}/index.html` },
-    { text: 'Blogs', href: `${basePath}/blogs/index.html` },
-    { text: 'Portfolio', href: `${basePath}/portfolio/index.html` },
-    { text: 'Essays', href: `${basePath}/essays/index.html` },
-    { text: 'Design Process', href: `${basePath}/design/index.html` },
-     { text: 'About', href: `${basePath}/About.html` }
-  ];
-
   const ul = document.createElement('ul');
+  const menuItems = getMenuItems(basePath);
+
   menuItems.forEach(item => {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.textContent = item.text;
-    a.href = item.href;
-    li.appendChild(a);
-    ul.appendChild(li);
+      ul.appendChild(createMenuItem(item));
   });
 
   navMenu.appendChild(ul);
   navContainer.appendChild(navMenu);
+}
 
-  // Additional features like setting up blog list and breadcrumbs can be initialized here if needed
-  setupBlogListHoverEffects();
-  setupBreadcrumbs();
-  setupBlogNavigation();
-  
-});
+function getMenuItems(basePath) {
+  return [
+      { text: 'Home', href: `${basePath}/index.html` },
+      { text: 'Blogs', href: `${basePath}/blogs/index.html` },
+      { text: 'Portfolio', href: `${basePath}/portfolio/index.html` },
+      { text: 'Essays', href: `${basePath}/essays/index.html` },
+      { text: 'Design Process', href: `${basePath}/design/index.html` },
+      { text: 'About', href: `${basePath}/About.html` }
+  ];
+}
 
+function createMenuItem(item) {
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+  a.textContent = item.text;
+  a.href = item.href;
+  li.appendChild(a);
+  return li;
+}
 function setupBlogListHoverEffects() {
   const blogList = document.getElementById('blog-list');
   const posts =[
@@ -156,20 +160,3 @@ function setupBlogNavigation() {
   }
   
 }
-// Function to apply hover effects to all elements with a specific class
-function setupHoverEffectsForClass(className, hoverColor, originalColor) {
-  const elements = document.querySelectorAll('.' + className);
-  elements.forEach(element => {
-    element.addEventListener('mouseover', function() {
-      this.style.color = hoverColor; // Change color on hover
-    });
-    element.addEventListener('mouseout', function() {
-      this.style.color = originalColor; // Revert to original color
-    });
-  });
-}
-
-// Apply hover effects to elements with the class 'interactive-heading'
-document.addEventListener('DOMContentLoaded', function() {
-  setupHoverEffectsForClass('interactive-heading', '#008000', '#000000');
-});
