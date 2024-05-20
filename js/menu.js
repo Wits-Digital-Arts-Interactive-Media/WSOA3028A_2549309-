@@ -49,10 +49,12 @@ function setupBlogListHoverEffects() {
     { title: 'Blog Post 4: Navigating Creativity and Usability: A Journey in Responsive Design', url: 'blog4.html' },
     { title: 'Blog Post 5: Advanced UX Strategies for Modern Web Design', url: 'blog5.html' },
     { title: 'Blog Post 6: Internet and the Just Society', url: 'blog6.html' },
-    { title: 'Blog Post 7: ', url: 'blog7.html' },
+    { title: 'Blog Post 7: Critical reflections', url: 'blog7.html' },
     { title: 'Blog Post 8: Information Geographies and Digital Hegemony: A South African Perspective', url: 'blog8.html' },
     { title: 'Blog Post 9:  Empowering Women Through the Internet in Africa', url: 'blog9.html' },
-    { title: 'Blog Post 10: ', url: 'blog10.html' },
+    { title: 'Blog Post 10: Decolonizing Artificial Intelligence', url: 'blog10.html' },
+    { title: 'Blog Post 11: Reflecting on Development from Code to Culture', url: 'blog11.html' },
+    { title: 'Blog Post 12: The Conscience of the Internet', url: 'blog12.html' },
     // Additional posts as needed
   ];
 
@@ -132,7 +134,7 @@ function setupBreadcrumbs() {
 function setupBlogNavigation() {
   const posts = [
     'blog1.html', 'blog2.html', 'blog3.html', 'blog4.html', 'blog5.html',
-    'blog6.html', 'blog7.html', 'blog8.html', 'blog9.html', 'blog10.html'
+    'blog6.html', 'blog7.html', 'blog8.html', 'blog9.html', 'blog10.html', 'blog11.html', 'blog12.html',
   ];
   const currentFile = window.location.pathname.split('/').pop();
   const currentIndex = posts.indexOf(currentFile);

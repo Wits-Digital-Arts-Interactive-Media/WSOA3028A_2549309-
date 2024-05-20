@@ -1,3 +1,29 @@
+body {
+  font-family: 'Merriweather', serif;
+  font-size: 1rem; /* Relative to the base font size set on html */
+  line-height: 1.6; 
+  color: #333;
+  background-color: #fff; /* Default background color */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  }
+  
+  a {
+  color: #0066CC; /* Blue color for links */
+  text-decoration: none; /* No underline by default */
+  }
+  
+  a:hover, a:focus {
+  text-decoration: underline; /* Underline on hover/focus for clarity */
+  color: #004499; /* Darker blue for better visibility */
+  }
+
+
+
+
 #navbar ul {
   list-style-type: none;
   margin: 0;
