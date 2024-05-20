@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Dynamically set the base path based on the depth of the current directory
-    const depth = window.location.pathname.split('/').filter(part => part.length > 0).length - 1;
-    let basePath = '';
-    for (let i = 0; i < depth; i++) {
-        basePath += '../';
-    }
+    // Set the base path explicitly for GitHub Pages
+    const basePath = window.location.hostname.includes('github.io') ? '/WSOA3028A_2549309/' : '/';
 
     const navHTML = `
     <header class="header" id="header">
@@ -43,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="${basePath}about.html" class="nav__link">
+                        <a href="${basePath}About.html" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
                             <span>About</span>
                         </a>
