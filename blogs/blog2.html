@@ -17,26 +17,15 @@
     <script src="../js/blogs.js"></script>
 </head>
 <body>
-    <header>
-      
-        <h1>Blog 2 </h1>
-        <div id="nav-container"></div>
-        <div id="breadcrumbs"></div>
-        <!--<nav aria-label="Breadcrumb">
-            <ol style="list-style: none; padding: 0;">
-                <li style="display: inline;"><a href="../index.html">Home</a></li>
-                <li style="display: inline;"> &gt; </li>
-                <li style="display: inline;"><a href="./index.html">Blogs</a></li>
-                <li style="display: inline;"> &gt; </li>
-                <li style="display: inline;" aria-current="page">blog 2</li>
-            </ol>
-        </nav>-->
-        <hr>  
-        
-    </header>
+    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+
     
-    <main>
-        <article aria-labelledby="post-heading">
+    <main class="home">
+        <article class="blog-content">
+            <div class="breadcrumbs"></div>
+            
+            <h1>Blog 2</h1>
+            <img src="../Images/blog2.png" alt="Blog image">
             <time datetime="2024-02-23">23 February 2024</time>
             by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
                 <section>
@@ -87,16 +76,34 @@
                 <p><strong>Clarity and Organization:</strong> Each main section of the website (home, blog, works, essays, about) gets its own directory to contain related files. This separation helps maintain clarity and prevents clutter.</p>
     
                 <h3>Inspirational Websites:</h3>
-                <ul>
-                    <li><a href="https://www.nedavius.com/projects">Nedavius Projects</a> - The transitions on Nedavius Projects are truly captivating, seamlessly guiding users through the portfolio with elegant animations.</li>
-                    <li><a href="https://blacknegative.com/#!/client/">Blacknegative</a> - Impresses with its incorporation of 3D elements, creating a visually stunning website that feels dynamic and immersive.</li>
-                    <li><a href="https://intothetrenches.1917.movie/">Into the Trenches</a> - Utilizes 3D and parallax scrolling to transport visitors into the world of the movie.</li>
-                    <li><a href="https://fpp.net/">FPP</a> - Example website.</li>
-                    <li><a href="https://unseen.co/">Unseen</a> - Minimalist design allows the photography to shine, creating a clean and elegant showcase for the artwork.</li>
-                    <li><a href="https://wlt.design/">WLT Design</a> - Makes a bold statement with its vibrant colors and bold typography.</li>
-                    <li><a href="https://curious.co/">Curious</a> - Stands out for its interactive elements and engaging content.</li>
-                    <li>Realistic example of how I envision my website: <a href="https://www.enricodeiana.design/">Enrico Deiana's Design</a> - Comparing my website to these inspirational examples, I aim to incorporate elements of captivating transitions, immersive visuals, and user-friendly navigation.</li>
-                </ul>
+<ul>
+    <li>
+        <a href="https://www.nedavius.com/projects" target="_blank">Nedavius Projects</a> - The transitions on Nedavius Projects are truly captivating, seamlessly guiding users through the portfolio with elegant animations.
+    </li>
+    <li>
+        <a href="https://blacknegative.com/#!/client/" target="_blank">Blacknegative</a> - Impresses with its incorporation of 3D elements, creating a visually stunning website that feels dynamic and immersive.
+    </li>
+    <li>
+        <a href="https://intothetrenches.1917.movie/" target="_blank">Into the Trenches</a> - Utilizes 3D and parallax scrolling to transport visitors into the world of the movie.
+    </li>
+    <li>
+        <a href="https://fpp.net/" target="_blank">FPP</a> - Example website.
+    </li>
+    <li>
+        <a href="https://unseen.co/" target="_blank">Unseen</a> - Minimalist design allows the photography to shine, creating a clean and elegant showcase for the artwork.
+    </li>
+    <li>
+        <a href="https://wlt.design/" target="_blank">WLT Design</a> - Makes a bold statement with its vibrant colors and bold typography.
+    </li>
+    <li>
+        <a href="https://curious.co/" target="_blank">Curious</a> - Stands out for its interactive elements and engaging content.
+    </li>
+    <li>
+        Realistic example of how I envision my website: 
+        <a href="https://www.enricodeiana.design/" target="_blank">Enrico Deiana's Design</a> - Comparing my website to these inspirational examples, I aim to incorporate elements of captivating transitions, immersive visuals, and user-friendly navigation.
+    </li>
+</ul>
+
     
                 <h3>Wireframes:</h3>
                 <p>My wireframes can be viewed in the design process. <a href="../design/index.html">Click here</a> to view them now.</p>
@@ -143,11 +150,13 @@
             <section>
         </article>
         </main>
-        <footer>
+        <footer class="blog__footer">
             <div class="blog-navigation">
-                <button id="prev-post">Previous Post</button>
-                <button id="next-post">Next Post</button>
-                </div>
+                <button class="nav-button" id="prev-post">Previous Post</button>
+                <button class="nav-button" id="next-post">Next Post</button>
+            </div>
+            <p>&copy; 2024 Aaminah Habib | All rights reserved</p>
         </footer>
+        
     </body>
     </html>

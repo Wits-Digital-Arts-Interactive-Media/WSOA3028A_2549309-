@@ -17,16 +17,16 @@
     <script src="../js/blogs.js"></script>
 </head>
 <body>
-    <header>
-      
-        <h1>Blog 5 </h1>
-        <div id="nav-container"></div>
-        <div id="breadcrumbs"></div>
-        <hr>   
-    </header>
+    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
 
-    <main>
-        <article>
+    <main class="home">
+        <article class="blog-content">
+            <div class="breadcrumbs"></div>
+                
+            </div>
+            <h1>Blog 5</h1>
+            <img src="../Images/blog5.png" alt="Blog image">
+        
             <time datetime="2024-03-15">15 March 2024</time>
             by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
             <h2 id="post-heading">Advanced UX Strategies for Modern Web Design</h2>
@@ -175,11 +175,12 @@
         </article>   
         </main>
 
-    <footer>
-        <div class="blog-navigation">
-            <button id="prev-post">Previous Post</button>
-            <button id="next-post">Next Post</button>
+        <footer class="blog__footer">
+            <div class="blog-navigation">
+                <button class="nav-button" id="prev-post">Previous Post</button>
+                <button class="nav-button" id="next-post">Next Post</button>
             </div>
-    </footer>
+            <p>&copy; 2024 Aaminah Habib | All rights reserved</p>
+        </footer>
 </body>
 </html>

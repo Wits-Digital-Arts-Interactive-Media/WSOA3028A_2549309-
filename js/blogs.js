@@ -52,3 +52,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+// Breadcrumbs for blogs
+document.addEventListener('DOMContentLoaded', function () {
+    const breadcrumbContainer = document.querySelector('.breadcrumbs');
+
+    if (breadcrumbContainer) {
+        const path = window.location.pathname.split('/').filter(segment => segment);
+        const isBlogPage = path.includes('blogs');
+
+        let breadcrumbHtml = `<a href="/index.html">Home</a>`;
+        
+        if (isBlogPage) {
+            breadcrumbHtml += ` > <a href="/blogs/index.html">Blogs</a>`;
+            const blogIndex = path.indexOf('blogs') + 1;
+            if (blogIndex < path.length) {
+                const blogTitle = path[blogIndex].replace('.html', '').replace(/-/g, ' ').toUpperCase();
+                breadcrumbHtml += ` > ${blogTitle}`;
+            }
+        }
+
+        breadcrumbContainer.innerHTML = breadcrumbHtml;
+    }
+});
+
+

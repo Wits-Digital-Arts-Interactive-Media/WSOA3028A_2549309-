@@ -17,16 +17,15 @@
     <script src="../js/blogs.js"></script>
 </head>
 <body>
-    <header>
-        
-        <h1>Blog 11</h1>
-        <div id="nav-container"></div>
-        <div id="breadcrumbs"></div>
-        <hr>   
-    </header>
-    <main>
-      <article>
-            <secction>
+  <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+
+  <main class="home">
+      <article class="blog-content">
+          <div class="breadcrumbs"></div>
+              
+          </div>
+          <h1>Blog 11</h1>
+          <img src="../Images/blog11.png" alt="Blog image">
                 <time datetime="2024-04-29">07 May 2024</time> 
                 by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
             <h2 id="post-heading"> Reflecting on Development from Code to Culture</h2>
@@ -89,11 +88,12 @@
             
       </article>
     </main>
-    <footer>
+    <footer class="blog__footer">
       <div class="blog-navigation">
-        <button id="prev-post">Previous Post</button>
-        <button id="next-post">Next Post</button>
-        </div>
-    </footer>
+          <button class="nav-button" id="prev-post">Previous Post</button>
+          <button class="nav-button" id="next-post">Next Post</button>
+      </div>
+      <p>&copy; 2024 Aaminah Habib | All rights reserved</p>
+  </footer>
 </body>
 </html>

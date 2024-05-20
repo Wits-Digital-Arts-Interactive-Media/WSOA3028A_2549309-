@@ -17,16 +17,15 @@
     <script src="../js/blogs.js"></script>
 </head>
 <body>
-    <header>
-     
-        <h1>Blog 8 </h1>
-        <div id="nav-container"></div>
-        <div id="breadcrumbs"></div>
-        <hr>   
-    </header>
-    <main>
-        <article>
-            <section>
+    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+
+    <main class="home">
+        <article class="blog-content">
+            <div class="breadcrumbs"></div>
+                
+            </div>
+            <h1>Blog 8</h1>
+            <img src="../Images/blog8.png" alt="Blog image">
                
         <time datetime="2024-04-13">13 April 2024</time> 
         by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
@@ -224,11 +223,12 @@ This highlights the necessity for developers to build e-commerce sites that addr
 
 
     </main>
-    <footer>
+    <footer class="blog__footer">
         <div class="blog-navigation">
-            <button id="prev-post">Previous Post</button>
-            <button id="next-post">Next Post</button>
-            </div>
+            <button class="nav-button" id="prev-post">Previous Post</button>
+            <button class="nav-button" id="next-post">Next Post</button>
+        </div>
+        <p>&copy; 2024 Aaminah Habib | All rights reserved</p>
     </footer>
 </body>
 </html>
