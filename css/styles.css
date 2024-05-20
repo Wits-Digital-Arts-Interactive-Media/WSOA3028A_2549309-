@@ -935,3 +935,127 @@ a {
       grid-template-columns: 1fr;
   }
 }
+/*=============== DESIGN PROCESS PAGE ===============*/
+
+
+.header {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+
+.main {
+  padding: 2rem 1rem;
+  margin-top: 60px;
+}
+
+h2, h3, h4, h5 {
+  color: #333;
+}
+
+ul, details {
+  margin: 1rem 0;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for ToC and active section highlighting */
+.toc-container {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  padding: 10px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  width: 200px;
+  height: calc(100% - 100px);
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.toc-container h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.toc-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc-container li {
+  margin-bottom: 5px;
+}
+
+.toc-container a {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: block;
+  padding: 5px;
+}
+
+.toc-container a.active {
+  background-color: #52759a;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Styles to fix overlapping issues */
+.main-content {
+  margin-left: 220px; /* Adjust according to ToC width */
+  padding: 20px;
+}
+
+header, footer {
+  position: relative;
+  z-index: 101; /* Ensure they are above the ToC */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .toc-container {
+      position: static;
+      width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+  }
+
+  .main-content {
+      margin-left: 0;
+      padding: 10px;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .toc-container {
+      display: none;
+  }
+
+  .content {
+      margin: 1rem;
+  }
+
+  figure img {
+      width: 100%;
+  }
+}
