@@ -1,164 +1,81 @@
-document.addEventListener("DOMContentLoaded", function() {
-  setupNavigation();
-  setupBlogListHoverEffects();
-  setupBreadcrumbs();
-  setupBlogNavigation();
+document.addEventListener('DOMContentLoaded', () => {
+    const navHTML = `
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="/index.html" class="nav__logo">AAMINAH HABIB</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/index.html" class="nav__link">
+                            <i class="ri-arrow-right-up-line"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/blogs/index.html" class="nav__link">
+                            <i class="ri-arrow-right-up-line"></i>
+                            <span>Blogs</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/portfolio/index.html" class="nav__link">
+                            <i class="ri-arrow-right-up-line"></i>
+                            <span>Portfolio</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/essays/index.html" class="nav__link">
+                            <i class="ri-arrow-right-up-line"></i>
+                            <span>Essays</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/design/index.html" class="nav__link">
+                            <i class="ri-arrow-right-up-line"></i>
+                            <span>Design Process</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/About.html" class="nav__link">
+                            <i class="ri-arrow-right-up-line"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-large-line"></i>
+                </div>
+                <div class="nav__social">
+                    <a href="https://www.instagram.com/" target="_blank" class="nav__social-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://github.com/" target="_blank" class="nav__social-link">
+                        <i class="ri-github-line"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+    `;
+
+    document.body.insertAdjacentHTML('afterbegin', navHTML);
+
+    const navMenu = document.getElementById('nav-menu'),
+          navToggle = document.getElementById('nav-toggle'),
+          navClose = document.getElementById('nav-close');
+
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.add('show-menu');
+        });
+    }
+
+    if (navClose) {
+        navClose.addEventListener('click', () => {
+            navMenu.classList.remove('show-menu');
+        });
+    }
 });
-
-function setupNavigation() {
-  const basePath = '/WSOA3028A_2549309';  // Base path, adjust if your site is in a subdirectory
-  const navContainer = document.getElementById('nav-container');
-  const navMenu = document.createElement('nav');
-  navMenu.id = 'navbar';
-  const ul = document.createElement('ul');
-  const menuItems = getMenuItems(basePath);
-
-  menuItems.forEach(item => {
-      ul.appendChild(createMenuItem(item));
-  });
-
-  navMenu.appendChild(ul);
-  navContainer.appendChild(navMenu);
-}
-
-function getMenuItems(basePath) {
-  return [
-      { text: 'Home', href: `${basePath}/index.html` },
-      { text: 'Blogs', href: `${basePath}/blogs/index.html` },
-      { text: 'Portfolio', href: `${basePath}/portfolio/index.html` },
-      { text: 'Essays', href: `${basePath}/essays/index.html` },
-      { text: 'Design Process', href: `${basePath}/design/index.html` },
-      { text: 'About', href: `${basePath}/About.html` }
-  ];
-}
-
-function createMenuItem(item) {
-  const li = document.createElement('li');
-  const a = document.createElement('a');
-  a.textContent = item.text;
-  a.href = item.href;
-  li.appendChild(a);
-  return li;
-}
-function setupBlogListHoverEffects() {
-  const blogList = document.getElementById('blog-list');
-  const posts =[
-    { title: 'Blog Post 1: Exploring the Roots of Internet and Web Technologies', url: 'blog1.html' },
-    { title: 'Blog Post 2: Exploring Website Structure and Inspirations', url: 'blog2.html' },
-    { title: 'Blog Post 3:Interaction Design and User Experience', url: 'blog3.html' },
-    { title: 'Blog Post 4: Navigating Creativity and Usability: A Journey in Responsive Design', url: 'blog4.html' },
-    { title: 'Blog Post 5: Advanced UX Strategies for Modern Web Design', url: 'blog5.html' },
-    { title: 'Blog Post 6: Internet and the Just Society', url: 'blog6.html' },
-    { title: 'Blog Post 7: Critical reflections', url: 'blog7.html' },
-    { title: 'Blog Post 8: Information Geographies and Digital Hegemony: A South African Perspective', url: 'blog8.html' },
-    { title: 'Blog Post 9:  Empowering Women Through the Internet in Africa', url: 'blog9.html' },
-    { title: 'Blog Post 10: Decolonizing Artificial Intelligence', url: 'blog10.html' },
-    { title: 'Blog Post 11: Reflecting on Development from Code to Culture', url: 'blog11.html' },
-    { title: 'Blog Post 12: The Conscience of the Internet', url: 'blog12.html' },
-    // Additional posts as needed
-  ];
-
-
-  if (blogList) {
-    const ul = document.createElement('ul');
-    posts.forEach(post => {
-      const li = document.createElement('li');
-      const a = document.createElement('a');
-      a.textContent = post.title;
-      a.href = post.url;
-
-      a.addEventListener('mouseover', function() {
-        this.style.color = '#4CAF50';
-      });
-
-      a.addEventListener('mouseout', function() {
-        this.style.color = '';
-      });
-
-      li.appendChild(a);
-      ul.appendChild(li);
-    });
-
-    blogList.appendChild(ul);
-  }
-}
-
-function setupBreadcrumbs() {
-  const breadcrumbContainer = document.getElementById('breadcrumbs');
-  const pathElements = [
-    { name: 'Home', url: '../index.html' },
-    { name: 'Blogs', url: 'index.html' },
-    { name: document.title, url: '#' }
-  ];
-
-  if (breadcrumbContainer) {
-    const ol = document.createElement('ol');
-    ol.style.listStyle = 'none';
-    ol.style.padding = 0;
-
-    pathElements.forEach((elem, index) => {
-      const li = document.createElement('li');
-      li.style.display = 'inline';
-      if (index > 0) {
-        li.innerHTML = ' &gt; ';
-      }
-
-      const a = document.createElement('a');
-      if (elem.url !== '#') {
-        a.href = elem.url;
-        a.textContent = elem.name;
-        a.addEventListener('mouseover', function() {
-          this.style.color = '#4CAF50';
-        });
-
-        a.addEventListener('mouseout', function() {
-          this.style.color = '';
-        });
-
-        li.appendChild(a);
-      } else {
-        a.textContent = elem.name;
-        a.setAttribute('aria-current', 'page');
-        a.style.color = '#4CAF50';  // Set current page color
-        a.style.pointerEvents = 'none';  // No clicking on current page breadcrumb
-        li.appendChild(a);
-      }
-
-      ol.appendChild(li);
-    });
-
-    breadcrumbContainer.appendChild(ol);
-  }
-}
-
-function setupBlogNavigation() {
-  const posts = [
-    'blog1.html', 'blog2.html', 'blog3.html', 'blog4.html', 'blog5.html',
-    'blog6.html', 'blog7.html', 'blog8.html', 'blog9.html', 'blog10.html', 'blog11.html', 'blog12.html',
-  ];
-  const currentFile = window.location.pathname.split('/').pop();
-  const currentIndex = posts.indexOf(currentFile);
-
-  const prevPostBtn = document.getElementById('prev-post');
-  const mainBlogBtn = document.getElementById('main-blog');
-  const nextPostBtn = document.getElementById('next-post');
-
-  if (currentIndex > 0) {
-    prevPostBtn.onclick = () => {
-      console.log('Going to:', posts[currentIndex - 1]); // Log the previous post URL
-      window.location.href = posts[currentIndex - 1];
-    };
-  } else {
-    prevPostBtn.disabled = true;
-  }
-  
-  if (currentIndex < posts.length - 1) {
-    nextPostBtn.onclick = () => {
-      console.log('Going to:', posts[currentIndex + 1]); // Log the next post URL
-      window.location.href = posts[currentIndex + 1];
-    };
-  } else {
-    nextPostBtn.disabled = true;
-  }
-  
-}

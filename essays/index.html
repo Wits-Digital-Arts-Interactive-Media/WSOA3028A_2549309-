@@ -3,100 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aaminah's  portfolio website for WSOA3028A">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <meta name="description" content="Aaminah's portfolio website for WSOA3028A">
     <meta name="author" content="Aaminah Habib">
     <meta property="og:title" content="Aaminah Habib's Portfolio">
-    <meta property="og:description" content="Discover research by Aaminah Habib's WSOA3028A portfolio in game design and interactive media.">
+    <meta property="og:description" content="Discover perspectives and blog of Aaminah Habib's WSOA3028A portfolio in game design and interactive media.">
     <meta property="og:image" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2549309/Images/profile.jpg">
     <meta property="og:type" content="website">
     <title>Essays</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/menu.js" defer></script>
-    <script src="../js/active-nav.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/main.js"></script>
 </head>
 <body>
-    <header>
-        Aaminah Habib
-        <h1> Essays</h1>
-        <div id="nav-container"></div>
-            <!--  <ul style="list-style: none; margin: 0; padding: 0;">
-                <li style="display: inline; margin-right: 20px;"><a href="../index.html">Home</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="../portfolio/portfolio.html">Portfolio</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="index.html">Blogs</a></li> 
-                <li style="display: inline; margin-right: 20px;"><a href="../designprocess.html">Design Process</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="../essays/index.html">Essays</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="../about.html">About</a></li>
-            </ul>-->
-        
-        <hr>
-    </header>
-    <main>
-        <section aria-labelledby="essays-section">
-            <h2 id="essays-section">My Essays</h2>
-            <article aria-label="Essay 1">
-                
-                <h3>Essay 1:UX & UI Analysis of Discover.co.za</h3>
-                <p>In the digital age, a website is more than just a platform; it's a dynamic interface where organizations articulate their mission, engage with their audience, and strive to meet comprehensive goals that span visibility, engagement, conversion, support, and education, all while developing brand loyalty. Discovery, a leader in health insurance, banking services, and wellness solutions in South Africa, represents this multi-faceted approach through its website. </p>
-                <details>
-                    <summary></summary>
-           
-                <p> The UI components are semiotic signifiers that are instrumental in guiding user interactions (Geyser, 2023). These elements are encoded with meaning beyond their visual appearance, acting as signals that elicit specific behaviors from users, which is key to the website's interaction design.</p>
-            <p> The typography on the Discovery website is modern and clean, playing a role in achieving the goal of Visibility (Bush, 1979). The sans-serif font used for both headings and body text are readable, with a hierarchy that clearly differentiates between titles, subtitles, and paragraph text, making the website’s information architecture easily digestible. This strategic use of typography aligns with Vannevar Bush's vision of retractable paths, where an associative trail of links guides users through content in a manner akin to the human mind's operation, rather than a forced linear path (Bush, 1979). The clear differentiation between titles, subtitles, and paragraph text ensures that users can navigate through content hierarchies without feeling overwhelmed, embodying Bush's concept within the Discovery's structure (Bush, 1979). The size of the font is adequate, ensuring readability across devices.  However, using relative units like 'em' or 'rem' in CSS, rather than absolute units like pixels, can help achieve a more fluid and responsive design that would be a good practice to implement in terms of scalability to provide a consistent experience across different platforms and devices (typographyhandbook.com, n.d.).Discovery's employment of a strategic typographic hierarchy and visual cues enhances website navigation and content comprehension, serving as direct applications of Ted Nelson’s vision of non-linear navigation (Nelson, 2003). The bold titles guide users through the site’s content and make it easier to digest the information presented. This is essential in a content strategy that aims to present complex information, such as insurance details and banking options, in an understandable format. By categorizing information under clear headings, Discovery ensures that users can navigate through content hierarchies without feeling overwhelmed. Uppercase lettering for calls to action stands as an excellent navigational tool. It draws the eye and clarifies the actions users can take, such as “GET A QUOTE”. This clear visual prompt supports Discovery's goal of user engagement and conversion by making the next steps unmistakable and inviting. Hyperlinks in blue offer a visual cue for additional navigation paths, making the site's vast resources more findable.  This approach not only aids in user navigation but also enhances the site's SEO, as search engines tend to favor well-structured content with clear navigational paths. Moreover, the bold term within paragraphs ensures that users scanning the page can quickly identify valuable content, thus improving the overall findability of information. This operationalizes Nelson's idea of a "docuverse," where every user can carve out their own narrative, thus avoiding the<blockquote> "nightmare labyrinth" </blockquote> </cite>of disorganized content that <cite>Jorge Luis Borges</cite> warned against <cite>(Nelson, 2003)</cite><cite> (Borges, 1941)</cite>. This approach also lessens the dependence on color alone.</p>
-            <p> The brand's primary colors—cool blues and pinks—create a visual identity that’s both trustworthy and inviting, aligning with the goal of Brand Loyalty (Soegaard, 2023). Colors are used strategically to draw attention to calls to action and important navigational elements, such as the 'Get a quote' button, which stands out due to its contrasting color. The low contrast between text and background on the Discovery website, particularly over images, hinders readability for users with visual impairments, compromising both accessibility and usability, and does not comply with WCAG contrast ratio guidelines (Intechnic, n.d.) (W3C, 2019). This potentially questions sites credibility.</p>
-            <p> Consistent and contextual use of icons and images across Discovery’s website enhances quick understanding and supports the overall message (Elliott, 2022) (Fleck, 2021). Images are of high quality and relevant to the services being offered, such as the fuel pump image for car insurance, which is visually engaging and ties directly to the value proposition of fuel cashback. They are supported by text alongside, and no information is dependent on the image or icons alone. However, 16 images lack alternative text, therefore visual impairments users cannot understand the content that images convey and makes images inaccessible to screen reader users.</p>
-            <p> Discovery's use of white space and balanced layout contributes to a user-friendly interface, guiding the user’s attention without causing cognitive overload. Adequate spacing between UI elements allows for ease of interaction.</p>
-            <p> The visual design of Discovery's website, characterized by consistent use of button styles, interaction states, and a coherent color scheme, facilitates ease of navigation. The navigation bar, logo placement, and footer's static positioning contribute to a user-friendly interface, aiding user orientation and strengthening brand recognition. This coherent use of visual elements reflects a thoughtful consideration of user experience, mirroring Bush's retractable paths where users can explore interconnected information with ease. Consistent use of button styles and interaction states (like hover effects) across the site ensure users can predict and learn the website’s interactive behaviors, reducing the learning curve and improving the overall user experience (Bush, 1979). </p>
-            <p> Adhering to best practices in web security and privacy is foundational for building trust, a key aspect of brand loyalty, while also enhancing web accessibility. Discovery already has a solid foundation with secure HTTPS, valid security certificates, and encryption for data inputs, relevant in the context of health insurance and financial services, where the sensitivity of user data is heightened. Discovery sets clear guidelines around data sharing, manipulation, and consumption that is accessible in their privacy policy (OneTrust, 2020).  These practices are essential for ensuring users feel safe and respected. Discovery’s use of deprecated APIs and third-party cookies indicates potential security and privacy issues that could affect user trust.  However, commitment to user experience extends beyond privacy and security.</p>
-            <p> To ensure Discovery is accessible and inclusive, lets address Discovery’s accessibility issues. Providing descriptive alternative text for all images, linked images, and implementing spacer images via CSS can significantly improve the experience for screen reader users, eliminating confusion and enhancing site navigation (Smashing Magazine, 2019). Empty headings and broken ARIA references can cause confusion by suggesting a structure that doesn't exist, making navigation more difficult for screen reader users. It confuses users using a keyboard and creates a disorienting experience. The missing or invalid language attribute affects users who rely on screen readers by potentially causing incorrect pronunciation, impacting understanding for non-native speakers or when using translation tools. Buttons without an accessible name make it difficult for screen reader users to understand the function of the buttons. Form elements without labels makes them unusable as screen readers cannot read. Links without discernible names affects both screen reader users and those who rely on clear visual cues for navigation. It can be frustrating and wasteful for users, especially those using screen readers, as they increase the time required to navigate content (Smashing Magazine, 2019). Presence of Noscript Element errors can cause issues if content is not accessible with JavaScript , potentially blocking access to information for users on restrictive networks or with certain browser configurations, excluding them.</p>
-            <p> Device Dependent Event Handler errors are presented. If functionality is only available for a specific device input (like a mouse), it can prevent users relying on keyboards or other assistive technologies from accessing all features. Making all interactive elements fully accessible is non-negotiable. Buttons must have accessible names, form elements require labels, and links need discernible names to ensure that every user, regardless of their method of site interaction (whether via screen readers, keyboards, or other assistive technologies), can fully engage with the site's content and functionalities. </p>
-            <p>Discovery does implement measures for inclusivity and user accessibility. It includes subtitles for videos, which is a key feature for making audiovisual content accessible to users who are hearing impaired. Integration of keyboard navigation into its design, accommodates users who may face challenges using a mouse due to physical disabilities or personal preference. This feature underscores the importance of ensuring that all users can navigate the website with ease, thereby enhancing the user experience for a more diverse audience.</p>
-            <p>Understanding the growing reliance on mobile devices for internet access, Discovery employs a responsive design strategy. This approach optimally adjusts the website's layout and content according to the device's screen size and resolution, significantly improving readability and navigability for smartphone and tablet users. Such adaptability ensures that the website is accessible and user-friendly across various devices, promoting a positive browsing experience that meets modern digital consumption habits.</p>
-            <p>Furthermore, Discovery's commitment to cross-browser compatibility broadening its reach. This consideration guarantees that the website delivers a consistent and flawless experience across different web browsers, accommodating users' varied preferences and constraints regarding their choice of browser (MDN Web Docs, 2020).  </p>
-            <p>Optimizing the site’s performance and addressing the longer load times are essential for improving User Engagement. Discovery maintains a low cumulative layout shift score, suggesting there aren't many unexpected layouts shifts that could disorient users. This consistency is key to ensuring that all users, regardless of how they access the internet, can enjoy the full range of features and information offered by Discovery without encountering technical issues. </p>
-            <p>The website takes approximately 9.5 seconds to load fully, which is longer than the ideal load time. This can impact user engagement, as longer load times are associated with higher bounce rates. Users may become impatient, especially on mobile devices with potentially slower internet connections.</p>
-            <p>The rendering and painting time suggests Discovery’s design and layout are efficiently handled by the browser and the visual elements of the website are rendered quickly, contributing to a good visual load experience. The server response time is very fast however the longer scripting time indicates that JavaScript execution takes up most of the processing time. This suggests a lack of minimalist code as the website is running multiple or complex scripts that need to be optimized. Discovery 's JavaScript execution demands significant browser processing power, which could affect performance on less powerful devices.</p>
-            <p>Performance also ties into accessibility. Users with assistive technologies may experience additional delays if a site is already slow, making the website less accessible. These factors influence the user’s experience.</p> 
-            <p>The Discovery website enhances user engagement through an interactive chatbot feature, accessible via a prominent button. This interactive element acts as a conversation between the user and Discovery (the system), providing real-time assistance and guidance that respects the user’s input without leading to random or frustrating outcomes, the chatbot reinforces the concept that user effort is both valued and effective (Smuts, 2009).  The presence of the chatbot demonstrates Discovery's commitment to instant support and user-centric service, reflecting an advanced level of interaction design. It supports the website's goal of providing education and support by answering questions, directing users to resources, and simplifying the journey toward service understanding and acquisition, thereby empowering them to make informed decisions about the services offered. This contributes to a user's sense of control and agency (Nelson, 2003). </p> 
-            <p>Discovery's website employs several feedback mechanisms to create a responsive and reassuring user experience. For instance, upon form submission, users receive immediate confirmation messages, which affirm that their actions have been successfully registered. Similarly, the chatbot offers on-the-fly feedback to user queries, providing a sense of interaction that many users find engaging and personal. These feedback mechanisms are crucial in building user trust and are indicative of a well-thought-out interaction design that prioritizes user reassurance and engagement. Moreover, error handling mechanisms provide users with clear, constructive information on how to rectify mistakes, ensuring the interaction remains fluid and frustration-free. The integration of these features aligns with ethical design by valuing user time and reducing confusion, thus enhancing overall satisfaction, and contributing to Discovery’s conversion goals.</p> 
-            <p>The signifier and the signified come together to create meaningful interactions <cite>(Geyser, 2023)</cite>. By recognizing these components as integral parts of a semiotic system, we see how they contribute to the overarching interaction design of the site, facilitating a journey that is intuitive and aligned with Discovery’s goals. Discovery's website circumvents the 'nightmare labyrinth' (Borges, 1941). The site's structure reflects a thoughtful consideration of user experience, mirroring Bush's vision of retractable paths where users can traverse through a web of interconnected information with ease (Bush, 1979). This non-linear navigation ensures that users are not forced into a rigid journey but can explore services and resources at will, crafting a narrative that suits their unique needs (Nelson, 2003). Discovery creates a dynamic environment that users can inhabit, making informed decisions through interaction and comprehensive feedback mechanisms. This thoughtful navigation and interaction reflect the ethics and responsibilities in UI/UX design, ensuring that users’ forays into Discovery’s digital domain are both empowering and intuitive.</p> 
-        
-            <section>
-            <h3> References </h3> 
-           <ul>
-            <li> <a href="#">Borges, J.L. (1941). The Library of Babel. [online] Available at: https://sites.evergreen.edu/politicalshakespeares/wp-content/uploads/sites/226/2015/12/Borges-The-Library-of-Babel.pdf.</a></li>
-            <li><a href="#"> Bush, V. (1979). As we may think. ACM SIGPC Notes, 1(4), pp.36–44. doi:https://doi.org/10.1145/1113634.1113638. </a></li>
-            <li><a href="#">chromewebstore.google.com. (n.d.). Lighthouse. [online] Available at: https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk. </a></li>
-            <li><a href="#">Discovery.co.za. (2024). Discovery. [online] Available at: https://www.discovery.co.za/car-and-home-insurance/buildings-insurance [Accessed 3 Apr. 2024]. </a></li>
-            <li><a href="#">Elliott, J. (2022). How to Use Icons in Design: UX and UI Best Practices - The Noun Project Blog. [online] Available at: https://blog.thenounproject.com/how-to-use-icons-in-ui-and-ux-design-best-practices/. </a></li>
-            <li><a href="#">Fleck, R. (2021.). 10 iconography rules to follow in UI design. [online] Dribbble. Available at: https://dribbble.com/stories/2021/09/15/ui-icon-tips. </a></li>
-            <li><a href="#">‌Geyser, H. (2023) ‘Designing Interaction’, [Lecture], WSOA3028A: Interactive Media 3A, University of the Witwatersrand, 16 March 2023. </a></li>
-            <li><a href="#">Intechnic. (n.d.). Color Accessibility – UX Best Practices for Using Color in Design. [online] Available at: https://www.intechnic.com/blog/color-accessibility-ux-best-practices-for-using-color-in-design/.
-                Apr. 2024].
-                 </a></li>
-            <li><a href="#">MDN Web Docs. (2020). Introduction to cross browser testing. [online] Available at: https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction. </a></li>
-            <li><a href="#">Nelson. (2003). Proposal For A Universal Electronic Publishing System and Archive | PDF | World Wide Web | Internet & Web. [online] Available at: https://www.scribd.com/document/454107/Proposal-for-a-Universal-Electronic-Publishing-System-and-Archive [Accessed 3 Apr. 2024]. </a></li>
-            <li><a href="#">OneTrust (2020). Ethics in Privacy and Security. [online] OneTrust. Available at: https://www.onetrust.com/blog/ethics-in-privacy-and-security/. </a></li>
-            <li><a href="#">Soegaard, M. (2023). UI Color Palette 2023: Best Practices, Tips, and Tricks for Designers. [online] The Interaction Design Foundation. Available at: https://www.interaction-design.org/literature/article/ui-color-palette. </a></li>
-            <li><a href="#">Smashing Magazine. (2019). How A Screen Reader User Accesses The Web: A Smashing Video. [online] Available at: https://www.smashingmagazine.com/2019/02/accessibility-webinar/ [Accessed3 Apr. 2024].
-
-            </a></li>
-            <li><a href="#"> SMUTS, A. (2009). What Is Interactivity? The Journal of Aesthetic Education, [online] 43(4), pp.53–73. Available at: https://www.jstor.org/stable/25656247. </a></li>
-            <li><a href="#">typographyhandbook.com. (n.d.). Typography Handbook. [online] Available at: https://typographyhandbook.com/.  </a></li>
-            <li><a href="#">W3C (2019). Tips for Getting Started Designing for Web Accessibility. [online] Web Accessibility Initiative (WAI). Available at: https://www.w3.org/WAI/tips/designing/.  </a></li>
-          
-        </ul>
-       </section>
-    </details>
-        </article>
-            <article aria-label="Essay 2">
-                <h3>Essay 2</h3>
-                <p>Essay content goes here...</p>
-            </article>
+    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+    <main class="essays">
+        <section class="essays__header">
+            <h1>Essays</h1>
+            <p class="essays__intro">Dive into my essays where critical thought meets the written word, discussing the intersections of technology, society, and future-forward thinking.</p>
+        </section>
+        <section class="essays__content">
+            <div class="essays__list">
+                <article class="essay__item">
+                    <img src="../Images/essay1.jpg" alt="Essay 1 Image" class="essay__image">
+                    <div class="essay__info">
+                        <h2 class="essay__title" data-subtitle="UX & UI Analysis">Essay 1: UX & UI Analysis</h2>
+                        <p class="essay__intro">In the digital age, a website is more than just a platform...</p>
+                        <a href="essay1.html" class="essay__read-more">Read more</a>
+                    </div>
+                </article>
+                <article class="essay__item">
+                    <img src="../Images/essay2.jpg" alt="Essay 2 Image" class="essay__image">
+                    <div class="essay__info">
+                        <h2 class="essay__title" data-subtitle="The Future of Interaction Design">Essay 2: Interaction Design</h2>
+                        <p class="essay__intro">Exploring the future of interaction design and its impact...</p>
+                        <a href="essay2.html" class="essay__read-more">Read more</a>
+                    </div>
+                </article>
+                <!-- Add more essays as needed -->
+            </div>
         </section>
     </main>
     <footer>
-        <address class="vcard" >
-            <p>&copy; 2024 <span class="fn">Aaminah Habib</span> | All rights reserved</p>
-        </address>
+        <div class="footer-content">
+            <p>&copy; 2024 Aaminah Habib | All rights reserved</p>
+        </div>
+    </footer>
+    <script src="../js/menu.js"></script>
 </body>
 </html>

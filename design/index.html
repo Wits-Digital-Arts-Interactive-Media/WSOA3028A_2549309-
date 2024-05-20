@@ -3,36 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
     <meta name="description" content="Aaminah's  portfolio website for WSOA3028A">
     <meta name="author" content="Aaminah Habib">
     <meta property="og:title" content="Aaminah Habib's Portfolio">
-    <meta property="og:description" content="Discover Aaminah Habib's design proceess for WSOA3028A portfolio in game design and interactive media.">
+    <meta property="og:description" content="Discover perspectives and blog of Aaminah Habib's WSOA3028A portfolio in game design and interactive media.">
     <meta property="og:image" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2549309/Images/profile.jpg">
     <meta property="og:type" content="website">
-    <title>Design process</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/menu.js" defer></script>
-    <script src="../js/active-nav.js"></script>
+    <title>Design</title>
+    <script src="../js/menu.js"></script>
+    <script src="../js/main.js"></script>
     <script src="../js/scrolling.js"></script>
+    <script src="../js/backToTop.js"></script>
+
+
 </head>
 <body>
-    <header>
-        Aaminah Habib
-        <h1> Design process</h1>
-        <div id="nav-container"></div>
-            <!-- <ul style="list-style: none; margin: 0; padding: 0;">
-                <li style="display: inline; margin-right: 20px;"><a href="index.html">Home</a></li>
-                <li style="display: inline; margin-right: 20px;"></li><a href="portfolio/portfolio.html">Portfolio</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="blogs/index.html">Blogs</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="designprocess.html">Design Process</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="essays/index.html">Essays</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="about.html">About</a></li>
-            </ul>--> 
-        
-        <hr>
-       <nav id="table-of-contents"></nav>
-
-    </header>
+    <!-- Navigation will be injected here by JavaScript -->
     <main> 
         <h2>Development</h2>
     <section aria-labelledby="goal-alignment">
@@ -97,8 +85,7 @@
                <li> Progress bar: To indicate the progression through the design process or long essay. However, will still be testing this and iterating this decision. </li>
                </ul>
      </section>           
-     <!--<a href="#goal-alignment">Back to Top</a>-->
-     <button class="back-to-top">Back to Top</button>
+    
 
      <section aria-labelledby="design">
             <h3 id="design">Design</h3>
@@ -186,8 +173,7 @@
 
 
       </section>
-      <!--<a href="#goal-alignment">Back to Top</a>-->
-      <button class="back-to-top">Back to Top</button>
+  
 
 
         <h4>Style Guide</h4>
@@ -325,13 +311,15 @@ The ToC actively highlights which section is currently being viewed, giving user
         <p> Large, medium and small (depending on page), expressive images for portfolio and blog entries, also home page, with captions when necessary.</p>
         <p> The images provide a visual break from text and help to tell a story, showcasing my work and thoughts effectively. It also aligns with best practices for portfolio sites where visual work needs to be front and center.</p>
     </section>
-    <!--<a href="#goal-alignment">Back to Top</a>-->
-    <button class="back-to-top">Back to Top</button>
-
+ 
+            <!-- Back to Top Button -->
+            <button id="back-to-top" title="Back to top">↑</button>
     </main>
     <footer>
-        <address class="vcard" >
-            <p>&copy; 2024 <span class="fn">Aaminah Habib</span> | All rights reserved</p>
-        </address>
+        <div class="footer-content">
+            <p>&copy; 2024 Aaminah Habib | All rights reserved</p>
+        </div>
+    </footer>
+   
 </body>
 </html>

@@ -3,57 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aaminah's  portfolio website for WSOA3028A">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <meta name="description" content="Aaminah's portfolio website for WSOA3028A">
     <meta name="author" content="Aaminah Habib">
     <meta property="og:title" content="Aaminah Habib's Portfolio">
-    <meta property="og:description" content="Discover more about me in Aaminah Habib's WSOA3028A portfolio in game design and interactive media.">
+    <meta property="og:description" content="Discover perspectives and blog of Aaminah Habib's WSOA3028A portfolio in game design and interactive media.">
     <meta property="og:image" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2549309/Images/profile.jpg">
     <meta property="og:type" content="website">
-    <title>About </title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/menu.js" defer></script>
-    <script src="./js/active-nav.js" defer></script>
+    <title>About</title>
+    <script src="js/menu.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
 </head>
 <body>
-    <header>
-        Aaminah Habib
-        <h1> About </h1>
-       
-        <div id="nav-container"></div>
-            <!--  <ul style="list-style: none; margin: 0; padding: 0;">
-                <li style="display: inline; margin-right: 20px;"><a href="index.html">Home</a></li>
-                <li style="display: inline; margin-right: 20px;"></li><a href="portfolio/portfolio.html">Portfolio</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="blogs/index.html">Blogs</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="designprocess.html">Design Process</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="essays/index.html">Essays</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="about.html">About</a></li>
-            </ul>-->
-        
-        <hr>
-
-    </header>
-    <main>
-        <h2>About Me</h2>
-    <p class="h-card">
-    <article>
-        <section>
-            <h3>Who am I?</h3> 
-            <p>I am Aaminah Habib, a passionate game designer and interactive media student. My journey in the world of digital art and design is driven by a relentless pursuit of creating immersive and inclusive experiences that resonate with users worldwide. From conceptualizing game environments to executing interactive projects, every creation is a step towards redefining the boundaries of storytelling and gameplay.</p> 
-            <figure>
-                <img class="u-photo" src="Images/profile.jpg" alt="A Bitmoji representing Aaminah Habib, smiling" title="Profile Image"  width="400" height="400">
-                <figcaption>A glimpse of me.</figcaption>
-            </figure>
-           <span class="p-name">Aaminah Habib</span><br>
-        <a class="u-email" href="simplymyownstory@gmail.com">simplymyownstory@gmail.com</a><br>
-        <span class="p-org">University of the Witwatersrand</span><br>
-        <span class="p-locality">Johannesburg</span><br>
-        <span class="p-country-name">South Africa</span> 
+    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+    <main class="about">
+        <section class="about__container">
+            <div class="about__image-container">
+                <img class="about__image" src="Images/profile.jpg" alt="A Bitmoji representing Aaminah Habib, smiling" title="Profile Image">
+            </div>
+            <div class="about__content">
+                <h1>About Me</h1>
+                <p>I am Aaminah Habib, a passionate game designer and interactive media student. My journey in the world of digital art and design is driven by a relentless pursuit of creating immersive and inclusive experiences that resonate with users worldwide. From conceptualizing game environments to executing interactive projects, every creation is a step towards redefining the boundaries of storytelling and gameplay.</p>
+                <button class="contact__button" id="openModal">Contact</button>
+            </div>
         </section>
-    </article>
     </main>
+
+    <!-- Contact Form Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
     <footer>
-        <address class="vcard" >
-            <p>&copy; 2024 <span class="fn">Aaminah Habib</span> | All rights reserved</p>
-        </address>
+        <div class="footer-content">
+            <p>&copy; 2024 Aaminah Habib | All rights reserved</p>
+        </div>
+    </footer>
+   
 </body>
 </html>

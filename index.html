@@ -3,94 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aaminah's  portfolio website for WSOA3028A">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <meta name="description" content="Aaminah's portfolio website for WSOA3028A">
     <meta name="author" content="Aaminah Habib">
     <meta property="og:title" content="Aaminah Habib's Portfolio">
-    <meta property="og:description" content="Discover Aaminah Habib's WSOA3028A portfolio in game design and interactive media.">
+    <meta property="og:description" content="Discover perspectives and blog of Aaminah Habib's WSOA3028A portfolio in game design and interactive media.">
     <meta property="og:image" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2549309/Images/profile.jpg">
     <meta property="og:type" content="website">
-    <title>Home </title>
-    
-    
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/menu.js" defer></script>
-    <script src="./js/active-nav.js" defer></script>
+    <title>Home</title>
+    <script src="js/menu.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
-    <header>
-        Aaminah Habib
-        <h1> Home</h1>
-        <div id="nav-container"></div>
-
-            <!--   <ul style="list-style: none; margin: 0; padding: 0;">
-                <li style="display: inline; margin-right: 20px;"><a href="index.html">Home</a></li>
-                <li style="display: inline; margin-right: 20px;"></li><a href="portfolio/portfolio.html">Portfolio</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="blogs/index.html">Blogs</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="designprocess.html">Design Process</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="essays/index.html">Essays</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="about.html">About</a></li>
-            </ul>
-        -->
-       
-        <hr>
-        
-    </header>
-    <main>
-        <article>
-            <section>
-                <h2>Game Design/Interactive Media</h2> 
-                <p>Dive into the nexus of creativity and technology where each project is a story waiting to be told. From the intricate designs of game environments to the immersive experiences of interactive media, explore a portfolio curated to showcase innovation, craftsmanship...</p>
-                
-            </section>
-            <h2 class="interactive-heading"><a href="blogs/index.html">My blogs</a></h2>
-            <p> Explore a collection of insights and stories where I unravel the threads of digital creativity and the web's ever-evolving landscape</p>
-            <hr>
-            <h2 class="interactive-heading"><a href="portfolio/index.html">My portfolio</a></h2>
-            <p>Delve into my curated gallery showcasing projects, each piece a chapter in my design journey. </p>
-            <figure>
-                    <img src="Images/homePageWork.png" alt="digital artwork of a scene from a platformer vidoe game which is an example of Aaminahs works"  class="portfolio-hover-image" title="Homepage artwork" width="500" height="300"> 
-                    <figcaption>An example of my art.</figcaption>
-                </figure>
-                
-            <hr>
-            <h2 class="interactive-heading"><a href="essays/index.html">My essays</a></h2> 
-            <p>Dive into my essays where critical thought meets the written word, discussing the intersections of technology, society, and future-forward thinking. </p>
-            <hr>
-            <h2 class="interactive-heading"><a href="design/index.html">My design process</a></h2>
-            <p>Take a peek behind my design process, from the spark of inspiration to the final flourish of completion. </p>
-            <hr>
-            <h2 class="interactive-heading"><a href="About.html">About Me</a></h2>
-            <p> Learn about the person behind the creativity, my philosophy on design, and the path that has led me to where I stand in the digital realm today.</p>
-            <hr>
-
+    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+    <main class="home">
+        <section class="home__intro">
+            <h1>Game Design/Interactive Media</h1>
+            <p>Dive into the nexus of creativity and technology where each project is a story waiting to be told. From the intricate designs of game environments to the immersive experiences of interactive media, explore a portfolio curated to showcase innovation, craftsmanship...</p>
+        </section>
+        <section class="home__sections">
+            <div class="home__section">
+                <h2 class="home__section-title"><a href="blogs/index.html" class="home__link">My Blogs</a></h2>
+                <img src="Images/blog.png" alt="An example of my art" class="home__image">
+                <p>Explore a collection of insights and stories where I unravel the threads of digital creativity and the web's ever-evolving landscape.</p>
+            </div>
+            <div class="home__section">
+                <h2 class="home__section-title"><a href="portfolio/index.html" class="home__link">My Portfolio</a></h2>
+                <img src="Images/portfolio.png" alt="An example of my art" class="home__image">
+                <p>Delve into my curated gallery showcasing projects, each piece a chapter in my design journey.</p>
+            </div>
+            <div class="home__section">
+                <h2 class="home__section-title"><a href="essays/index.html" class="home__link">My Essays</a></h2>
+                <img src="Images/essays.png" alt="An example of my art" class="home__image">
+                <p>Dive into my essays where critical thought meets the written word, discussing the intersections of technology, society, and future-forward thinking.</p>
+            </div>
+            <div class="home__section">
+                <h2 class="home__section-title"><a href="design/index.html" class="home__link">My Design Process</a></h2>
+                <img src="Images/design proces.png" alt="An example of my art" class="home__image">
+                <p>Take a peek behind my design process, from the spark of inspiration to the final flourish of completion.</p>
+            </div>
+            <div class="home__section">
+                <h2 class="home__section-title"><a href="About.html" class="home__link">About Me</a></h2>
+                <img src="Images/about.png" alt="An example of my art" class="home__image">
+                <p>Welcome to my personal space! I am Aaminah Habib, a passionate game designer and interactive media student.</p>
+            </div>
+        </section>
     </main>
     <footer>
-        <address class="vcard" >
-            <p>&copy; 2024 <span class="fn">Aaminah Habib</span> | All rights reserved</p>
-        </address>
-        <script>
-           document.addEventListener('DOMContentLoaded', function() {
-  const portfolioImage = document.querySelector('.portfolio-hover-image');
-
-  // When the mouse enters the image area
-  portfolioImage.addEventListener('mouseenter', function() {
-    // Change the image or style
-    this.style.transform = 'scale(1.1)'; 
-    this.style.opacity = '0.7';        
-    // can also change the source of the image if i want to swap images
-    // this.src = 'path-to-your-hover-image.jpg';
-  });
-
-  // When the mouse leaves the image area
-  portfolioImage.addEventListener('mouseleave', function() {
-    // Revert the image or style to original
-    this.style.transform = '';
-    this.style.opacity = '1';
-    // And if swapped images, revert to the original
-    // this.src = 'path-to-your-original-image.jpg';
-  });
-});
-
-          </script>
+        <div class="footer-content">
+            <p>&copy; 2024 Aaminah Habib | All rights reserved</p>
+        </div>
+    </footer>
+    <script src="js/menu.js"></script>
 </body>
 </html>
