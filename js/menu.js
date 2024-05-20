@@ -1,43 +1,49 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const basePath = window.location.pathname.includes('index.html') ? '.' : '..';
+    // Dynamically set the base path based on the depth of the current directory
+    const depth = window.location.pathname.split('/').filter(part => part.length > 0).length - 1;
+    let basePath = '';
+    for (let i = 0; i < depth; i++) {
+        basePath += '../';
+    }
+
     const navHTML = `
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="${basePath}/index.html" class="nav__logo">AAMINAH HABIB</a>
+            <a href="${basePath}index.html" class="nav__logo">AAMINAH HABIB</a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="${basePath}/index.html" class="nav__link">
+                        <a href="${basePath}index.html" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
                             <span>Home</span>
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="${basePath}/blogs/index.html" class="nav__link">
+                        <a href="${basePath}blogs/index.html" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
                             <span>Blogs</span>
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="${basePath}/portfolio/index.html" class="nav__link">
+                        <a href="${basePath}portfolio/index.html" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
                             <span>Portfolio</span>
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="${basePath}/essays/index.html" class="nav__link">
+                        <a href="${basePath}essays/index.html" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
                             <span>Essays</span>
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="${basePath}/design/index.html" class="nav__link">
+                        <a href="${basePath}design/index.html" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
                             <span>Design Process</span>
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="${basePath}/about.html" class="nav__link">
+                        <a href="${basePath}about.html" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
                             <span>About</span>
                         </a>
