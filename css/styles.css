@@ -212,7 +212,7 @@ a {
 
 /* Sibling fade animation */
 .nav__list:has(.nav__link:hover) .nav__link:not(:hover) {
-  opacity: 0.4;
+  opacity: 0.8;
 }
 
 .nav__close {
@@ -245,6 +245,18 @@ a {
   visibility: visible;
   transform: translateX(0);
 }
+
+/* Active navigation link */
+.nav__link.active {
+  color: #007BFF; /* Change the color to indicate active page */
+  font-weight: bold; /* Make the active link bold */
+}
+
+.nav__link.active span::after {
+  width: 100%; /* Extend the underline for active link */
+  background-color: #007BFF; /* Change underline color to match */
+}
+
 
 /* Large devices */
 @media screen and (min-width: 1150px) {
@@ -1058,4 +1070,27 @@ header, footer {
   figure img {
       width: 100%;
   }
+}
+/* footer */
+
+footer {
+    background-color: #333; /* Dark background */
+    color: white; 
+    padding: 20px 0; 
+    text-align: center; 
+    font-size: 14px; 
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
+}
+
+.footer-content {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.footer-content p {
+    margin: 0; 
+    line-height: 1.6; 
 }

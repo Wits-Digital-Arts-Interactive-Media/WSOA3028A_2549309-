@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const blogs = [
-        { title: "Blog 1", link: "blog1.html" },
-        { title: "Blog 2", link: "blog2.html" },
-        { title: "Blog 3", link: "blog3.html" },
-        { title: "Blog 4", link: "blog4.html" },
-        { title: "Blog 5", link: "blog5.html" },
-        { title: "Blog 6", link: "blog6.html" },
-        { title: "Blog 7", link: "blog7.html" },
-        { title: "Blog 8", link: "blog8.html" },
-        { title: "Blog 9", link: "blog9.html" },
-        { title: "Blog 10", link: "blog10.html" },
-        { title: "Blog 11", link: "blog11.html" },
-        { title: "Blog 12", link: "blog12.html" },
-        { title: "Blog 13", link: "blog13.html" },
+        { title: "Exploring the Roots of Internet and Web Technologies", link: "blog1.html" },
+        { title: "Exploring Website Structure and Inspirations", link: "blog2.html" },
+        { title: "Interaction Design and User Experience", link: "blog3.html" },
+        { title: "Navigating Creativity and Usability: A Journey in Responsive Design", link: "blog4.html" },
+        { title: "Advanced UX Strategies for Modern Web Design", link: "blog5.html" },
+        { title: "Internet and the Just Society", link: "blog6.html" },
+        { title: "critical reflection", link: "blog7.html" },
+        { title: "Information Geographies and Digital Hegemony: A South African Perspective", link: "blog8.html" },
+        { title: " Empowering Women Through the Internet in Africa", link: "blog9.html" },
+        { title: "Decolonizing Artificial Intelligence: Insights and Applications from Decolonial Theory", link: "blog10.html" },
+        { title: "Reflecting on Development from Code to Culture", link: "blog11.html" },
+        { title: "The Conscience of the Internet", link: "blog12.html" },
+        { title: "Critical Reflection", link: "blog13.html" },
         // Add more blog entries here
     ];
 

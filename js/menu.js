@@ -81,6 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
             navMenu.classList.remove('show-menu');
         });
     }
+
+    // Add active class to the current page link
+    const navLinks = document.querySelectorAll('.nav__link');
+    navLinks.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add('active');
+        }
+    });
 });
-
-

@@ -1,17 +1,26 @@
-window.onscroll = function() {
-    scrollFunction();
-};
+document.addEventListener("DOMContentLoaded", function() {
+    window.onscroll = function() {
+        scrollFunction();
+    };
 
-function scrollFunction() {
-    const backToTopButton = document.getElementById("back-to-top");
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        backToTopButton.style.display = "block";
-    } else {
-        backToTopButton.style.display = "none";
+    function scrollFunction() {
+        const backToTopButton = document.getElementById("back-to-top");
+        console.log("Scroll event triggered");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
     }
-}
 
-document.getElementById('back-to-top').addEventListener('click', function() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    const backToTopButton = document.getElementById('back-to-top');
+    if (backToTopButton) {
+        console.log("Button found");
+        backToTopButton.addEventListener('click', function() {
+            console.log("Back to top button clicked");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    } else {
+        console.log("Button not found");
+    }
 });
