@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <meta name="description" content="Aaminah's  portfolio website for WSOA3028A">
+    <meta name="author" content="Aaminah Habib">
+    <meta property="og:title" content="Aaminah Habib's Portfolio">
+    <meta property="og:description" content="Discover perspectives and blog of Aaminah Habib's WSOA3028A portfolio in game design and interactive media.">
+    <meta property="og:image" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2549309/Images/profile.jpg">
+    <meta property="og:type" content="website">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/menu.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/blogs.js"></script>
+    <script src="../js/backToTop.js"></script>
+</head>
+<body>
+    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+
+    <main class="home">
+        <article class="blog-content">
+            <div class="breadcrumbs"></div>
+                
+            </div>
+            <h1>Blog 14</h1>
+            <img src="../Images/blog13.png" alt="Blog image">
+   <H2>Reflection on my website from feedback session </H2>
+   <p class="intro">
+    Attending a feedback class on web development was a transformative experience, offering numerous tips and perspectives that I hadn't previously considered for my website. One of the most significant takeaways was the paramount importance of accessibility. Ensuring that my website is accessible to everyone, regardless of their device or abilities, is crucial. A website that functions only on my laptop but isn't accessible to others fails its fundamental purpose. This realization has shifted my perspective on web development, highlighting the ethical responsibility I have to make my content accessible.
+   </p>
+   <p>
+    As a beginner, I am now focusing on the basics of accessibility, such as using semantic markups and meta tags effectively. However, I learned that it’s not enough to merely include these elements; they must be meaningful. For instance, alt text for images and icons must be thoughtfully crafted to be useful for screen readers. This requires a nuanced approach: some images need detailed descriptions, while others, like background images, can have simpler alt text. Significant images and icons, such as profile and contact icons or portfolio pieces, require more descriptive alt text to convey their importance accurately.
+   </p>
+   <p>
+    While I had been focusing on responsiveness, the class highlighted several aspects I had overlooked, such as ensuring the cursor changes appropriately for hyperlinks, text input fields, and other interactive elements. This small but crucial detail significantly enhances the user interface (UI) and user experience (UX), demonstrating that even minor adjustments can have a substantial impact on overall usability.
+   </p>
+   <p>
+    I also realized the importance of aligning the user experience with the overall narrative of my portfolio. My website should not only function well but also reflect my personality and cohesively tie together my portfolio pieces. This means revisiting the user experience design to ensure it is more personalized and relevant to my portfolio, rather than just a generic website.
+   </p>
+   <p>
+    Another fascinating insight was the limitless potential of CSS for creative design. While mastering the basics of accessibility, such as semantic markups, responsiveness, and color contrast, is essential, there is also room for creative enhancements like parallax scrolling. However, these advanced features should only be added once the foundational accessibility and usability aspects are firmly in place.
+   </p>
+   <p>
+    The class also made me realize the need to revisit my wireframes and style guides, especially for specific pages like blogs and essays. Planning how elements like titles and images will be displayed is crucial to ensure they overlap smoothly and don’t clash. This detailed planning is necessary to create a visually harmonious and functionally robust website.
+   </p>
+   <p>
+    Overall, this feedback session has provided me with a new perspective and approach. It has empowered me to critically review and adjust my style guides and wireframes to create a more accessible, cohesive, and creatively designed website. This reflective process has underscored the importance of continuous learning and adaptation in web development, ensuring that my website not only meets technical standards but also delivers a meaningful and engaging user experience.
+   </p>
+   <H2>Reflection on my development moving forward </H2>
+   <p>
+    We have been speaking about accessibility. I want to start of simple. I realized the importance of sematic mark ups, so that is exactly what I will work on improving. One of the simplest yet most impactful enhancements is adding aria-label attributes to navigation buttons. This small change significantly improves the descriptiveness for screen readers, ensuring that visually impaired users can navigate my site with greater ease and understanding. I saw this before and I might have added it somewhere in my html before but what exactly is it. ARIA (Accessible Rich Internet Applications) attributes are essential tools for improving accessibility on the web. By incorporating aria-label attributes into my navigation buttons, I was able to provide clear, descriptive labels that screen readers can interpret. For example, a simple button element can be enhanced with button aria-label="Main Navigation", instantly conveying its purpose to assistive technologies. This not only improves the user experience for those relying on screen readers but also demonstrates a commitment to inclusivity.
+
+<p>While focusing on accessibility, I also noticed that my website hosts numerous images, which could potentially compromise performance. To address this, I learned about the technique of lazy loading for images. Lazy loading is a powerful strategy that defers the loading of non-critical images until they are about to enter the viewport. This optimization can drastically reduce initial load times and improve overall site performance, especially for image-heavy pages.</p>
+   </p>
+        </article>
+  <!-- Navigation Buttons -->
+  <div class="blog-navigation">
+    <button class="nav-button" id="prev-post" aria-label="Go to Previous Post">Previous Post</button>
+    <button class="nav-button" id="next-post" aria-label="Go to Next Post">Next Post</button>
+</div>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" title="Back to top">↑</button>
+</main>
+
+<footer class="blog__footer">
+<div class="footer-content">
+    <p>&copy; 2024 Aaminah Habib | All rights reserved</p>
+</div>
+</footer>
+</body>
+</html>
