@@ -20,6 +20,17 @@
  * 
  **/
 
+
+//fliping the book for comic on portfolio page
+$(document).ready(function() {
+	$('#flipbook').turn({
+		width: 800,
+		height: 600,
+		autoCenter: true
+	});
+ });
+
+ 
 (function($) {
 
 'use strict';
