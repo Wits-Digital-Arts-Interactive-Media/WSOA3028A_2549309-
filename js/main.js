@@ -1,4 +1,5 @@
 /* credit to https://www.youtube.com/watch?v=kQGKU4u9Dng for helping with this */
+/*for navigation menu */
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),

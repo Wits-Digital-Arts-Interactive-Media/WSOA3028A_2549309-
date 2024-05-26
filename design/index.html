@@ -238,6 +238,18 @@
                     <h5>Imagery and Visual Storytelling</h5>
                     <p>Large, medium, and small (depending on the page), expressive images for portfolio and blog entries, also home page, with captions when necessary.</p>
                     <p>The images provide a visual break from text and help to tell a story, showcasing my work and thoughts effectively. It also aligns with best practices for portfolio sites where visual work needs to be front and center.</p>
+                <h4>Implementation Notes</h4>
+                <details>
+                    <summary> </summary>
+                <p>The UI and UX design choices of my website have a profound impact on the organization and functionality of the code, ensuring it remains user-friendly and accessible. The folder structure of my website is carefully organized to reflect the hierarchical information structure, with separate folders for blogs, essays, portfolio, and design, each containing its own index.html and individual content pages. This separation of concerns is further extended into distinct folders for css and js, promoting modularity and scalability. For example, styles.css houses all styling rules, ensuring consistency across all pages, while separate JavaScript files (main.js, menu.js, blogs.js, backToTop.js) manage different functionalities, making the website easier to maintain and update.</p>
+                <p>
+                    Semantic markup is a key component of the website, with the use of tags like header, nav, section, article, and footer providing clear context to browsers and assistive technologies. This enhances accessibility and ensures that interface elements, such as navigation bars, buttons, and forms, are fully and correctly expressed. For instance, the navigation bar uses semantic nav tags and ARIA attributes to improve usability for screen readers.
+                </p>
+            <p>
+                JavaScript  handles various interaction points, such as menu toggles in menu.js, breadcrubs, scrolling, back-to-top functionality in backToTop.js, and dynamic blog menu generation in blogs.js. By consolidating repeated functionalities and avoiding inline scripting, the code remains clean and maintainable. External script linking further aids in this separation, ensuring that interaction points are efficiently managed without cluttering the HTML files.
+            </p>
+            <p>CSS is used extensively to ensure consistent styling across all pages, avoiding inline styles to maintain a modular approach. The use of media queries ensures responsive layouts that adapt to different screen sizes and devices, enhancing the user experience. For instance, the styles.css file includes specific rules for different screen widths, ensuring that content remains accessible and visually appealing on both mobile and desktop devices.</p>
+            </details>
                 </section>
             </div>
         </div>

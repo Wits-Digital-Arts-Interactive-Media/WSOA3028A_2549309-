@@ -1,3 +1,4 @@
+/* Blogs menu*/ 
 document.addEventListener('DOMContentLoaded', () => {
     const blogs = [
         { title: "Exploring the Roots of Internet and Web Technologies", link: "blog1.html", img: "../Images/blog1.png", intro: "Exploring the history of the internet through readings and examining the first-ever published website was interesting. It's remarkable to witness the transformation from a simple text-based interface to the vibrant, multimedia-rich experiences we encounter today. "},

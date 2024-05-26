@@ -1,3 +1,5 @@
+/*for the contact button*/
+
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('contactModal');
     const openModalBtn = document.getElementById('openModal');

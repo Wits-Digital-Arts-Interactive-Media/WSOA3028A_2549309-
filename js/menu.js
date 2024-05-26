@@ -1,5 +1,5 @@
+/*for mavigation bar too*/
 document.addEventListener('DOMContentLoaded', () => {
-    // Set the base path explicitly for GitHub Pages
     const basePath = window.location.hostname.includes('github.io') ? '/WSOA3028A_2549309/' : '/';
 
     const navHTML = `

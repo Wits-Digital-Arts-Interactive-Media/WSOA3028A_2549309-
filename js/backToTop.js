@@ -1,3 +1,4 @@
+/*For back to top button*/ 
 document.addEventListener("DOMContentLoaded", function() {
     window.onscroll = function() {
         scrollFunction();
