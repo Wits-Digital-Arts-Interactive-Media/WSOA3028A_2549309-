@@ -18,42 +18,41 @@
 </head>
 <body>
     <header class="header" id="header"></header> <!-- Navigation will be injected here -->
-    <main class="essays" >
-        <section class="essays__header">
+    <main class="home">
+        <section class="essays">
             <h1>Essays</h1>
             <p class="essays__intro">Dive into my essays where critical thought meets the written word, discussing the intersections of technology, society, and future-forward thinking.</p>
-        </section>
-        <section class="essays__content">
-            <div class="essays__list">
-                <article class="essay__item">
-                  
-                    <div class="essay__info">
-                        <h2 class="essay__title" data-subtitle="UX & UI Analysis">Essay 1: UX & UI Analysis</h2>
-                         <img src="../Images/essay 1.png" alt="Essay 1 Image" class="essay__image"> 
-                         <p class="essay__intro">In the digital age, a website is more than just a platform...</p>
-                        <a href="essay1.html" class="essay__read-more">Read more</a>
+            <ul id="essay-menu" class="essay__list">
+                <li class="essay__item">
+                    <div class="essay__image-container">
+                        <img src="../Images/essay 1.png" alt="Essay 1" class="essay__image">
                     </div>
-                </article>
-                <article class="essay__item">
-                    
-                    <div class="essay__info">
-                        <h2 class="essay__title" data-subtitle="The Future of Interaction Design">Essay 2: Interaction Design</h2>
-                        <img src="../Images/essay 2.png" alt="Essay 2 Image" class="essay__image">
-                        <p class="essay__intro">Exploring the future of interaction design and its impact...</p>
-                        <a href="essay2.html" class="essay__read-more">Read more</a>
+                    <div class="essay__content">
+                        <a href="essay1.html" class="essay__link">Essay 1: UX & UI Analysis</a>
+                        <p class="essay__intro">In the digital age, a website is more than just a platform; it's a dynamic interface where organizations articulate their mission, engage with their audience, and strive to meet comprehensive goals that span visibility, engagement, conversion, support, and education, all while developing brand loyalty. Discovery, a leader in health insurance, banking services, and wellness solutions in South Africa, represents this multi-faceted approach through its website. </p>
+                        <a href="essay1.html" class="read-more">Read more</a>
                     </div>
-                </article>
+                </li>
+                <li class="essay__item">
+                    <div class="essay__image-container">
+                        <img src="../Images/essay 2.png" alt="Essay 2" class="essay__image">
+                    </div>
+                    <div class="essay__content">
+                        <a href="essay2.html" class="essay__link">Essay 2: Digital Colonialism</a>
+                        <p class="essay__intro">In the digital age, a website is more than just a platform; it's a dynamic interface where organizations articulate their mission, engage with their audience, and strive to meet comprehensive goals that span visibility, engagement, conversion, support, and education, all while developing brand loyalty. Discovery, a leader in health insurance, banking services, and wellness solutions in South Africa, represents this multi-faceted approach through its website. </p>
+                        <a href="essay2.html" class="read-more">Read more</a>
+                    </div>
+                </li>
                 <!-- Add more essays as needed -->
-            </div>
+            </ul>
         </section>
-          <!-- Back to Top Button -->
-  <button id="back-to-top" title="Back to top">↑</button>
+        <!-- Back to Top Button -->
+        <button id="back-to-top" title="Back to top">↑</button>
     </main>
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 Aaminah Habib | All rights reserved</p>
         </div>
     </footer>
-    <script src="../js/menu.js"></script>
 </body>
 </html>

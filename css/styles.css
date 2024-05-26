@@ -719,55 +719,55 @@ a {
   }
 }
 /*=============== ESSAYS PAGE ===============*/
+/*=============== ESSAYS MENU ===============*/
 .essays {
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
-.essays__header {
+.essays h1 {
   text-align: center;
-  margin-bottom: 40px;
-}
-
-.essays__header h1 {
-  margin-bottom: 10px;
 }
 
 .essays__intro {
+  text-align: center;
   font-size: 1.1em;
   color: #666;
+  margin-bottom: 40px;
 }
 
-.essays__content {
+.essay__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
-  justify-content: center;
 }
 
 .essay__item {
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  flex: 1 1 calc(50% - 40px);
   display: flex;
-  flex-direction: column;
+  gap: 20px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
   align-items: center;
-  text-align: left;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .essay__item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background: #eee;
+}
+
+.essay__image-container {
+  flex-shrink: 0;
 }
 
 .essay__image {
-  max-width: 100%;
+  max-width: 200px;
   border-radius: 8px;
-  margin-bottom: 10px;
   transition: opacity 0.3s, transform 0.3s;
 }
 
@@ -776,54 +776,70 @@ a {
   transform: scale(1.05);
 }
 
-.essay__info {
-  padding: 20px;
+.essay__content {
+  flex: 1;
 }
 
-.essay__title {
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.essay__title:hover::after {
-  content: attr(data-subtitle);
-  display: block;
-  font-size: 0.9em;
-  color: #555;
-  margin-top: 5px;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+.essay__link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .essay__intro {
-  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #666;
 }
 
-.essay__read-more {
+/* Read more button styling */
+.read-more {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #333;
+  background-color: var(--primary-color); /* Use primary color for consistency */
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.3s;
+  margin-top: 10px; /* Ensure there's spacing above the button */
 }
 
-.essay__read-more:hover {
-  background-color: #555;
+.read-more:hover {
+  background-color: #0056b3; /* Darken the button on hover */
+  transform: translateY(-3px); /* Slightly raise the button on hover */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .essay__item {
-      flex: 1 1 100%;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .essay__image {
-      max-width: 100%;
+    max-width: 100%;
+  }
+
+  .essay__link {
+    font-size: 1.5rem;
+  }
+
+  .read-more {
+    width: 100%;
+    text-align: center;
   }
 }
+
+@media (max-width: 480px) {
+  .essays h1 {
+    font-size: 1.5rem;
+  }
+
+  .essay__link {
+    font-size: 1.2rem;
+  }
+}
+
 
 /*=============== BLOG MENU ===============*/
 .blogs {
@@ -1194,9 +1210,14 @@ a {
   margin-top: 60px;
 }
 
+h1 {
+  text-align: center;  
+}
+
 h2, h3, h4, h5 {
   color: #333;
 }
+
 
 ul, details {
   margin: 1rem 0;
@@ -1215,6 +1236,23 @@ a:hover {
   text-decoration: underline;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+ 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: left; 
+}
+
+.subtitle {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: center; 
+}
 /* ToC container adjustments */
 .toc-container {
   position: fixed;
