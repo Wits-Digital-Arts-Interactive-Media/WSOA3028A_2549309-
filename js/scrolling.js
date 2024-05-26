@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   function setupBackToTopButton() {
-    var backToTopButtons = document.querySelectorAll('.back-to-top');
+    let backToTopButtons = document.querySelectorAll('.back-to-top');
   
     backToTopButtons.forEach(function(button) {
         button.addEventListener('click', function(e) {
