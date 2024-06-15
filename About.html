@@ -15,10 +15,11 @@
     <script src="js/menu.js"></script>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/formspree.js"></script>
 </head>
 <body>
-    <header class="header" id="header" ></header> <!-- Navigation will be injected here -->
-    <main class="about" >
+    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+    <main class="about">
         <section class="about__container">
             <div class="about__image-container">
                 <img class="about__image" src="Images/profile.jpg" alt="A Bitmoji representing Aaminah Habib, smiling" title="Profile Image">
@@ -35,7 +36,6 @@
                 </div>
                 <button class="contact__button" id="openModal">Contact</button>
             </div>
-            
         </section>
     </main>
 
@@ -44,7 +44,7 @@
         <div class="modal-content">
             <span class="close-button" id="closeModal">&times;</span>
             <h2>Contact Me</h2>
-            <form id="contactForm">
+            <form id="contactForm" action="https://formspree.io/f/mvoeedoz" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 <label for="email">Email:</label>
@@ -53,6 +53,7 @@
                 <textarea id="message" name="message" required></textarea>
                 <button type="submit">Send</button>
             </form>
+            <div id="form-response" style="display:none; margin-top: 20px;"></div>
         </div>
     </div>
 
@@ -61,6 +62,5 @@
             <p>&copy; 2024 Aaminah Habib | All rights reserved</p>
         </div>
     </footer>
-   
 </body>
 </html>
