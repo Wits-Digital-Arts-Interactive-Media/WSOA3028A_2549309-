@@ -946,7 +946,53 @@ a {
   left: auto;
   right: -30px;
 }
+.blog-meta {
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
 
+.blog-meta time {
+  font-weight: bold;
+}
+
+.blog-meta a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.blog-meta a:hover {
+  text-decoration: underline;
+}
+/* Simple Animated Decorative Divider Styles */
+.decorative-divider {
+  width: 100%;
+  height: 20px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.decorative-divider::before {
+  content: '';
+  position: absolute;
+  width: 0; /* Start with 0 width */
+  height: 3px;
+  background: #053c15;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  animation: draw-line 3s forwards; /* Animation runs only once and stays in the final state */
+}
+
+@keyframes draw-line {
+  0% {
+      width: 0;
+  }
+  100% {
+      width: 100%;
+  }
+}
 
 
 /* Responsive Styles */
