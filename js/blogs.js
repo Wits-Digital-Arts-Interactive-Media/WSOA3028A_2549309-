@@ -1,8 +1,8 @@
 /* Blogs menu*/ 
 document.addEventListener('DOMContentLoaded', () => {
     const blogs = [
-        { title: "Exploring the Roots of Internet and Web Technologies", link: "blog1.html", img: "../Images/blog1.png", intro: "Exploring the history of the internet through readings and examining the first-ever published website was interesting. It's remarkable to witness the transformation from a simple text-based interface to the vibrant, multimedia-rich experiences we encounter today. "},
-        { title: "Exploring Website Structure and Inspirations", link: "blog2.html" , img: "../Images/blog2.png",intro:"I envision a blog page designed with a visually appealing timeline layout, featuring blocks representing individual blog posts. Each block displays the date and title of the post, along with a ‘’check it out’’ button for users to explore further. I've carefully considered the folder structure as follows."},
+        { title: "Exploring the Roots of Internet and Web Technologies", link: "blog1.html",  intro: "Exploring the history of the internet through readings and examining the first-ever published website was interesting. It's remarkable to witness the transformation from a simple text-based interface to the vibrant, multimedia-rich experiences we encounter today. "},
+        { title: "Exploring Website Structure and Inspirations", link: "blog2.html" , intro:"I envision a blog page designed with a visually appealing timeline layout, featuring blocks representing individual blog posts. Each block displays the date and title of the post, along with a ‘’check it out’’ button for users to explore further. I've carefully considered the folder structure as follows."},
         { title: "Interaction Design and User Experience", link: "blog3.html" , img: "../Images/blog3.png",intro:"In the digital world, every pixel and code snippet play a crucial role in storytelling. The narrative isn't just in the content we produce but, in the journey, we craft for our users. This week, I dove into the art of interaction design to align my website's content, experience, and interface elements with the intricate expectations of diverse audiences. " },
         { title: "Reflection on wireframes in line with the IXD process", link: "blog4.html", img: "../Images/blog4.png", intro:"Reflecting on how my original wireframes are aligning with the IxD process, I believe they provide a solid foundation that captures my vision for the site. The structural layout aligns well with the user-centric design principles I am aiming to uphold. "},
         { title: "Advanced UX Strategies for Modern Web Design", link: "blog5.html", img: "../Images/blog5.png", intro:"Here are a few options of websites i want to inspect and analyse thier design practices"},
@@ -26,9 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const blogItem = document.createElement('li');
             blogItem.className = 'blog__item';
             blogItem.innerHTML = `
-                <div class="blog__image-container">
-                    <img src="${blog.img}" alt="Blog Image" class="blog__image">
-                </div>
+                
                 <div class="blog__content">
                     <a href="${blog.link}" class="blog__link">
                         <h2>${blog.title}</h2>
