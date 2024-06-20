@@ -1812,3 +1812,27 @@ img {
   margin: 0 auto;
   text-align: left;
 }
+/* Details and summary styles */
+.main-content details {
+  margin: 1rem 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.main-content summary {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.main-content summary:hover {
+  background-color: #e0e0e0;
+}
+
+.main-content details[open] summary {
+  background-color: #ddd;
+  border-bottom: 1px solid #ddd;
+}
