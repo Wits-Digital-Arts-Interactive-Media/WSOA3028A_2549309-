@@ -1246,16 +1246,7 @@ a {
 }
 
 /*=============== DESIGN PROCESS PAGE ===============*/
-.header {
-  background-color: #000;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
+
 
 /* Main content adjustments/ added for tested.TEMPORARY FIX,TO CHANGE SOON */
 .main-content {
@@ -1353,7 +1344,7 @@ a:hover {
   top: 100px;
   left: 0;
   padding: 10px;
-  background-color: #fff;
+  background-color: #000000;
   border-right: 1px solid #ddd;
   width: 200px;
   height: calc(100% - 100px);
@@ -1376,7 +1367,7 @@ a:hover {
 }
 
 .toc-container a {
-  color: #333;
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.9rem;
   display: block;
@@ -1452,6 +1443,29 @@ header, footer {
       width: 100%;
   }
 }
+
+/* Additional responsive styles * for tablet/
+@media (max-width: 1024px) {
+  .toc-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 10px;
+  }
+}
+
 /* Footer styles */
 footer {
   background-color: #333; /* Dark background */
