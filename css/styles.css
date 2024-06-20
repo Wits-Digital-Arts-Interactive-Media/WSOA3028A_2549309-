@@ -1444,7 +1444,7 @@ header, footer {
   }
 }
 
-/* Additional responsive styles * for tablet/
+/* Additional responsive styles  for tablet*/
 @media (max-width: 1024px) {
   .toc-container {
     position: relative;
