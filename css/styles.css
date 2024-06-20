@@ -1384,10 +1384,9 @@ h6 {
 }
 
 /*=============== DESIGN PROCESS PAGE ===============*/
-
 /*=============== DESIGN PROCESS PAGE ===============*/
 
-/* Main content adjustments/ added for tested.TEMPORARY FIX,TO CHANGE SOON */
+/* Main content adjustments */
 .main-content {
   margin-left: 220px; /* Adjust according to ToC width */
   padding: 40px; /* Increase padding for more space */
@@ -1414,11 +1413,6 @@ h6 {
   margin-bottom: 20px; /* Add space below lists */
 }
 
-/* Details and summary styles */
-.main-content details {
-  margin: 1rem 0;
-}
-
 /* Link styles */
 .main-content a {
   color: var(--primary-color);
@@ -1442,12 +1436,8 @@ h2, h3, h4, h5 {
   color: #333;
 }
 
-
-ul, details {
-  margin: 1rem 0;
-}
-
 ul {
+  margin: 1rem 0;
   padding-left: 1.5rem;
 }
 
@@ -1464,7 +1454,6 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
- 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   text-align: left; 
@@ -1477,6 +1466,7 @@ a:hover {
   line-height: 1.6;
   text-align: center; 
 }
+
 /* ToC container adjustments */
 .toc-container {
   position: fixed;
@@ -1542,68 +1532,11 @@ a:hover {
 }
 
 /* Styles to fix overlapping issues */
-.main-content {
-  margin-left: 220px; /* Adjust according to ToC width */
-  padding: 20px;
-}
-
 header, footer {
   position: relative;
   z-index: 101; /* Ensure they are above the ToC */
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .toc-container {
-      position: static;
-      width: 100%;
-      height: auto;
-      border-right: none;
-      border-bottom: 1px solid #ddd;
-  }
-
-  .main-content {
-      margin-left: 0;
-      padding: 10px;
-  }
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .toc-container {
-      display: none;
-  }
-
-  .content {
-      margin: 1rem;
-  }
-
-  figure img {
-      width: 100%;
-  }
-}
-
-/* Additional responsive styles  for tablet*/
-@media (max-width: 1024px) {
-  .toc-container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .main-content {
-    margin-left: 0;
-    padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .main-content {
-    padding: 10px;
-  }
-}
 /* General styles for all images */
 img {
   max-width: 100%;
@@ -1642,12 +1575,13 @@ img {
     width: 100%; /* Scale images to full width on smaller screens */
   }
 }
+
 /* Image container styles */
 .image-container {
-  max-width: 50%;
+  max-width: 100%;
   margin: auto;
   padding: 10px;
-  text-align: center;
+  text-align: left;
 }
 
 .image-container img {
@@ -1657,19 +1591,6 @@ img {
   border-radius: 10px; /* Optional: Add rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
   margin-bottom: 10px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .image-container img {
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  .image-container img {
-    max-width: 80%;
-  }
 }
 
 /* Carousel container */
@@ -1772,7 +1693,7 @@ img {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  text-align: center;
+  text-align: left;
   background: #fff;
 }
 
@@ -1810,24 +1731,40 @@ img {
   }
 }
 
-
-/* Specific section adjustments */
-.goal {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Additional responsive styles for the wireframe-cards section */
+.wireframe-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 }
 
+.wireframe-cards .card {
+  flex: 0 0 48%; /* Take up about half the container width */
+}
+
+@media (max-width: 768px) {
+  .wireframe-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wireframe-cards .card {
+    flex: 0 0 100%; /* Take full width on small screens */
+    max-width: 100%;
+  }
+}
+
+/* Goal alignment container */
 .goal-container {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  margin: 20px 0;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .goal-item {
-  flex: 0 0 48%;
+  flex: 0 0 48%; /* Adjust to take up about half the container */
   margin-bottom: 20px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1840,77 +1777,38 @@ img {
   margin-top: 0;
 }
 
-.goal-item p {
-  margin: 10px 0;
-}
-
-.goal-item ul {
-  list-style: disc inside;
-  padding-left: 20px;
-}
-
-.goal-item details summary {
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* Card container for UX section */
-.card-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.card {
-  flex: 0 0 48%;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.card h3 {
-  margin-top: 0;
-  font-size: 1.5em;
-}
-
-.card figure {
-  margin: 20px 0;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.card figcaption {
-  margin-top: 10px;
-  font-style: italic;
-  color: #666;
-}
-
 /* Adjustments for smaller screens */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .goal-container {
-      justify-content: center;
-  }
-  
-  .goal-item {
-      flex: 0 0 100%;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .card {
-      flex: 0 0 100%;
+  .goal-item {
+    flex: 0 0 100%; /* Take full width on small screens */
+    max-width: 100%;
   }
 }
 
-@media (max-width: 768px) {
-  .card-container {
-      flex-direction: column;
-      align-items: center;
-  }
+/* Decorative Divider */
+.decorative-divider {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+}
+
+/* General styles */
+.section {
+  padding: 20px 0;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
 }
