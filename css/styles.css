@@ -8,7 +8,7 @@
   /* Colors */
   --white-color: hsl(0, 0%, 100%);
   --black-color: hsl(0, 0%, 0%);
-  --primary-color: #007BFF;
+  --primary-color: #1f8bff;
 
   /* Font and typography */
   --body-font: "Montserrat Alternates", sans-serif;
@@ -188,6 +188,13 @@ a {
   .container {
     margin-inline: auto;
   }
+}
+/*global intro text*/
+.intro {
+  text-align: center;
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 40px;
 }
 /*=============== HEADER & NAV ===============*/
 .header {
@@ -492,7 +499,7 @@ a {
 
 .close-button:hover,
 .close-button:focus {
-  color: black;
+  color: rgb(221, 15, 36);
   text-decoration: none;
   cursor: pointer;
 }
@@ -625,6 +632,7 @@ a {
 
 .contact__button:hover {
   background-color: #555;
+  transform: translateY(-3px); /* Slightly raise the button on hover */
 }
 
 @media (max-width: 600px) {
@@ -1177,7 +1185,7 @@ a {
   transition: color 0.3s ease;
 }
 .prev:hover, .next:hover {
-  color: #2e96e6; /* Red color on hover */
+  color: #2e96e6; /* color on hover */
 }
 .prev {
   left: 10px;
@@ -1342,7 +1350,7 @@ a:hover {
 }
 
 .toc-container a.active {
-  background-color: #52759a;
+  background-color: #258fff;
   color: #fff;
   border-radius: 5px;
 }
@@ -1489,3 +1497,116 @@ footer {
   
 }
 
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif; /* A clean, modern font */
+  text-align: center; /* Centered text */
+  /*text-transform: uppercase;  Uppercase letters */
+  letter-spacing: 2px; /* Spacing between letters */
+  background: linear-gradient(to right, #277221, #1f0905);
+  -webkit-background-clip: text; /* Safari, Chrome, and Opera */
+  -moz-background-clip: text; /* Firefox */
+  -ms-background-clip: text; /* Microsoft browsers */
+  background-clip: text; /* Standard */
+  color: transparent; /* Make the text color transparent to show the gradient */
+  background-size: 200% 200%; /* For smooth gradient animation */
+  animation: gradient-animation 3s ease-in-out infinite, fadeIn 2s ease-in-out;
+}
+
+/* Specific styles for h1 */
+h1 {
+  font-size: 3.5em; /* Large font size */
+  margin: 20px 0; /* Space around the heading */
+  padding: 10px; /* Padding for the heading */
+}
+
+/* Specific styles for h2 */
+h2 {
+  font-size: 2em; /* Slightly smaller than h1 */
+  margin: 15px 0; /* Space around the heading */
+  padding: 5px; /* Padding for the heading */
+}
+
+/* Specific styles for h3 */
+h3 {
+  font-size: 1.5em; /* Slightly smaller than h2 */
+  margin: 10px 0; /* Space around the heading */
+  padding: 5px; /* Padding for the heading */
+}
+
+/* Specific styles for h4 */
+h4 {
+  font-size: 1em; /* Slightly smaller than h3 */
+  margin: 10px 0; /* Space around the heading */
+  padding: 5px; /* Padding for the heading */
+}
+
+/* Specific styles for h5 */
+h5 {
+  font-size: 0.75em; /* Slightly smaller than h4 */
+  margin: 10px 0; /* Space around the heading */
+  padding: 5px; /* Padding for the heading */
+}
+
+/* Specific styles for h6 */
+h6 {
+  font-size: 0.15em; /* Slightly smaller than h5 */
+  margin: 10px 0; /* Space around the heading */
+  padding: 5px; /* Padding for the heading */
+}
+
+/* Gradient animation */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 2.5em; /* Slightly smaller for tablets */
+  }
+  h2 {
+    font-size: 1.75em;
+  }
+  h3 {
+    font-size: 1.25em;
+  }
+  h4, h5, h6 {
+    font-size: 1em; /* Uniform size for smaller headings */
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em; /* Smaller for mobile devices */
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  h4, h5, h6 {
+    font-size: 0.875em; /* Uniform smaller size for mobile */
+  }
+}
