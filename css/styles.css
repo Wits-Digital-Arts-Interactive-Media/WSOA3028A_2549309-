@@ -1245,8 +1245,203 @@ a {
   }
 }
 
+
+/* Footer styles */
+footer {
+  background-color: #333; /* Dark background */
+  color: white; 
+  padding: 20px 0; 
+  text-align: center; 
+  font-size: 14px; 
+  position: relative; 
+  bottom: 0; 
+  width: 100%; 
+}
+
+.footer-content {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
+}
+
+.footer-content p {
+  margin: 0; 
+  line-height: 1.6; 
+  color: white; /* Ensure text color is white */
+}
+
+.blog__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.blog-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto; /* Added margin to separate from content */
+}
+
+.nav-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #555;
+}
+
+.blog__footer p {
+  text-align: center;
+  color: white;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog-navigation {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .nav-button {
+      margin-bottom: 10px;
+      width: 80%;
+  }
+
+  .nav-button:last-child {
+      margin-bottom: 0;
+  }
+
+  
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif; /* A clean, modern font */
+  text-align: center; /* Centered text */
+  /*text-transform: uppercase;  Uppercase letters */
+  letter-spacing: 2px; /* Spacing between letters */
+  background: linear-gradient(to right, #277221, #1f0905);
+  -webkit-background-clip: text; /* Safari, Chrome, and Opera */
+  -moz-background-clip: text; /* Firefox */
+  -ms-background-clip: text; /* Microsoft browsers */
+  background-clip: text; /* Standard */
+  color: transparent; /* Make the text color transparent to show the gradient */
+  background-size: 200% 200%; /* For smooth gradient animation */
+  animation: gradient-animation 3s ease-in-out infinite, fadeIn 2s ease-in-out;
+}
+
+/* Specific styles for h1 */
+h1 {
+  font-size: 3.5em; /* Large font size */
+  margin: 20px 0; /* Space around the heading */
+  padding: 10px; /* Padding for the heading */
+}
+
+/* Specific styles for h2 */
+h2 {
+  font-size: 1.7em; /* Slightly smaller than h1 */
+  margin: 15px 0; /* Space around the heading */
+  padding: 5px; /* Padding for the heading */
+}
+
+/* Specific styles for h3 */
+h3 {
+  font-size: 1.5em; /* Slightly smaller than h2 */
+  margin: 10px 0; /* Space around the heading */
+  padding: 5px; /* Padding for the heading */
+}
+
+/* Specific styles for h4 */
+h4 {
+  font-size: 1em; /* Slightly smaller than h3 */
+  margin: 10px 0; /* Space around the heading */
+  padding: 5px; /* Padding for the heading */
+}
+
+/* Specific styles for h5 */
+h5 {
+  font-size: 0.75em; /* Slightly smaller than h4 */
+  margin: 10px 0; /* Space around the heading */
+  padding: 5px; /* Padding for the heading */
+}
+
+/* Specific styles for h6 */
+h6 {
+  font-size: 0.15em; /* Slightly smaller than h5 */
+  margin: 10px 0; /* Space around the heading */
+  padding: 5px; /* Padding for the heading */
+}
+
+/* Gradient animation */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 2.5em; /* Slightly smaller for tablets */
+  }
+  h2 {
+    font-size: 1.75em;
+  }
+  h3 {
+    font-size: 1.25em;
+  }
+  h4, h5, h6 {
+    font-size: 1em; /* Uniform size for smaller headings */
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em; /* Smaller for mobile devices */
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  h4, h5, h6 {
+    font-size: 0.875em; /* Uniform smaller size for mobile */
+  }
+}
+
 /*=============== DESIGN PROCESS PAGE ===============*/
 
+/*=============== DESIGN PROCESS PAGE ===============*/
 
 /* Main content adjustments/ added for tested.TEMPORARY FIX,TO CHANGE SOON */
 .main-content {
@@ -1465,196 +1660,313 @@ header, footer {
     padding: 10px;
   }
 }
-
-/* Footer styles */
-footer {
-  background-color: #333; /* Dark background */
-  color: white; 
-  padding: 20px 0; 
-  text-align: center; 
-  font-size: 14px; 
-  position: relative; 
-  bottom: 0; 
-  width: 100%; 
+/* General styles for all images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Ensure images maintain aspect ratio */
 }
 
-.footer-content {
-  max-width: 1200px; 
-  margin: 0 auto; 
-  padding: 0 20px; 
-}
-
-.footer-content p {
-  margin: 0; 
-  line-height: 1.6; 
-  color: white; /* Ensure text color is white */
-}
-
-.blog__footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
-}
-
-.blog-navigation {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 400px;
-  margin: 20px auto; /* Added margin to separate from content */
-}
-
-.nav-button {
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.nav-button:hover {
-  background-color: #555;
-}
-
-.blog__footer p {
+/* Specific styles for figures and images within the main-content */
+.main-content figure {
+  max-width: 100%;
+  margin: 1rem auto;
   text-align: center;
-  color: white;
 }
 
+.main-content figure img {
+  width: 80%; /* Scale images down initially */
+  height: auto;
+}
 
+.main-content figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #666;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .main-content figure img {
+    width: 100%; /* Scale images to full width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content figure img {
+    width: 100%; /* Scale images to full width on smaller screens */
+  }
+}
+/* Image container styles */
+.image-container {
+  max-width: 50%;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd; /* Optional: Add a border */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+  margin-bottom: 10px;
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .blog-navigation {
-      flex-direction: column;
-      align-items: center;
+  .image-container img {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container img {
+    max-width: 80%;
+  }
+}
+
+/* Carousel container */
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Carousel slides */
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Navigation buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+  user-select: none;
+  z-index: 1000;
+  border: none;
+  border-radius: 10px; /* Adjusted to be more square with rounded corners */
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .prev, .next {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
   }
 
-  .nav-button {
-      margin-bottom: 10px;
-      width: 80%;
+  .next {
+    right: 5px;
   }
 
-  .nav-button:last-child {
-      margin-bottom: 0;
+  .prev {
+    left: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prev, .next {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
   }
 
+  .next {
+    right: 5px;
+  }
+
+  .prev {
+    left: 5px;
+  }
+}
+
+/* Card container styles */
+.card-container {
+  display: flex;
+  justify-content: space-between; /* Distribute space between cards */
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.card {
+  flex: 0 0 48%; /* Adjust to take up about half the container */
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  background: #fff;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .card-container {
+      justify-content: center; /* Center cards */
+  }
   
-}
-
-/* Heading Styles */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif; /* A clean, modern font */
-  text-align: center; /* Centered text */
-  /*text-transform: uppercase;  Uppercase letters */
-  letter-spacing: 2px; /* Spacing between letters */
-  background: linear-gradient(to right, #277221, #1f0905);
-  -webkit-background-clip: text; /* Safari, Chrome, and Opera */
-  -moz-background-clip: text; /* Firefox */
-  -ms-background-clip: text; /* Microsoft browsers */
-  background-clip: text; /* Standard */
-  color: transparent; /* Make the text color transparent to show the gradient */
-  background-size: 200% 200%; /* For smooth gradient animation */
-  animation: gradient-animation 3s ease-in-out infinite, fadeIn 2s ease-in-out;
-}
-
-/* Specific styles for h1 */
-h1 {
-  font-size: 3.5em; /* Large font size */
-  margin: 20px 0; /* Space around the heading */
-  padding: 10px; /* Padding for the heading */
-}
-
-/* Specific styles for h2 */
-h2 {
-  font-size: 1.7em; /* Slightly smaller than h1 */
-  margin: 15px 0; /* Space around the heading */
-  padding: 5px; /* Padding for the heading */
-}
-
-/* Specific styles for h3 */
-h3 {
-  font-size: 1.5em; /* Slightly smaller than h2 */
-  margin: 10px 0; /* Space around the heading */
-  padding: 5px; /* Padding for the heading */
-}
-
-/* Specific styles for h4 */
-h4 {
-  font-size: 1em; /* Slightly smaller than h3 */
-  margin: 10px 0; /* Space around the heading */
-  padding: 5px; /* Padding for the heading */
-}
-
-/* Specific styles for h5 */
-h5 {
-  font-size: 0.75em; /* Slightly smaller than h4 */
-  margin: 10px 0; /* Space around the heading */
-  padding: 5px; /* Padding for the heading */
-}
-
-/* Specific styles for h6 */
-h6 {
-  font-size: 0.15em; /* Slightly smaller than h5 */
-  margin: 10px 0; /* Space around the heading */
-  padding: 5px; /* Padding for the heading */
-}
-
-/* Gradient animation */
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive Styles */
-@media (max-width: 1200px) {
-  h1 {
-    font-size: 2.5em; /* Slightly smaller for tablets */
-  }
-  h2 {
-    font-size: 1.75em;
-  }
-  h3 {
-    font-size: 1.25em;
-  }
-  h4, h5, h6 {
-    font-size: 1em; /* Uniform size for smaller headings */
+  .card {
+      flex: 0 0 100%; /* Take full width */
+      max-width: 600px; /* Optional: set a max width */
   }
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2em; /* Smaller for mobile devices */
+  .card img {
+      max-width: 90%; /* Ensure images are smaller on small screens */
   }
-  h2 {
-    font-size: 1.5em;
+}
+
+@media (max-width: 480px) {
+  .card img {
+      max-width: 80%; /* Ensure images are smaller on very small screens */
   }
-  h3 {
-    font-size: 1em;
+}
+
+
+/* Specific section adjustments */
+.goal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.goal-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.goal-item {
+  flex: 0 0 48%;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: #fff;
+  text-align: left;
+}
+
+.goal-item h4 {
+  margin-top: 0;
+}
+
+.goal-item p {
+  margin: 10px 0;
+}
+
+.goal-item ul {
+  list-style: disc inside;
+  padding-left: 20px;
+}
+
+.goal-item details summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Card container for UX section */
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 0 0 48%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.card figure {
+  margin: 20px 0;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card figcaption {
+  margin-top: 10px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .goal-container {
+      justify-content: center;
   }
-  h4, h5, h6 {
-    font-size: 0.875em; /* Uniform smaller size for mobile */
+  
+  .goal-item {
+      flex: 0 0 100%;
+  }
+
+  .card {
+      flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+      flex-direction: column;
+      align-items: center;
   }
 }

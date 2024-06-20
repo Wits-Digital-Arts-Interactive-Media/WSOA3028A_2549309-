@@ -56,3 +56,24 @@ document.addEventListener('DOMContentLoaded', function () {
     lightboxTitle.textContent = title;
   }
 });
+/*navigation for wireframes */
+let slideIndexes = { 'carousel1': 0, 'carousel2': 0 };
+
+function changeSlide(n, carouselId) {
+    const carousel = document.getElementById(carouselId);
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    slideIndexes[carouselId] += n;
+
+    if (slideIndexes[carouselId] >= slides.length) {
+        slideIndexes[carouselId] = 0;
+    } else if (slideIndexes[carouselId] < 0) {
+        slideIndexes[carouselId] = slides.length - 1;
+    }
+
+    const carouselContainer = carousel.querySelector('.carousel-container');
+    carouselContainer.style.transform = `translateX(${-slideIndexes[carouselId] * 100}%)`;
+}
+
+// Initialize first slide for all carousels
+Object.keys(slideIndexes).forEach(id => changeSlide(0, id));
+
