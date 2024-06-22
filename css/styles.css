@@ -775,7 +775,7 @@ body {
 /* Essay Navigation Buttons */
 .essay-navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; 
   margin: 40px 0;
 }
 
@@ -917,7 +917,7 @@ body {
 /* Essay Navigation Buttons */
 .essay-navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; 
   margin: 40px 0; /* Added margin for spacing */
 }
 
