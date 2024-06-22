@@ -972,7 +972,7 @@ body {
   width: 30px; /* Set a reasonable fixed width */
   max-width: 90vw; /* Ensure it doesn't exceed the screen width */
   background-color: #e0dede;
-  border: 1px solid #ddd;
+
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: 'Merriweather', serif;
   cursor: pointer; /* Pointer cursor for interactivity */
@@ -988,7 +988,7 @@ body {
 .essay-nav-label {
   display: block;
   font-size: 1rem;
-  color: #9d9595;
+  color: #000000;
   margin-bottom: 5px;
   position: fixed;
   top: 120px;
@@ -1373,11 +1373,9 @@ body {
   width: 40px; /* Set a reasonable fixed width */
   max-width: 90vw; /* Ensure it doesn't exceed the screen width */
   background-color: #e0dede;
-  border: 1px solid #ddd;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: 'Merriweather', serif;
   cursor: pointer; /* Pointer cursor for interactivity */
-  z-index: 1000; /* Ensure it stays above other content */
   margin-top: 10px; /* Ensure spacing between label and dropdown */
   
 }
@@ -1391,7 +1389,7 @@ body {
 .blog-nav-label {
   display: block;
   font-size: 1rem;
-  color: #9d9595;
+  color: #000000;
   margin-bottom: 5px;
   position: fixed;
   top: 120px;
