@@ -20,7 +20,16 @@
 <body>
     <header class="header" id="header"></header> <!-- Navigation will be injected here -->
 
-    <main class="home"> <div class="breadcrumbs"></div>
+    <main class="home">  <aside >
+        <label for="blog-dropdown" class="blog-nav-label"></label>
+        <select id="blog-dropdown" aria-label="Select a blog to navigate">
+            <option value="">Select a Blog</option>
+            <!-- Options will be populated by JavaScript -->
+        </select>
+    </aside>
+        
+        
+        <div class="breadcrumbs"></div>
         <h1>Blog 7</h1>
         <article class="blog-content">
             

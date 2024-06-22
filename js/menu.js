@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navHTML = `
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="${basePath}index.html" class="nav__logo">AAMINAH HABIB</a>
+            <a href="${basePath}index.html" class="nav__logo">HABIBTEA</a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">

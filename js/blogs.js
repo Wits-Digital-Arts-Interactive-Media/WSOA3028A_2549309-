@@ -86,3 +86,53 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+/* side little Blogs menu inside blog posts*/ 
+document.addEventListener('DOMContentLoaded', () => {
+    const blogs = [
+        { title: "Roots of the Web ", link: "blog1.html"},
+        { title: "Interaction Design and User Experience", link: "blog3.html" },
+        { title: "Wireframes and IXD process", link: "blog4.html"},
+        { title: "UX Strategies for Modern Web Design", link: "blog5.html"},
+        { title: "Internet and the Just Society", link: "blog6.html" },
+        { title: "Game Design for Positive Change", link: "blog7.html"},
+        { title: "Digital Hegemony in South African ", link: "blog8.html" , img: "../Images/blog8.png"},
+        { title: " Empowering Women Through the Internet in Africa", link: "blog9.html"  },
+        { title: "Decolonizing Artificial Intelligence", link: "blog10.html"  },
+        { title: "Reflecting on Development from Code to Culture", link: "blog11.html"},
+        { title: "The Conscience of the Internet", link: "blog12.html"},
+        { title: "Rethinking Digital Technology in Africa", link: "blog13.html"},
+        { title: "From the World Wide Web to Local Wonders", link: "blog14.html"},
+        { title: "Reflection on Website from Feedback Session", link: "blog15.html"},
+        { title: "Critical Reflection ", link: "blog16.html"},
+
+        // Add more blog entries here
+    ];
+
+    const blogDropdown = document.getElementById('blog-dropdown');
+
+    const currentPath = window.location.pathname.split('/').pop();
+    let currentBlogIndex = blogs.findIndex(blog => blog.link === currentPath);
+
+    // Populate dropdown menu
+    if (blogDropdown) {
+        blogs.forEach((blog, index) => {
+            const option = document.createElement('option');
+            option.value = blog.link;
+            option.textContent = blog.title;
+            if (index === currentBlogIndex) {
+                option.selected = true;
+            }
+            blogDropdown.appendChild(option);
+        });
+
+        blogDropdown.addEventListener('change', (event) => {
+            const selectedBlog = event.target.value;
+            if (selectedBlog) {
+                window.location.href = selectedBlog;
+            }
+        });
+    }
+
+   
+        });
+    
