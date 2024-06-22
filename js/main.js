@@ -42,3 +42,37 @@ document.addEventListener('DOMContentLoaded', function () {
    }
 });
 
+/*Sidebar menu for the individual essays */
+document.addEventListener('DOMContentLoaded', () => {
+   const essays = [
+       { title: "UX & UI Analysis", link: "essay1.html"},
+       { title: "Digital Colonialism ", link: "essay2.html" },
+   
+       // Add more essay entries here
+   ];
+
+   const essayDropdown = document.getElementById('essay-dropdown');
+
+   const currentPath = window.location.pathname.split('/').pop();
+   let currentEssayIndex = essays.findIndex(essay => essay.link === currentPath);
+
+   // Populate dropdown menu
+   if (essayDropdown) {
+       essays.forEach((essay, index) => {
+           const option = document.createElement('option');
+           option.value = essay.link;
+           option.textContent = essay.title;
+           if (index === currentEssayIndex) {
+               option.selected = true;
+           }
+           essayDropdown.appendChild(option);
+       });
+
+       essayDropdown.addEventListener('change', (event) => {
+           const selectedEssay = event.target.value;
+           if (selectedEssay) {
+               window.location.href = selectedEssay;
+           }
+       });
+   }
+ });
