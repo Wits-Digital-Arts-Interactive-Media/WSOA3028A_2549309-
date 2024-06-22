@@ -981,7 +981,8 @@ body {
 
 #essay-dropdown:hover {
   border-color: #272727;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: scale(1.07); /* Zoom effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
 }
 
 .essay-nav-label {
@@ -1383,7 +1384,8 @@ body {
 
 #blog-dropdown:hover {
   border-color: #272727;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: scale(1.07); /* Zoom effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
 }
 
 .blog-nav-label {
@@ -1499,6 +1501,7 @@ body {
 .gallery-item img {
   width: 100%;
   height: auto;
+  border-radius: 8px;
   transition: transform 0.3s ease;
 }
 .gallery-item:hover {
