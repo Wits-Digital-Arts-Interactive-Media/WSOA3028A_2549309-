@@ -1,5 +1,6 @@
 /* Blogs menu*/ 
 document.addEventListener('DOMContentLoaded', () => {
+     // Blog data
     const blogs = [
         { title: "Exploring the Roots of Internet and Web Technologies", link: "blog1.html",  intro: "Exploring the history of the internet through readings and examining the first-ever published website was interesting. It's remarkable to witness the transformation from a simple text-based interface to the vibrant, multimedia-rich experiences we encounter today. "},
         { title: "Exploring Website Structure and Inspirations", link: "blog2.html" , intro:"I envision a blog page designed with a visually appealing timeline layout, featuring blocks representing individual blog posts. Each block displays the date and title of the post, along with a ‘’check it out’’ button for users to explore further. I've carefully considered the folder structure as follows."},
@@ -20,16 +21,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Add more blog entries here
     ];
+    const blogsSidebar = [
+        { title: "Roots of the Web ", link: "blog1.html"},
+        { title: "Interaction Design and User Experience", link: "blog3.html" },
+        { title: "Wireframes and IXD process", link: "blog4.html"},
+        { title: "UX Strategies for Modern Web Design", link: "blog5.html"},
+        { title: "Internet and the Just Society", link: "blog6.html" },
+        { title: "Game Design for Positive Change", link: "blog7.html"},
+        { title: "Digital Hegemony in South African ", link: "blog8.html" , img: "../Images/blog8.png"},
+        { title: " Empowering Women Through the Internet in Africa", link: "blog9.html"  },
+        { title: "Decolonizing Artificial Intelligence", link: "blog10.html"  },
+        { title: "Reflecting on Development from Code to Culture", link: "blog11.html"},
+        { title: "The Conscience of the Internet", link: "blog12.html"},
+        { title: "Rethinking Digital Technology in Africa", link: "blog13.html"},
+        { title: "From the World Wide Web to Local Wonders", link: "blog14.html"},
+        { title: "Reflection on Website from Feedback Session", link: "blog15.html"},
+        { title: "Critical Reflection ", link: "blog16.html"},
 
+        // Add more blog entries here
+    ];
+
+    // Generate blog menu
     const blogMenu = document.getElementById('blog-menu');
-
-    // Generate blog list
     if (blogMenu) {
         blogs.forEach(blog => {
             const blogItem = document.createElement('li');
             blogItem.className = 'blog__item';
             blogItem.innerHTML = `
-                
                 <div class="blog__content">
                     <a href="${blog.link}" class="blog__link">
                         <h2>${blog.title}</h2>
@@ -61,11 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-});
-// Breadcrumbs for blogs
-document.addEventListener('DOMContentLoaded', function () {
-    const breadcrumbContainer = document.querySelector('.breadcrumbs');
 
+    // Breadcrumbs for blogs
+    const breadcrumbContainer = document.querySelector('.breadcrumbs');
     if (breadcrumbContainer) {
         const path = window.location.pathname.split('/').filter(segment => segment);
         const isBlogPage = path.includes('blogs');
@@ -83,39 +99,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         breadcrumbContainer.innerHTML = breadcrumbHtml;
     }
-});
 
-
-/* side little Blogs menu inside blog posts*/ 
-document.addEventListener('DOMContentLoaded', () => {
-    const blogs = [
-        { title: "Roots of the Web ", link: "blog1.html"},
-        { title: "Interaction Design and User Experience", link: "blog3.html" },
-        { title: "Wireframes and IXD process", link: "blog4.html"},
-        { title: "UX Strategies for Modern Web Design", link: "blog5.html"},
-        { title: "Internet and the Just Society", link: "blog6.html" },
-        { title: "Game Design for Positive Change", link: "blog7.html"},
-        { title: "Digital Hegemony in South African ", link: "blog8.html" , img: "../Images/blog8.png"},
-        { title: " Empowering Women Through the Internet in Africa", link: "blog9.html"  },
-        { title: "Decolonizing Artificial Intelligence", link: "blog10.html"  },
-        { title: "Reflecting on Development from Code to Culture", link: "blog11.html"},
-        { title: "The Conscience of the Internet", link: "blog12.html"},
-        { title: "Rethinking Digital Technology in Africa", link: "blog13.html"},
-        { title: "From the World Wide Web to Local Wonders", link: "blog14.html"},
-        { title: "Reflection on Website from Feedback Session", link: "blog15.html"},
-        { title: "Critical Reflection ", link: "blog16.html"},
-
-        // Add more blog entries here
-    ];
-
+    // Side blog dropdown menu
     const blogDropdown = document.getElementById('blog-dropdown');
+    currentBlogIndex = blogsSidebar.findIndex(blog => blog.link === currentPath);
 
-    const currentPath = window.location.pathname.split('/').pop();
-    let currentBlogIndex = blogs.findIndex(blog => blog.link === currentPath);
-
-    // Populate dropdown menu
     if (blogDropdown) {
-        blogs.forEach((blog, index) => {
+        blogsSidebar.forEach((blog, index) => {
             const option = document.createElement('option');
             option.value = blog.link;
             option.textContent = blog.title;
@@ -132,7 +122,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-   
-        });
-    
+});
