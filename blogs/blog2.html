@@ -15,10 +15,12 @@
     <script src="../js/menu.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/blogs.js"></script>
-    <script src="../js/backToTop.js"></script>
+
 </head>
 <body>
-    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+    <header class="header" id="header">
+        <nav id="main-nav"></nav>
+        </header>
 
     
     <main class="home">
@@ -29,19 +31,19 @@
                 <!-- Options will be populated by JavaScript -->
             </select>
         </aside>
-        <article class="blog-content">
+        <article class="blog-content" class="h-entry">
             <div class="breadcrumbs"></div>
             
             <h1>Blog 2</h1>
-            
+          
                 <section>
-                    <h2 id="post-heading">Exploring Website Structure and Inspirations</h2>
+                    <h2 class="p-name">Exploring Website Structure and Inspirations</h2>
                     <div class="blog-meta">
                                     <time datetime="2024-02-23">23 February 2024</time> 
                                     by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
                                     <div class="decorative-divider"></div>
                                 </div>
-
+  <section class="e-content">
                 <h3>Folder structure and URL scheme</h3>
                 <p class="intro"> I envision a blog page designed with a visually appealing timeline layout, featuring blocks representing individual blog posts. Each block displays the date and title of the post, along with a ‘’check it out’’ button for users to explore further. Clicking on this button navigates users to a dedicated page where they can access the complete content of the blog post. This same concept applies to the portfolio and essay pages. Therefore, I've carefully considered the folder structure as follows:</p>
                 <ul>
@@ -160,7 +162,8 @@
                     
       
                 </ul>
-            <section>
+            </section>
+          </section>
         </article>
 
     <!-- Navigation Buttons -->

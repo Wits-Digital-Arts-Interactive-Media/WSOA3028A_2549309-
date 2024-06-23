@@ -15,10 +15,12 @@
     <script src="../js/menu.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/blogs.js"></script>
-    <script src="../js/backToTop.js"></script>
+  
 </head>
 <body>
-    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+    <header class="header" id="header">
+        <nav id="main-nav"></nav>
+        </header>
 
     <main class="home">
         <aside >
@@ -28,20 +30,20 @@
                 <!-- Options will be populated by JavaScript -->
             </select>
         </aside>
-        <article class="blog-content">
+        <article class="blog-content" class="h-entry">
             <div class="breadcrumbs"></div>
                 
             </div>
-            <h1>Blog 8</h1>
+            <h1 >Blog 8</h1>
            
-                <h2 id="post-heading">Information Geographies and Digital Hegemony: A South African Perspective</h2>
+                <h2 class="p-name">Information Geographies and Digital Hegemony: A South African Perspective</h2>
  <div class="blog-meta">
                 <time datetime="2024-04-13">13 April 2024</time> 
                 by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
                 <div class="decorative-divider"></div>
             </div>
 
-
+            <section class="e-content">
                 <p class="intro" >This week, my focus is on an examination of digital hegemonies and information geographies. The primary text by<cite> Graham</cite>, paired with insights from <cite>Ballatore </cite>, <cite>Greenstein</cite>, and<cite>Kasapis </cite>, provides a view of the evolving digital landscape. Particularly, these works collectively explain how geographical and socio-economic contexts influence and are influenced by the Internet’s ubiquity. As a South African web developer, I find these insights not simply academic; they resonate with the socio-political and economic realities of web development in South Africa.</p>
             </section>
             <section>
@@ -229,7 +231,7 @@ This highlights the necessity for developers to build e-commerce sites that addr
                     <li>www.dcdt.gov.za (n.d.). "DCDT - SA Connect." Available at: dcdt.gov.za/sa-connect-document.html</li>
                 </ul>
             </section>
-            
+        </section>
         </article>   
 
   <!-- Back to Top Button -->

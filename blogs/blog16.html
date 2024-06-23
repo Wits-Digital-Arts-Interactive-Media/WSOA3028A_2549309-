@@ -15,10 +15,12 @@
     <script src="../js/menu.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/blogs.js"></script>
-    <script src="../js/backToTop.js"></script>
+
 </head>
 <body>
-    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+    <header class="header" id="header">
+        <nav id="main-nav"></nav>
+        </header>
 
     <main class="home">
         <aside >
@@ -28,19 +30,20 @@
                 <!-- Options will be populated by JavaScript -->
             </select>
         </aside>
-        <article class="blog-content">
+        <article class="blog-content" class="h-entry">
             <div class="breadcrumbs"></div>
                 
             </div>
             <h1>Blog 16</h1>
            
-            <h2>Critical Reflection on My Design Process and Final
+            <h2 class="p-name">Critical Reflection on My Design Process and Final
                 Website</h2> 
             <div class="blog-meta">
                 <time datetime="2024-02-29">29 May 2024</time> 
                 by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
                 <div class="decorative-divider"></div>
             </div>
+            <section class="e-content">
             <section>
         
    <p class="intro">
@@ -103,6 +106,7 @@
         <li><cite>Norman, D. (2013). <i>The Design of Everyday Things: Revised and Expanded Edition</i>. Basic Books.</cite></li>
     </ul>
 </section>
+            </section>
         </article>
   <!-- Navigation Buttons -->
   <div class="blog-navigation">

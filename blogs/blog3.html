@@ -15,10 +15,12 @@
     <script src="../js/menu.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/blogs.js"></script>
-    <script src="../js/backToTop.js"></script>
+
 </head>
 <body>
-    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+    <header class="header" id="header">
+        <nav id="main-nav"></nav>
+        </header>
 
     <main class="home">
         <aside >
@@ -28,20 +30,20 @@
                 <!-- Options will be populated by JavaScript -->
             </select>
         </aside>
-        <article class="blog-content">
+        <article class="blog-content" class="h-entry">
             <div class="breadcrumbs"></div>
                 
             </div>
             <h1>Blog 3</h1>
-            
+           
             <section> 
-                <h2 id="blog3-heading">Interaction Design and User Experience</h2>
+                <h2 class="p-name">Interaction Design and User Experience</h2>
                 <div class="blog-meta">
                                 <time datetime="2024-03-01">1 March 2024</time> 
                                 by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
                                 <div class="decorative-divider"></div>
                             </div>
-
+ <section class="e-content">
             <p > Exploring the history of the internet through readings and examining the first-ever published website was interesting. It's remarkable to witness the transformation from a simple text-based interface to the vibrant, multimedia-rich experiences we encounter today. The evolution of user interfaces, with the addition of colors, images, links, and interactive elements like buttons, has undoubtedly enhanced the user experience and accessibility of the web.  <cite>Vannevar Bush's</cite> visionary paper continues to resonate, advocating for human-centric design principles that mirror the associative trails of the human mind, ultimately shaping the way we navigate and comprehend information online <cite> (Bush, 1945)</cite>.
             <p class="intro" >In the digital world, every pixel and code snippet play a crucial role in storytelling. The narrative isn't just in the content we produce but, in the journey, we craft for our users. This week, I dove into the art of interaction design to align my website's content, experience, and interface elements with the intricate expectations of diverse audiences. This includes potential employers and clients who seek a testament to skill and creativity, fellow professionals and collaborators or aspiring professionals and students seeking knowledge and inspiration. My portfolio is more than a showcase; it's a convergence point for dialogue, learning, and professional growth.</p>
         </section>
@@ -162,7 +164,7 @@
             <p>By implementing this structure, I aim to maintain clarity and simplicity in my project, making it easier to manage, debug, and expand in the future.</p>
       
         </section>
-     
+   </section>
     </article>
       <!-- Back to Top Button -->
       <button id="back-to-top" title="Back to top">↑</button>

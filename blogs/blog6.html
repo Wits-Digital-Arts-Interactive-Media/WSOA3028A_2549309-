@@ -15,10 +15,12 @@
     <script src="../js/menu.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/blogs.js"></script>
-    <script src="../js/backToTop.js"></script>
+
 </head>
 <body>
-    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+    <header class="header" id="header">
+        <nav id="main-nav"></nav>
+        </header>
 
     <main class="home">
         <aside >
@@ -28,19 +30,19 @@
                 <!-- Options will be populated by JavaScript -->
             </select>
         </aside>
-        <article class="blog-content">
+        <article class="blog-content" class="h-entry">
             <div class="breadcrumbs"></div>
                 
             </div>
             <h1>Blog 6</h1>
            
-                <h2 id="post-heading">Internet and the Just Society</h2>
+                <h2 class="p-name">Internet and the Just Society</h2>
  <div class="blog-meta">
                 <time datetime="2024-04-11">11 April 2024</time> 
                 by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
                 <div class="decorative-divider"></div>
             </div>
-
+            <section class="e-content">
                 <p class="intro" >In the digital age, access to the internet is not just a luxury; it's a necessity for participation in the global economy, education, and democracy. Yet, a significant digital divide persists, separating those with access to information and communication technologies (ICTs) from those without. The <a href="https://www.internetjustsociety.org/" target="_blank">Institute for Internet and the Just Society</a>
                      highlights the urgent need for inclusive digital governance and fair artificial intelligence to ensure that the digital future is equitable for all.</p>
                 <section aria-labelledby="post-heading">
@@ -155,7 +157,7 @@
                         <li>UNESCO (n.d.). "Request Rejected." Available at: <a href="https://www.unesco.org/en/ifap" target="_blank">UNESCO</a>.</li>
                     </ul>
                 </section>
-            
+                </section>
 
                 </article> 
                   <!-- Back to Top Button -->

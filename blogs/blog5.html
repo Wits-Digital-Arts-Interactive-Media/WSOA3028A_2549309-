@@ -15,10 +15,12 @@
     <script src="../js/menu.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/blogs.js"></script>
-    <script src="../js/backToTop.js"></script>
+
 </head>
 <body>
-    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+    <header class="header" id="header">
+        <nav id="main-nav"></nav>
+        </header>
 
     <main class="home">
         <aside >
@@ -28,20 +30,22 @@
                 <!-- Options will be populated by JavaScript -->
             </select>
         </aside>
-        <article class="blog-content">
+        <article class="blog-content" class="h-entry">
             <div class="breadcrumbs"></div>
                 
             </div>
             <h1>Blog 5</h1>
            
-            <h2 id="post-heading">Advanced UX Strategies for Modern Web Design</h2>
+            <h2 class="p-name">Advanced UX Strategies for Modern Web Design</h2>
              <div class="blog-meta">
                 <time datetime="2024-03-15">15 March 2024 </time> 
                 by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
                 <div class="decorative-divider"></div>
             </div>
+
+            <section class="e-content">
             <p class="intro">Here are a few options of websites i want to inspect and analyse thier design practices</p>
-            <section aria-labelledby="post-heading">
+            <section >
                 
                 <table border="1" cellspacing="0" cellpadding="5">
                     <thead>
@@ -183,6 +187,7 @@
                 <p>Discovery Health's context provides ample opportunity to discuss how ethical design practices can enhance user trust and satisfaction, a crucial aspect of UX/UI analysis. I can explore how effectively the website navigates the balance between innovative design and ethical considerations, such as accessibility, privacy, and data protection. This approach would reflect current discussions in the field of UX/UI design, potentially making my essay more relevant and impactful.</p>
            
             </section> 
+            </section>
         </article>   
           <!-- Back to Top Button -->
           <button id="back-to-top" title="Back to top">↑</button>

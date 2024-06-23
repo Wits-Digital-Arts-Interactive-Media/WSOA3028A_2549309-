@@ -17,7 +17,9 @@
 
 </head>
 <body>
-    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+    <header class="header" id="header">
+        <nav id="main-nav"></nav>
+        </header>
     <main class="essays">
         <select id="essay-dropdown" class="essay-dropdown">
             <option value="" disabled selected>Select an Essay</option>
@@ -25,10 +27,14 @@
           
                <section class="breadcrumbs"></section> <!-- Breadcrumbs will be injected here -->  
               
-                <article aria-label="Essay 1">
-                   <h1>Essay 1: UX & UI Analysis  </h1>
+                <article aria-label="Essay 1" class="h-entry">
+                   <h1 class="p-name">Essay 1: UX & UI Analysis  </h1>
                     <h2>Case study of Discover.co.za</h2>
+                    <div class="blog-meta">
+                        <time datetime="2024-04-08">8 April 2024</time> 
+                        by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
                     <div class="decorative-divider"></div>
+                    <section class="e-content">
                     <p>In the digital age, a website is more than just a platform; it's a dynamic interface where organizations articulate their mission, engage with their audience, and strive to meet comprehensive goals that span visibility, engagement, conversion, support, and education, all while developing brand loyalty. Discovery, a leader in health insurance, banking services, and wellness solutions in South Africa, represents this multi-faceted approach through its website. </p>
                    
                
@@ -51,7 +57,7 @@
                 <p>The Discovery website enhances user engagement through an interactive chatbot feature, accessible via a prominent button. This interactive element acts as a conversation between the user and Discovery (the system), providing real-time assistance and guidance that respects the user’s input without leading to random or frustrating outcomes, the chatbot reinforces the concept that user effort is both valued and effective (Smuts, 2009).  The presence of the chatbot demonstrates Discovery's commitment to instant support and user-centric service, reflecting an advanced level of interaction design. It supports the website's goal of providing education and support by answering questions, directing users to resources, and simplifying the journey toward service understanding and acquisition, thereby empowering them to make informed decisions about the services offered. This contributes to a user's sense of control and agency (Nelson, 2003). </p> 
                 <p>Discovery's website employs several feedback mechanisms to create a responsive and reassuring user experience. For instance, upon form submission, users receive immediate confirmation messages, which affirm that their actions have been successfully registered. Similarly, the chatbot offers on-the-fly feedback to user queries, providing a sense of interaction that many users find engaging and personal. These feedback mechanisms are crucial in building user trust and are indicative of a well-thought-out interaction design that prioritizes user reassurance and engagement. Moreover, error handling mechanisms provide users with clear, constructive information on how to rectify mistakes, ensuring the interaction remains fluid and frustration-free. The integration of these features aligns with ethical design by valuing user time and reducing confusion, thus enhancing overall satisfaction, and contributing to Discovery’s conversion goals.</p> 
                 <p>The signifier and the signified come together to create meaningful interactions <cite>(Geyser, 2023)</cite>. By recognizing these components as integral parts of a semiotic system, we see how they contribute to the overarching interaction design of the site, facilitating a journey that is intuitive and aligned with Discovery’s goals. Discovery's website circumvents the 'nightmare labyrinth' (Borges, 1941). The site's structure reflects a thoughtful consideration of user experience, mirroring Bush's vision of retractable paths where users can traverse through a web of interconnected information with ease (Bush, 1979). This non-linear navigation ensures that users are not forced into a rigid journey but can explore services and resources at will, crafting a narrative that suits their unique needs (Nelson, 2003). Discovery creates a dynamic environment that users can inhabit, making informed decisions through interaction and comprehensive feedback mechanisms. This thoughtful navigation and interaction reflect the ethics and responsibilities in UI/UX design, ensuring that users’ forays into Discovery’s digital domain are both empowering and intuitive.</p> 
-            
+               
                 <section>
                     <h3>References</h3>
                     <ul class="references">
@@ -121,7 +127,7 @@
                     </ul>
                 </section>
                 
-      
+            </section>
             </article>
               
 <!-- Navigation Buttons -->

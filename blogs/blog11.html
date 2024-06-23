@@ -15,11 +15,12 @@
     <script src="../js/menu.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/blogs.js"></script>
-    <script src="../js/backToTop.js"></script>
+ 
 </head>
 <body>
-  <header class="header" id="header"></header> <!-- Navigation will be injected here -->
-
+  <header class="header" id="header">
+    <nav id="main-nav"></nav>
+    </header>
   <main class="home">
     <aside >
       <label for="blog-dropdown" class="blog-nav-label"></label>
@@ -28,7 +29,7 @@
           <!-- Options will be populated by JavaScript -->
       </select>
   </aside>
-      <article class="blog-content">
+      <article class="blog-content" class="h-entry">
           <div class="breadcrumbs"></div>
               
           </div>
@@ -38,7 +39,9 @@
             by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
             <div class="decorative-divider"></div>
         </div>
-            <h2 id="post-heading"> Reflecting on Development from Code to Culture</h2>
+
+        <section class="e-content">
+            <h2 class="p-name"> Reflecting on Development from Code to Culture</h2>
       <h3> How CSS, HTML, and JavaScript Interact</h3>
       <p class="intro">
         When developing a website, I utilize HTML, CSS, and JavaScript to ensure that the structure, style, and functionality come together to create an engaging and responsive experience for users. 
@@ -95,7 +98,7 @@
                   </li>
               </ul>
             </section>
-            
+          </section>
       </article>
  <!-- Navigation Buttons -->
  <div class="blog-navigation">

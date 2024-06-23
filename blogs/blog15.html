@@ -15,10 +15,12 @@
     <script src="../js/menu.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/blogs.js"></script>
-    <script src="../js/backToTop.js"></script>
+ 
 </head>
 <body>
-    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+    <header class="header" id="header">
+        <nav id="main-nav"></nav>
+        </header>
 
     <main class="home">
         <aside >
@@ -28,20 +30,20 @@
                 <!-- Options will be populated by JavaScript -->
             </select>
         </aside>
-        <article class="blog-content">
+        <article class="blog-content" class="h-entry">
             <div class="breadcrumbs"></div>
                 
             </div>
             <h1>Blog 15</h1>
            
-            <h2>Reflection on Website from Feedback Session</h2> 
+            <h2 class="p-name">Reflection on Website from Feedback Session</h2> 
             <div class="blog-meta">
                 <time datetime="2024-06-02">02 June 2024</time> 
                 by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
                 <div class="decorative-divider"></div>
             </div>
             <section>
-        
+                <section class="e-content">
    <p class="intro">
     Attending a feedback class on web development was an eye-opening experience, offering invaluable insights and practical tips that significantly influenced my approach to creating an accessible and user-friendly website.   </p>
    <p>
@@ -69,6 +71,7 @@
 <p>While focusing on accessibility, I also noticed that my website hosts numerous images, which could potentially compromise performance. To address this, I learned about the technique of lazy loading for images. Lazy loading is a powerful strategy that defers the loading of non-critical images until they are about to enter the viewport. This optimization can drastically reduce initial load times and improve overall site performance, especially for image-heavy pages.</p>
    </p>
    </section>
+            </section>
         </article>
   <!-- Navigation Buttons -->
   <div class="blog-navigation">

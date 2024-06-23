@@ -15,10 +15,12 @@
     <script src="../js/menu.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/blogs.js"></script>
-    <script src="../js/backToTop.js"></script>
+   
 </head>
 <body>
-    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+    <header class="header" id="header">
+        <nav id="main-nav"></nav>
+        </header>
 
     <main class="home">
         <aside >
@@ -28,19 +30,19 @@
                 <!-- Options will be populated by JavaScript -->
             </select>
         </aside>
-        <article class="blog-content">
+        <article class="blog-content" class="h-entry">
             <div class="breadcrumbs"></div>
                 
             </div>
             <h1>Blog 10</h1>
            
-            <h2 id="post-heading"> Decolonizing Artificial Intelligence: Insights and Applications from Decolonial Theory</h2>
+            <h2 class="p-name"> Decolonizing Artificial Intelligence: Insights and Applications from Decolonial Theory</h2>
             <div class="blog-meta">
                             <time datetime="2024-04-29">29 April 2024 </time> 
                             by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
                             <div class="decorative-divider"></div>
                         </div>
-
+                        <section class="e-content">
 
         <p class="intro">
             In an age where artificial intelligence (AI) shapes many aspects of society—from healthcare and education to security and entertainment—the imperative to guide AI development with ethical considerations has never been more pressing. However, traditional frameworks for AI ethics often overlook how these technologies can perpetuate existing inequalities and colonial legacies. Integrating decolonial theory into AI development challenges these oversights, offering a pathway to create technologies that not only avoid harm but actively contribute to social justice and cultural recognition.
@@ -201,7 +203,7 @@
                 </ul>
             </section>
             
-            
+        </section>
       </article>
         <!-- Back to Top Button -->
         <button id="back-to-top" title="Back to top">↑</button>

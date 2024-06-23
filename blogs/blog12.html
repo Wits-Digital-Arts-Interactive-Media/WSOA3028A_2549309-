@@ -15,11 +15,12 @@
     <script src="../js/menu.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/blogs.js"></script>
-    <script src="../js/backToTop.js"></script>
+ 
 </head>
 <body>
-    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
-
+    <header class="header" id="header">
+        <nav id="main-nav"></nav>
+        </header>
     <main class="home">
         <aside >
             <label for="blog-dropdown" class="blog-nav-label"></label>
@@ -28,20 +29,20 @@
                 <!-- Options will be populated by JavaScript -->
             </select>
         </aside>
-        <article class="blog-content">
+        <article class="blog-content" class="h-entry">
             <div class="breadcrumbs"></div>
                 
             </div>
             <h1>Blog 12</h1>
            
             <section>
-        <h2 id="post-heading"> The Conscience of the Internet</h2>
+        <h2 class="p-name"> The Conscience of the Internet</h2>
          <div class="blog-meta">
                 <time datetime="2024-05-13">13 May 2024</time> 
                 by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
                 <div class="decorative-divider"></div>
             </div>
-
+            <section class="e-content">
         <h3> Ethics in the Age of Information Overload</h3>
 <p class="intro">In the vast expanse of the digital age, the internet has transcended its role as a mere repository of information to become a pulsating public sphere, where every click and scroll unveils new ideas, cultures, and beliefs. This digital cosmos connects distant geographies and diverse minds, creating an unprecedented exchange of thoughts and experiences. Its where political movements can ignite from a single tweet, educational resources are accessed with a tap, and social interactions weave through the fibers of web-based communities. The internet, in its boundless reach and influence, has fundamentally reshaped our social, economic, and political landscapes, making it the town square, library, and marketplace of the 21st century. </p>
 <p>Yet, with its profound capacity to connect and educate, the internet also unfolds as a complex ethical battleground. This blog seeks to explore the internet not just as a tool or technology, but as an ethical space fraught with challenges and brimming with potential. Drawing on the philosophical landscapes painted by Jorge Luis Borges in "The Library of Babel," the critical insights of Zizi Papacharissi on the virtual public sphere, and the legal frameworks discussed by Lauren Stein, we delve into what it means to navigate this digital infinity responsibly. Our journey through this blog will unpack the intricate web of privacy concerns, misinformation, digital divides, and censorship—each an ethical dilemma shaping the soul of our digital world. Through a blend of scholarly insights and contemporary research, this exploration aims to not only question but also illuminate the pathways toward a more equitable and ethical internet. </p>
@@ -65,13 +66,19 @@
 <h3>Ethical Theories:</h3>
 <p>To deeply understand the ethical dimensions of internet practices, it's essential to consider established ethical theories, which include Utilitarianism, Deontology, Virtue Ethics.</p>
 
-<details>
-    <summary></summary>
-    <p> <strong>Utilitarianism: </strong>This theory suggests that actions are right if they benefit the majority, promoting the greatest good for the greatest number. In the context of the internet, utilitarian principles can be applied to evaluate practices like data collection by tech companies. For instance, while mass data collection can improve services and enhance user experiences, it raises concerns about privacy and consent. The challenge is determining whether these practices result in net benefits or harms to society.</p>
-    <p> <strong>Deontology:  </strong>This theory focuses on duty, rules, and the intrinsic rightness of actions, regardless of outcomes. From a deontological perspective, internet practices such as user surveillance without consent are inherently unethical, regardless of any beneficial outcomes they might produce. This theory would advocate for strict adherence to ethical norms and laws that protect user privacy and rights.</p>
-    <p> <strong>Virtue Ethics </strong>This approach emphasizes virtues or moral character, focusing on the development of good character traits and the intention behind actions rather than rules or consequences alone. In terms of internet ethics, practices that promote transparency, trust, and respect for user autonomy—such as clear data usage policies and user empowerment in privacy settings—can be seen as fostering virtuous corporate behavior.</p>
-   <br>
-</details>
+<details class="main-content">
+            <summary>Click to expand and read more about each theory</summary>
+            <dl>
+                <dt><strong>Utilitarianism:</strong></dt>
+                <dd>This theory suggests that actions are right if they benefit the majority, promoting the greatest good for the greatest number. In the context of the internet, utilitarian principles can be applied to evaluate practices like data collection by tech companies. For instance, while mass data collection can improve services and enhance user experiences, it raises concerns about privacy and consent. The challenge is determining whether these practices result in net benefits or harms to society.</dd>
+
+                <dt><strong>Deontology:</strong></dt>
+                <dd>This theory focuses on duty, rules, and the intrinsic rightness of actions, regardless of outcomes. From a deontological perspective, internet practices such as user surveillance without consent are inherently unethical, regardless of any beneficial outcomes they might produce. This theory would advocate for strict adherence to ethical norms and laws that protect user privacy and rights.</dd>
+
+                <dt><strong>Virtue Ethics:</strong></dt>
+                <dd>This approach emphasizes virtues or moral character, focusing on the development of good character traits and the intention behind actions rather than rules or consequences alone. In terms of internet ethics, practices that promote transparency, trust, and respect for user autonomy—such as clear data usage policies and user empowerment in privacy settings—can be seen as fostering virtuous corporate behavior.</dd>
+            </dl>
+        </details>
 <p>Several recent case studies illustrate how these theories can be applied to real-world situations.</p>
 <p>Facebook-Cambridge Analytica Data Scandal involved the collection of personally identifiable information of up to 87 million Facebook users. The data was allegedly used to attempt to influence voter opinion on behalf of politicians who hired Cambridge Analytica. From a utilitarian perspective, the benefits of data analysis in political campaigning might be seen as outweighed by the harms caused in terms of privacy violations and manipulation. A deontological analysis would critique the deceit and rule-breaking involved, while a virtue ethics perspective would focus on the betrayal of user trust and lack of respect for autonomy. </p>
 <p>Google partnered with Ascension, the second-largest health system in the U.S., to analyze detailed health data, raising concerns about patient consent and privacy. Utilitarianism might justify this as beneficial for improving healthcare outcomes through better data analysis. However, deontology would raise concerns about consent and privacy rights, while virtue ethics would question the integrity and moral intentions of such covert data practices. </p>
@@ -146,6 +153,7 @@ Victims of conflicts, such as civilians in war-torn areas, often lack the resour
         <cite>UN Broadband Commission. (2020).</cite> The State of Broadband: Tackling Digital Inequalities A Decade for Action. Retrieved from <a href="https://www.broadbandcommission.org/Documents/working-groups/DigitalMoonshotforAfrica_Report.pdf" target="_blank">UN Broadband Commission's website</a>.
     </li>
 </ul>
+</section>
 </section>
 </article>
   <!-- Navigation Buttons -->

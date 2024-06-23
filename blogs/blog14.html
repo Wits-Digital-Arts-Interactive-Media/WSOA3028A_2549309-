@@ -15,10 +15,12 @@
     <script src="../js/menu.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/blogs.js"></script>
-    <script src="../js/backToTop.js"></script>
+
 </head>
 <body>
-    <header class="header" id="header"></header> <!-- Navigation will be injected here -->
+   <header class="header" id="header">
+      <nav id="main-nav"></nav>
+      </header>
 
     <main class="home">
       <aside >
@@ -28,18 +30,19 @@
              <!-- Options will be populated by JavaScript -->
          </select>
      </aside>
-        <article class="blog-content">
+        <article class="blog-content" class="h-entry">
             <div class="breadcrumbs"></div>
                 
             </div>
             <h1>Blog 15</h1>
            
-            <h2>From the World Wide Web to Local Wonders</h2> 
+            <h2 class="p-name">From the World Wide Web to Local Wonders</h2> 
             <div class="blog-meta">
                 <time datetime="2024-05-29">29 May 2024</time> 
                 by <a class="p-author h-card" href="../About.html">Aaminah Habib</a>
                 <div class="decorative-divider"></div>
             </div>
+            <section class="e-content">
             <section>
           
    <p class="intro">
@@ -189,6 +192,7 @@
 <p>When considering the cursor design for my website, I decided against using customized cursors. Personally, I find them somewhat annoying, as the pointer element of the cursor can sometimes be neglected. Custom cursors often don't feel modern and clean to me. My goal is to create a simple, clean, and modern look, and adding extra decoration feels excessive, almost like a Christmas tree. It can be distracting, with an annoyingly big cursor following the user's movements, rather than the default cursor which is small and easily visible.
 
    Customized cursors can blend in too much with the rest of the design, confusing the user and negatively impacting the user experience. The default cursor is designed to be functional and universally recognizable, which is why it works well in most situations.</p>
+   </section>
    </section>
         </article>
   <!-- Navigation Buttons -->
