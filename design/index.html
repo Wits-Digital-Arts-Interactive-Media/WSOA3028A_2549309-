@@ -182,6 +182,10 @@
             <img src="../Images/wireframes/screensizePage.png" alt="A wireframe of the smartphone screen size page in black and white with annotations" title="Screen Size Scaling Wireframe">
             <figcaption>Wireframe of the smartphone screen size page</figcaption>
         </div>
+        <div >
+            <img src="../Images/responsiveWireframes/Responive.png" alt="A set of wireframe of the smartphone screen size page in black and white with annotations" title="multiple Screen Size Scaling Wireframe">
+            <figcaption>Wireframe of the tablet/smartphone screen size page</figcaption>
+        </div>
     </div>
     <h4>Updated Wireframes and Interactive Elements</h4>
     <div class="carousel" id="carousel2" aria-label="Updated Wireframes Carousel">
@@ -278,9 +282,10 @@
                 </div>
                     <h4>Interface Element Representations</h4>
                     <ul>
-                        <li><strong>Navigation Bar:</strong> 
+                        <li><strong>Navigation Bar (main and side):</strong> 
                             <p>This persistent element at the top of each page allows users to easily navigate across the website without losing their place. It's designed to be minimalistic and clean, ensuring it complements rather than competes with the content. The right-aligned layout respects the Western reading pattern, ending in actionable items like 'Contact' or 'Blog', which encourage further user engagement.</li>
-                        </p>
+                        While the side menu bar will be a button that expands into a list with all the title on it, wil also be stick. Usefull for blogs and essay which have muliple entries.
+                            </p>
                         <li><strong>Buttons:</strong> <P>
                             Buttons are used throughout the site to direct user actions, including submitting forms, starting projects, and reading more about a specific topic. They are styled with rounded corners and a color that stands out against the background, drawing attention while maintaining an aesthetic coherence with the overall design. The hover state introduces a subtle animation that changes the button's color and elevation, providing visual feedback that the button is clickable. Some include Back to top, next, previous, read more.</li>
                         </P>
@@ -311,6 +316,7 @@
                         <li>Blogs Navigation Menu</li>
                         <li>Breadcrumbs</li>
                         <li>Table of Contents for Essays and Design Pages</li>
+                        <li>Side menu bar for essays, blogs</li>
                     </ul>
                 
               
@@ -321,18 +327,31 @@
          
 </section>
                 
-                    <h3>Implementation Notes</h3>
-                <details>
-                    <summary>How it all comes together </summary>
-                <p>The UI and UX design choices of my website have a profound impact on the organization and functionality of the code, ensuring it remains user-friendly and accessible. The folder structure of my website is carefully organized to reflect the hierarchical information structure, with separate folders for blogs, essays, portfolio, and design, each containing its own index.html and individual content pages. This separation of concerns is further extended into distinct folders for css and js, promoting modularity and scalability. For example, styles.css houses all styling rules, ensuring consistency across all pages, while separate JavaScript files (main.js, menu.js, blogs.js, backToTop.js) manage different functionalities, making the website easier to maintain and update.</p>
-                <p>
-                    Semantic markup is a key component of the website, with the use of tags like header, nav, section, article, and footer providing clear context to browsers and assistive technologies. This enhances accessibility and ensures that interface elements, such as navigation bars, buttons, and forms, are fully and correctly expressed. For instance, the navigation bar uses semantic nav tags and ARIA attributes to improve usability for screen readers.
-                </p>
-            <p>
-                JavaScript  handles various interaction points, such as menu toggles in menu.js, breadcrubs, scrolling, back-to-top functionality in backToTop.js, and dynamic blog menu generation in blogs.js. By consolidating repeated functionalities and avoiding inline scripting, the code remains clean and maintainable. External script linking further aids in this separation, ensuring that interaction points are efficiently managed without cluttering the HTML files.
-            </p>
-            <p>CSS is used extensively to ensure consistent styling across all pages, avoiding inline styles to maintain a modular approach. The use of media queries ensures responsive layouts that adapt to different screen sizes and devices, enhancing the user experience. For instance, the styles.css file includes specific rules for different screen widths, ensuring that content remains accessible and visually appealing on both mobile and desktop devices.</p>
-            </details>
+<h3>Implementation Notes</h3>
+<details>
+    <summary>How it all comes together</summary>
+    <p>The UI and UX design choices of my website profoundly impact the organization and functionality of the code, ensuring it remains user-friendly and accessible. The folder structure of my website is carefully organized to reflect the hierarchical information structure, with separate folders for blogs, essays, portfolio, and design, each containing its own index.html and individual content pages. This organization ensures that content is logically separated, making it easier for users to navigate and for developers to manage.</p>
+    <p> Separating content into distinct folders aligns with best practices for content management and organization. It makes the site easier to maintain and update, ensuring that each section can be developed independently without affecting other parts of the site. This structure also facilitates better scalability as new content can be added without disrupting the existing organization.</p>
+    <p>This separation of concerns is further extended into distinct folders for CSS and JavaScript, promoting modularity and scalability. For example, the styles.css file houses all styling rules, ensuring consistency across all pages, while separate JavaScript files (main.js, menu.js, blogs.js, backToTop.js) manage different functionalities, making the website easier to maintain and update.</p>
+    <p> By separating CSS and JavaScript into their own files, we ensure that styling and functionality are modular and reusable. This modularity allows for easier debugging and updates since changes in one part of the site won't inadvertently affect other parts. This structure supports the principle of separation of concerns, which is fundamental for scalable and maintainable web development.</p>
+    <p>Semantic markup is a key component of the website, providing clear context to browsers and assistive technologies. The use of tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code> enhances accessibility and ensures that interface elements, such as navigation bars, buttons, and forms, are fully and correctly expressed.</p>
+    <p>Semantic tags improve the readability of the HTML for developers and assistive technologies, enhancing accessibility for users with disabilities. They provide a clear structure to the content, which helps screen readers interpret and navigate the site more effectively. Additionally, search engines use semantic tags to better understand and index the content, improving SEO.</p>
+    <p>For instance, the navigation bar uses semantic <code>&lt;nav&gt;</code> tags and ARIA attributes to improve usability for screen readers.</p>
+    <p> The <code>&lt;nav&gt;</code> tag explicitly defines the navigation section of the page, while ARIA (Accessible Rich Internet Applications) attributes provide additional context for screen readers, ensuring that navigation elements are accessible to all users, including those who rely on assistive technologies.</p>
+    <p>JavaScript is used extensively to handle various interaction points, such as menu toggles, breadcrumbs, scrolling, back-to-top functionality, and dynamic blog menu generation. Event listeners are registered within the DOMContentLoaded event listener to ensure the scripts execute only after the HTML has been fully loaded, enhancing performance and user experience.</p>
+    <p> Registering event listeners within the DOMContentLoaded event listener ensures that the scripts only run after the page content is fully loaded, preventing errors that might occur if the scripts try to manipulate elements that are not yet available. This approach improves the performance and reliability of the website.</p>
+    <p>Key functionalities, such as form submissions, are handled using the Formspree API. By connecting my contact form to the Formspree service, I ensured that user inquiries are efficiently processed and delivered to my email, providing a seamless and reliable communication channel.</p>
+    <p> Using Formspree for form submissions offloads the server-side processing, reducing the complexity of the backend and ensuring that form submissions are handled securely and reliably. This approach improves user experience by providing a quick and efficient way to contact me without requiring extensive server-side infrastructure.</p>
+    <p>Interaction points and functionalities are consolidated where possible to avoid repetition and improve maintainability. For instance, common functionalities like menu toggles are handled in menu.js, while scrolling effects are managed in scrolling.js.</p>
+    <p> Consolidating common functionalities into separate files reduces code duplication and makes the codebase easier to manage. This approach adheres to the DRY (Don't Repeat Yourself) principle, which promotes reusability and maintainability in software development.</p>
+    <p>CSS is used extensively to ensure consistent styling across all pages, avoiding inline styles to maintain a modular approach. The use of media queries ensures responsive layouts that adapt to different screen sizes and devices, enhancing the user experience.</p>
+    <p>External CSS files enable consistent styling across the entire site, making it easier to implement and maintain a cohesive design. Media queries allow the design to be responsive, ensuring that the site looks and functions well on various devices, from desktops to smartphones. This responsiveness is crucial for providing a good user experience across different screen sizes.</p>
+    <p>Reusable classes and CSS variables are utilized to maintain consistency and efficiency. This approach reduces redundancy and ensures that changes can be made swiftly across the entire website. For example, common elements like buttons, headings, and containers have their styles defined once and applied across all relevant pages.</p>
+    <p>Using reusable classes and CSS variables promotes a clean and efficient CSS structure. It reduces redundancy and ensures that any changes to the styling need to be made in only one place, making the site easier to update and maintain. This approach aligns with best practices for maintainable and scalable CSS design.</p>
+    <p>Performance Optimization
+    One significant aspect of the development process was optimizing performance by using the defer attribute in script tags. The defer attribute allows scripts to be downloaded in parallel with the rest of the page and executed only after the HTML has been completely parsed.</p>
+    <p> Using the defer attribute improves page load times by ensuring that scripts do not block the rendering of the page. This approach enhances the user experience by allowing the content to load faster, making the site more responsive and interactive. It also contributes to better performance metrics, which are important for SEO and user satisfaction.</p>
+</details>
                 </section>
             </div>
         </div>
