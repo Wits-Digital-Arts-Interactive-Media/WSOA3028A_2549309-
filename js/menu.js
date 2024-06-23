@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="https://www.instagram.com/" target="_blank" class="nav__social-link">
                         <i class="ri-instagram-line"></i>
                     </a>
-                    <a href="https://github.com/" target="_blank" class="nav__social-link">
+                    <a href="https://github.com/Aaminah1/" target="_blank" class="nav__social-link">
                         <i class="ri-github-line"></i>
                     </a>
                 </div>
