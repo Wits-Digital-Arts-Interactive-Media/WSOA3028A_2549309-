@@ -1,3 +1,5 @@
+
+//Form to appear when contact button clicked, API HERE//
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contactForm');
     const formResponse = document.getElementById('form-response');
@@ -22,22 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (data.errors) {
                         formResponse.style.display = 'block';
                         formResponse.textContent = data.errors.map(error => error.message).join(', ');
-                        console.error('Form submission errors:', data.errors);
                     } else {
                         formResponse.style.display = 'block';
                         formResponse.textContent = 'Oops! There was a problem submitting your form.';
-                        console.error('Unknown error:', data);
                     }
-                }).catch(error => {
-                    formResponse.style.display = 'block';
-                    formResponse.textContent = 'Oops! There was a problem submitting your form.';
-                    console.error('Error parsing response:', error);
                 });
             }
         }).catch(error => {
             formResponse.style.display = 'block';
             formResponse.textContent = 'Oops! There was a problem submitting your form.';
-            console.error('Fetch error:', error);
         });
     });
 
@@ -55,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('click', (event) => {
-        if (event.target == modal) {
+        if (event.target === modal) {
             modal.style.display = "none";
         }
     });
