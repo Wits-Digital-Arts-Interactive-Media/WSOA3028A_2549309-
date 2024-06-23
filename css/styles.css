@@ -736,7 +736,6 @@ a {
   }
 }
 
-/* HOMEPAGE COOLER DESIGN */
 /* Hero Section */
 
 .hero {
@@ -749,6 +748,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-size: cover; /* Ensure the background image scales properly */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Fix the background image position */
 }
 
 .hero::before {
@@ -818,6 +821,8 @@ a {
   .hero {
     padding: 50px 20px;
     height: auto; /* Adjust height for tablets */
+    background-size: cover; /* Ensure the background image scales properly */
+    background-position: center; /* Center the background image */
   }
 
   .hero-content {
@@ -850,6 +855,7 @@ a {
     padding: 50px 20px;
     height: auto; /* Adjust height for mobile */
     background-size: cover; /* Ensure the background image scales properly */
+    background-position: center; /* Center the background image */
   }
 
   .hero-content {
@@ -867,8 +873,7 @@ a {
   }
 
   .cta-button {
-    font-size: 0.9rem;
-    padding: 10px;
+  display: none; /* Hide the button on small screens */
   }
 
   .card {
