@@ -2041,6 +2041,16 @@ a:hover {
 }
 
 /* ToC container adjustments */
+/* CSS for the offset effect */
+section::before {
+  content: "";
+  display: block;
+  height: 3rem; /* Adjust the height based on your fixed header */
+  margin-top: -3rem; /* Same value as height */
+  visibility: hidden;
+}
+
+
 .toc-container {
   position: fixed;
   top: 100px;

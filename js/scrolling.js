@@ -4,13 +4,28 @@
   const tocLinks = document.querySelectorAll('.toc-container a');
   const sections = document.querySelectorAll('main section');
 
+  // Smooth scroll function
+  tocLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      window.scrollTo({
+        top: targetElement.offsetTop - 70, // Adjust this value based on your header height
+        behavior: 'smooth'
+      });
+    });
+  });
+
   function activateLink() {
-      let index = sections.length;
+    let index = sections.length;
 
-      while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+    while (--index && window.scrollY + 100 < sections[index].offsetTop) {} // Adjust this value to match the header height
 
-      tocLinks.forEach((link) => link.classList.remove('active'));
+    tocLinks.forEach((link) => link.classList.remove('active'));
+    if (index >= 0) {
       tocLinks[index].classList.add('active');
+    }
   }
 
   activateLink();
