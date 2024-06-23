@@ -654,6 +654,12 @@ a {
 
 /*=============== HOME PAGE ===============
 /* Home Sections */
+.home {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}/* this one is resposnive for the alignmnet of the contents on the screen in genral, like used for design process and blog page alignment*/
+
 .home__sections {
   display: flex;
   flex-wrap: wrap;
