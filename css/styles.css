@@ -928,6 +928,7 @@ body {
   display: flex;
   justify-content: center; 
   margin: 40px 0;
+  
 }
 
 .nav-button {
@@ -1123,7 +1124,7 @@ body {
   width: 30px; /* Set a reasonable fixed width */
   max-width: 90vw; /* Ensure it doesn't exceed the screen width */
   background-color: #e0dede;
-
+  z-index: 1000; /* Ensure it stays above other content */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: 'Merriweather', serif;
   cursor: pointer; /* Pointer cursor for interactivity */
@@ -1148,7 +1149,7 @@ body {
   max-width: 90vw; /* Ensure it doesn't exceed the screen width */
   padding: 10px;
   font-family: 'Merriweather', serif;
- 
+  z-index: 1000; /* Ensure it stays above other content */
 }
 
 /* Media Queries for Responsiveness */
@@ -1528,7 +1529,7 @@ body {
   font-family: 'Merriweather', serif;
   cursor: pointer; /* Pointer cursor for interactivity */
   margin-top: 10px; /* Ensure spacing between label and dropdown */
-  
+  z-index: 1000; /* Ensure it stays above other content */
 }
 
 #blog-dropdown:hover {
@@ -1549,7 +1550,7 @@ body {
   padding: 10px;
   max-width: 90vw; /* Ensure it doesn't exceed the screen width */
   font-family: 'Merriweather', serif;
-
+  z-index: 1000; /* Ensure it stays above other content */
 }
 
 /* Media Queries for Responsiveness (i noticed that for the mobile, this overlaps the main navigation mene that opens up with button;(*/
