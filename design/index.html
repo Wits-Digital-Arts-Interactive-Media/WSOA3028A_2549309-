@@ -12,18 +12,18 @@
     <meta property="og:image" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2549309/Images/profile.jpg">
     <meta property="og:type" content="website">
     <title>Design</title>
-    <script src="../js/menu.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/menu.js" defer></script>
+    <script src="../js/main.js" defer></script>
 
 </head>
 <body>   
     <header class="header" id="header">
-    <nav id="main-nav"></nav>
+    <nav id="main-nav" aria-label="Main Navigation"></nav>
     </header>
     <main class="home" >
        
        
-            <div class="toc-container" id="toc">
+            <div class="toc-container" id="toc" aria-label="Table of Contents">
                 
                 <ul>
                     <li><a href="#goal-alignment">Goals</a></li>
@@ -80,10 +80,11 @@
                             </div>
                         </section>
 
-  <!-- Decorative Divider 2 -->
-<svg class="decorative-dividers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
+<!-- Decorative Divider 2 -->
+<svg class="decorative-dividers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" aria-hidden="true" role="presentation">
     <path fill="none" stroke="#000" stroke-width="2" d="M50 50 Q 150 0, 250 50 T 450 50 T 650 50 T 850 50 T 950 50" />
-  </svg>
+</svg>
+
   
   
 
@@ -106,10 +107,12 @@
                         </div>
                     </div>
                 </section>
-                <!-- Decorative Divider 2 -->
-<svg class="decorative-dividers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
+
+<!-- Decorative Divider 2 -->
+<svg class="decorative-dividers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" aria-hidden="true" role="presentation">
     <path fill="none" stroke="#000" stroke-width="2" d="M50 50 Q 150 0, 250 50 T 450 50 T 650 50 T 850 50 T 950 50" />
-  </svg>
+</svg>
+
   
                 <section id="design" >
                     <h2>Design</h2>
@@ -133,17 +136,18 @@
             </div>
         </section>
 
-                    <!-- Decorative Divider 2 -->
-<svg class="decorative-dividers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
+<!-- Decorative Divider 2 -->
+<svg class="decorative-dividers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" aria-hidden="true" role="presentation">
     <path fill="none" stroke="#000" stroke-width="2" d="M50 50 Q 150 0, 250 50 T 450 50 T 650 50 T 850 50 T 950 50" />
-  </svg>
+</svg>
+
   
   <section id="wireframe">
     <h2>Wireframes</h2>
     <h4>Wireframes of Initial Design</h4>
     <p>After laying down the initial concept, I begin the development phase where I put together wireframes.</p>
-    <div class="carousel" id="carousel1">
-        <button class="prev" onclick="changeSlide(-1, 'carousel1')">&#10094;</button>
+    <div class="carousel" id="carousel1" aria-label="Wireframes Carousel">
+        <button class="prev" onclick="changeSlide(-1, 'carousel1')" aria-label="Previous Slide">&#10094;</button>
         <div class="carousel-container">
             <figure class="carousel-slide">
                 <img src="../Images/wireframes/HomePage.png" alt="A wireframe of the home page in black and white with annotations" title="HomePage Wireframe">
@@ -166,9 +170,8 @@
                 <figcaption>Wireframe of the About page</figcaption>
             </figure>
         </div>
-        <button class="next" onclick="changeSlide(1, 'carousel1')">&#10095;</button>
+        <button class="next" onclick="changeSlide(1, 'carousel1')" aria-label="Next Slide">&#10095;</button>
     </div>
-
     <h4>Wireframes for Smartphone Screen Size</h4>
     <div class="wireframe-cards">
         <div class="card">
@@ -180,10 +183,9 @@
             <figcaption>Wireframe of the smartphone screen size page</figcaption>
         </div>
     </div>
-
     <h4>Updated Wireframes and Interactive Elements</h4>
-    <div class="carousel" id="carousel2">
-        <button class="prev" onclick="changeSlide(-1, 'carousel2')">&#10094;</button>
+    <div class="carousel" id="carousel2" aria-label="Updated Wireframes Carousel">
+        <button class="prev" onclick="changeSlide(-1, 'carousel2')" aria-label="Previous Slide">&#10094;</button>
         <div class="carousel-container">
             <figure class="carousel-slide">
                 <img src="../Images/newWirframes/Home2wireframe.png" alt="A wireframe of updated home page in black and white with annotations" title="Updated HomePage Wireframe">
@@ -210,14 +212,14 @@
                 <figcaption>Wireframe of updated about page</figcaption>
             </figure>
         </div>
-        <button class="next" onclick="changeSlide(1, 'carousel2')">&#10095;</button>
+        <button class="next" onclick="changeSlide(1, 'carousel2')" aria-label="Next Slide">&#10095;</button>
     </div>
 </section>
-
 <!-- Decorative Divider 2 -->
-<svg class="decorative-dividers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
+<svg class="decorative-dividers" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" aria-hidden="true" role="presentation">
     <path fill="none" stroke="#000" stroke-width="2" d="M50 50 Q 150 0, 250 50 T 450 50 T 650 50 T 850 50 T 950 50" />
-  </svg>
+</svg>
+
   
                     <section id="styleGuide" >
                     <h2 >Style Guide</h2>
@@ -335,7 +337,7 @@
             </div>
         </div>
         <!-- Back to Top Button -->
-        <button id="back-to-top" title="Back to top">↑</button>
+        <button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
     </main>
     <footer>
         <div class="footer-content">

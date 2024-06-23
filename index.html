@@ -15,64 +15,63 @@
     <title>Home</title>
     <script src="js/menu.js" defer></script>
     <script src="js/main.js" defer></script>
+
 </head>
 <body>
     <header class="header" id="header">
-        <nav id="main-nav"></nav>
-        </header>
-        
+        <nav id="main-nav" aria-label="Main Navigation"></nav>
+    </header>
+    
     <!-- Hero Section --> 
     <section class="hero">
         <div class="hero-content">
             <h1>Welcome to My Portfolio</h1>
             <p>Dive into the nexus of creativity and technology where each project is a story waiting to be told.</p>
-            <a href="#portfolio" class="cta-button">Explore My Work</a>
+            <a href="#portfolio" class="cta-button" aria-label="Explore My Work">Explore My Work</a>
         </div>
     </section>
     
-      <section class="home__sections"  id="portfolio">
-        <div class="home__section">
-            <h2 class="home__section-title"><a href="blogs/index.html" class="home__link">My Blogs</a></h2>
-            <a href="blogs/index.html">
-                <img src="Images/blog.png" alt="An example of my art" class="home__image">
-            </a>
-            <p>Explore a collection of insights and stories where I unravel the threads of digital creativity and the web's ever-evolving landscape.</p>
-            <a href="blogs/index.html" class="button-link">Read More</a>
-        </div>
-        <div class="home__section">
-            <h2 class="home__section-title"><a href="portfolio/index.html" class="home__link">My Portfolio</a></h2>
-            <a href="portfolio/index.html">
-                <img src="Images/portfolio.png" alt="An example of my art" class="home__image">
-            </a>
-            <p>Delve into my curated gallery showcasing projects, each piece a chapter in my design journey.</p>
-            <a href="portfolio/index.html" class="button-link">View Portfolio</a>
-        </div>
-        <div class="home__section">
-            <h2 class="home__section-title"><a href="essays/index.html" class="home__link">My Essays</a></h2>
-            <a href="essays/index.html">
-                <img src="Images/essays.png" alt="An example of my art" class="home__image">
-            </a>
-            <p>Dive into my essays where critical thought meets the written word, discussing the intersections of technology, society, and future-forward thinking.</p>
-            <a href="essays/index.html" class="button-link">Read Essays</a>
-        </div>
-        <div class="home__section">
-            <h2 class="home__section-title"><a href="design/index.html" class="home__link">My Design Process</a></h2>
-            <a href="design/index.html">
-                <img src="Images/design proces.png" alt="An example of my art" class="home__image">
-            </a>
-            <p>Take a peek behind my design process, from the spark of inspiration to the final flourish of completion.</p>
-            <a href="design/index.html" class="button-link">Explore Process</a>
-        </div>
-    </section>
-
-  
+    <main>
+        <section class="home__sections" id="portfolio">
+            <article class="home__section">
+                <h2 class="home__section-title"><a href="blogs/index.html" class="home__link">My Blogs</a></h2>
+                <a href="blogs/index.html">
+                    <img src="Images/blog.png" alt="Blog section illustration" class="home__image">
+                </a>
+                <p>Explore a collection of insights and stories where I unravel the threads of digital creativity and the web's ever-evolving landscape.</p>
+                <a href="blogs/index.html" class="button-link" aria-label="Read More about My Blogs">Read More</a>
+            </article>
+            <article class="home__section">
+                <h2 class="home__section-title"><a href="portfolio/index.html" class="home__link">My Portfolio</a></h2>
+                <a href="portfolio/index.html">
+                    <img src="Images/portfolio.png" alt="Portfolio section illustration" class="home__image">
+                </a>
+                <p>Delve into my curated gallery showcasing projects, each piece a chapter in my design journey.</p>
+                <a href="portfolio/index.html" class="button-link" aria-label="View Portfolio">View Portfolio</a>
+            </article>
+            <article class="home__section">
+                <h2 class="home__section-title"><a href="essays/index.html" class="home__link">My Essays</a></h2>
+                <a href="essays/index.html">
+                    <img src="Images/essays.png" alt="Essays section illustration" class="home__image">
+                </a>
+                <p>Dive into my essays where critical thought meets the written word, discussing the intersections of technology, society, and future-forward thinking.</p>
+                <a href="essays/index.html" class="button-link" aria-label="Read My Essays">Read Essays</a>
+            </article>
+            <article class="home__section">
+                <h2 class="home__section-title"><a href="design/index.html" class="home__link">My Design Process</a></h2>
+                <a href="design/index.html">
+                    <img src="Images/design proces.png" alt="Design process section illustration" class="home__image">
+                </a>
+                <p>Take a peek behind my design process, from the spark of inspiration to the final flourish of completion.</p>
+                <a href="design/index.html" class="button-link" aria-label="Explore My Design Process">Explore Process</a>
+            </article>
+        </section>
+    </main>
     
-   
-    
-<footer>
-    <div class="footer-content">
-        <p>&copy; 2024 Aaminah Habib | All rights reserved</p>
-    </div>
-</footer>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Aaminah Habib | All rights reserved</p>
+        </div>
+    </footer>
 </body>
 </html>

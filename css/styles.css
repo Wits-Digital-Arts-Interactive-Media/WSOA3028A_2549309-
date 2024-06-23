@@ -1715,7 +1715,7 @@ body {
   position: absolute;
   top: 20px;
   right: 30px;
-  color: #fff;
+  color: #000000;
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;
@@ -2046,8 +2046,8 @@ a:hover {
 section::before {
   content: "";
   display: block;
-  height: 3rem; /* Adjust the height based on your fixed header */
-  margin-top: -3rem; /* Same value as height */
+  height: 4rem; /* Adjust the height based on your fixed header */
+  margin-top: -4rem; /* Same value as height */
   visibility: hidden;
 }
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
-    <meta name="description" content="Aaminah's  portfolio website for WSOA3028A">
+    <meta name="description" content="Aaminah's portfolio website for WSOA3028A">
     <meta name="author" content="Aaminah Habib">
     <meta property="og:title" content="Aaminah Habib's Portfolio">
     <meta property="og:description" content="Discover perspectives and blog of Aaminah Habib's WSOA3028A portfolio in game design and interactive media.">
@@ -12,36 +12,35 @@
     <meta property="og:type" content="website">
     <title>Blogs</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/menu.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/blogs.js"></script>
-
+    <script src="../js/menu.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/blogs.js" defer></script>
 </head>
 <body>
     <header class="header" id="header">
-        <nav id="main-nav"></nav>
-        </header>
+        <nav id="main-nav" aria-label="Main Navigation"></nav>
+    </header>
     <main class="home">
-        <aside >
+        <aside>
             <label for="blog-dropdown" class="blog-nav-label"></label>
             <select id="blog-dropdown" aria-label="Select a blog to navigate">
                 <option value="">Select a Blog</option>
                 <!-- Options will be populated by JavaScript -->
             </select>
         </aside>
-        <section >
+        <section>
             <h1>Blogs</h1>
-            <p class="intro">Explore a collection of insights and stories where I unravel the threads of digital creativity and the web's ever-evolving landscape. </p>
+            <p class="intro">Explore a collection of insights and stories where I unravel the threads of digital creativity and the web's ever-evolving landscape.</p>
             <ul id="blog-menu" class="blog__list">
-              
-                    
+                <!-- Blog entries will be populated here -->
+            </ul>
         </section>
-         <!-- Back to Top Button -->
-  <button id="back-to-top" title="Back to top">↑</button>
+        <!-- Back to Top Button -->
+        <button id="back-to-top" title="Back to top" aria-label="Back to top">↑</button>
     </main>
     <footer>
         <div class="footer-content">
-            <p>© 2024 Aaminah Habib | All rights reserved</p>
+            <p>&copy; 2024 Aaminah Habib | All rights reserved</p>
         </div>
     </footer>
 </body>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="description" content="Aaminah's portfolio website for WSOA3028A">
     <meta name="author" content="Aaminah Habib">
     <meta property="og:title" content="Aaminah Habib's Portfolio">
@@ -12,46 +13,47 @@
     <meta property="og:image" content="https://wits-digital-arts-interactive-media.github.io/WSOA3028A_2549309/Images/profile.jpg">
     <meta property="og:type" content="website">
     <title>Essays</title>
-    <script src="../js/menu.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/menu.js" defer></script>
+    <script src="../js/main.js" defer></script>
 </head>
 <body>
     <header class="header" id="header">
-        <nav id="main-nav"></nav>
-        </header>
+        <nav id="main-nav" aria-label="Main Navigation"></nav>
+    </header>
     <main class="home">
-        <select id="essay-dropdown" class="essay-dropdown">
-            <option value="" disabled selected>Select an Essay</option>
-        </select>
-        <section >
+        <section>
             <h1>Essays</h1>
             <p class="intro">Dive into my essays where critical thought meets the written word, discussing the intersections of technology, society, and future-forward thinking.</p>
+            <select id="essay-dropdown" class="essay-dropdown" aria-label="Select an Essay">
+                <option value="" disabled selected>Select an Essay</option>
+                <!-- Options will be populated here -->
+            </select>
             <div id="essay-grid" class="essay__grid">
-                <div class="essay__item">
+                <article class="essay__item">
                     <a href="essay1.html" class="essay__image-link">
-                        <img src="../Images/essay 1.png" alt="Essay 1" class="essay__image">
+                        <img src="../Images/essay 1.png" alt="Cover image for Essay 1: UX & UI Analysis" class="essay__image">
                     </a>
                     <div class="essay__content">
-                        <a href="essay1.html" class="essay__link"> <h2>Essay 1: UX & UI Analysis</h2></a>
+                        <a href="essay1.html" class="essay__link"><h2>Essay 1: UX & UI Analysis</h2></a>
                         <p class="essay__intro">In the digital age, a website is more than just a platform; it's a dynamic interface where organizations articulate their mission, engage with their audience, and strive to meet comprehensive goals that span visibility, engagement, conversion, support, and education, all while developing brand loyalty. Discovery, a leader in health insurance, banking services, and wellness solutions in South Africa, represents this multi-faceted approach through its website.</p>
                         <a href="essay1.html" class="read-more">Read more</a>
                     </div>
-                </div>
-                <div class="essay__item">
+                </article>
+                <article class="essay__item">
                     <a href="essay2.html" class="essay__image-link">
-                        <img src="../Images/essay 2.png" alt="Essay 2" class="essay__image">
+                        <img src="../Images/essay 2.png" alt="Cover image for Essay 2: Digital Colonialism" class="essay__image">
                     </a>
                     <div class="essay__content">
                         <a href="essay2.html" class="essay__link"><h2>Essay 2: Digital Colonialism</h2></a>
                         <p class="essay__intro">In the digital age, a website is more than just a platform; it's a dynamic interface where organizations articulate their mission, engage with their audience, and strive to meet comprehensive goals that span visibility, engagement, conversion, support, and education, all while developing brand loyalty. Discovery, a leader in health insurance, banking services, and wellness solutions in South Africa, represents this multi-faceted approach through its website.</p>
                         <a href="essay2.html" class="read-more">Read more</a>
                     </div>
-                </div>
+                </article>
                 <!-- Add more essays as needed -->
             </div>
         </section>
         <!-- Back to Top Button -->
-        <button id="back-to-top" title="Back to top">↑</button>
+        <button id="back-to-top" title="Back to top" aria-label="Back to top">↑</button>
     </main>
     <footer>
         <div class="footer-content">
