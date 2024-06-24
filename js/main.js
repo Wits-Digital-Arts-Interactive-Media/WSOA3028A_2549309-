@@ -1,6 +1,4 @@
-/* credit to https://www.youtube.com/watch?v=kQGKU4u9Dng for helping with this */
-/*for navigation menu */
-/*=============== SHOW MENU ===============*/
+// Navigation menu
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close');
@@ -8,18 +6,26 @@ const navMenu = document.getElementById('nav-menu'),
 /* Menu show */
 if (navToggle) {
     navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu');
+        if (navMenu) {
+            navMenu.classList.add('show-menu');
+        } else {
+            console.error('Navigation menu element not found.');
+        }
     });
 }
 
 /* Menu hidden */
 if (navClose) {
     navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu');
+        if (navMenu) {
+            navMenu.classList.remove('show-menu');
+        } else {
+            console.error('Navigation menu element not found.');
+        }
     });
 }
 
-//breadcrumbs for essays
+// generate Breadcrumbs for essays
 document.addEventListener('DOMContentLoaded', function () {
     const breadcrumbContainer = document.querySelector('.breadcrumbs');
 
@@ -39,10 +45,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         breadcrumbContainer.innerHTML = breadcrumbHtml;
+    } else {
+        console.error('Breadcrumb container not found.');
     }
 });
 
-/*Sidebar menu for the individual essays */
+// Sidebar menu for the individual essays
 document.addEventListener('DOMContentLoaded', () => {
     const essays = [
         { title: "UX & UI Analysis", link: "essay1.html" },
@@ -53,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentPath = window.location.pathname.split('/').pop();
     let currentEssayIndex = essays.findIndex(essay => essay.link === currentPath);
 
+ // Populate dropdown menu with essay titles
     if (essayDropdown) {
         essays.forEach((essay, index) => {
             const option = document.createElement('option');
@@ -64,15 +73,19 @@ document.addEventListener('DOMContentLoaded', () => {
             essayDropdown.appendChild(option);
         });
 
+// Navigate to selected essay
         essayDropdown.addEventListener('change', (event) => {
             const selectedEssay = event.target.value;
             if (selectedEssay) {
                 window.location.href = selectedEssay;
             }
         });
+    } else {
+        console.error('Essay dropdown element not found.');
     }
 });
-/*For back to top button*/ 
+
+// Back to top button functionality
 document.addEventListener("DOMContentLoaded", function() {
     window.onscroll = function() {
         scrollFunction();
@@ -80,10 +93,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function scrollFunction() {
         const backToTopButton = document.getElementById("back-to-top");
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            backToTopButton.style.display = "block";
+        if (backToTopButton) {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
         } else {
-            backToTopButton.style.display = "none";
+            console.error('Back to top button not found.');
         }
     }
 
@@ -92,27 +109,35 @@ document.addEventListener("DOMContentLoaded", function() {
         backToTopButton.addEventListener('click', function() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+    } else {
+        console.error('Back to top button not found.');
     }
 });
 
- // JavaScript to handle the ToC highlight and scrolling
- document.addEventListener('DOMContentLoaded', function () {
+// Table of contents highlight and scrolling
+document.addEventListener('DOMContentLoaded', function () {
     const tocLinks = document.querySelectorAll('.toc-container a');
     const sections = document.querySelectorAll('main section');
 
-    function activateLink() {
-        let index = sections.length;
+    // Highlight active section in the table of contents
+    if (tocLinks.length && sections.length) {
+        function activateLink() {
+            let index = sections.length;
 
-        while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+            while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
 
-        tocLinks.forEach((link) => link.classList.remove('active'));
-        tocLinks[index].classList.add('active');
+            tocLinks.forEach((link) => link.classList.remove('active'));
+            tocLinks[index].classList.add('active');
+        }
+
+        activateLink();
+        window.addEventListener('scroll', activateLink);
+    } else {
+        console.error('Table of contents links or sections not found.');
     }
-
-    activateLink();
-    window.addEventListener('scroll', activateLink);
 });
-  // Portfolio gallery navigation
+
+// Portfolio gallery navigation
 document.addEventListener('DOMContentLoaded', function () {
     const galleryItems = document.querySelectorAll('.gallery-item');
     const lightbox = document.getElementById('lightbox');
@@ -123,33 +148,38 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextBtn = document.querySelector('.next');
     let currentIndex = 0;
 
-    galleryItems.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            currentIndex = index;
-            openLightbox(item.querySelector('img').src, item.getAttribute('title'));
+    // Open lightbox with selected image and title
+    if (galleryItems.length && lightbox && lightboxImg && lightboxTitle && closeBtn && prevBtn && nextBtn) {
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentIndex = index;
+                openLightbox(item.querySelector('img').src, item.getAttribute('title'));
+            });
         });
-    });
 
-    closeBtn.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-    });
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
 
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? galleryItems.length - 1 : currentIndex - 1;
-        const currentItem = galleryItems[currentIndex];
-        openLightbox(currentItem.querySelector('img').src, currentItem.getAttribute('title'));
-    });
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? galleryItems.length - 1 : currentIndex - 1;
+            const currentItem = galleryItems[currentIndex];
+            openLightbox(currentItem.querySelector('img').src, currentItem.getAttribute('title'));
+        });
 
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === galleryItems.length - 1) ? 0 : currentIndex + 1;
-        const currentItem = galleryItems[currentIndex];
-        openLightbox(currentItem.querySelector('img').src, currentItem.getAttribute('title'));
-    });
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === galleryItems.length - 1) ? 0 : currentIndex + 1;
+            const currentItem = galleryItems[currentIndex];
+            openLightbox(currentItem.querySelector('img').src, currentItem.getAttribute('title'));
+        });
 
-    function openLightbox(src, title) {
-        lightbox.style.display = 'flex';
-        lightboxImg.src = src;
-        lightboxTitle.textContent = title;
+        function openLightbox(src, title) {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = src;
+            lightboxTitle.textContent = title;
+        }
+    } else {
+        console.error('Gallery items or lightbox elements not found.');
     }
 });
 
@@ -158,7 +188,15 @@ const slideIndexes = { 'carousel1': 0, 'carousel2': 0 };
 
 function changeSlide(n, carouselId) {
     const carousel = document.getElementById(carouselId);
+    if (!carousel) {
+        console.error(`Carousel with ID ${carouselId} not found.`);
+        return;
+    }
     const slides = carousel.querySelectorAll('.carousel-slide');
+    if (!slides.length) {
+        console.error(`No slides found for carousel with ID ${carouselId}.`);
+        return;
+    }
     slideIndexes[carouselId] += n;
 
     if (slideIndexes[carouselId] >= slides.length) {
@@ -168,7 +206,11 @@ function changeSlide(n, carouselId) {
     }
 
     const carouselContainer = carousel.querySelector('.carousel-container');
-    carouselContainer.style.transform = `translateX(${-slideIndexes[carouselId] * 100}%)`;
+    if (carouselContainer) {
+        carouselContainer.style.transform = `translateX(${-slideIndexes[carouselId] * 100}%)`;
+    } else {
+        console.error(`Carousel container not found for carousel with ID ${carouselId}.`);
+    }
 }
 
 // Initialize first slide for all carousels
